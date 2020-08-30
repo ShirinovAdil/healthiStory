@@ -1,0 +1,70 @@
+
+@media (max-width:991px){
+	/* Main Menu Area css
+	============================================================================================ */
+	.navbar-toggler {
+		border: none;
+		border-radius: 0px;
+		padding: 0px;
+		cursor: pointer;
+		margin-top: 27px;
+		margin-bottom: 23px;
+	}
+
+	.navbar-toggler[aria-expanded="false"] span:nth-child(2) {
+		opacity: 1;
+	}
+	.navbar-toggler[aria-expanded="true"] span:nth-child(2) {
+		opacity: 0;
+	}
+	.navbar-toggler[aria-expanded="true"] span:first-child {
+		transform: rotate(-45deg);
+		position: relative;
+		top: 7.5px;
+	}
+	.navbar-toggler[aria-expanded="true"] span:last-child {
+		transform: rotate(45deg);
+		bottom: 6px;
+		position: relative;
+	}
+	.navbar-toggler span{
+		display: block;
+		width: 25px;
+		height: 3px;
+		background: #0051d2;
+		margin: auto;
+		margin-bottom: 4px;
+		transition: all 400ms linear;
+		cursor: pointer;
+    }
+    
+    .header_top .nav{
+		padding: 0px;
+	}
+	.header_area .navbar .nav .nav-item .nav-link{
+		line-height: 40px;
+		display: block;
+		border-bottom: 1px solid #ededed33;
+		border-radius: 0px;
+        text-align: center;
+		padding-left: 10%;
+		font-size: 1em;
+    }
+    .header_area .navbar .nav .nav-item .eauth .nav-link{
+		color:red;
+	}
+	.header_area .navbar .nav .nav-item .nav-link:hover{
+        color:black;
+        font-weight: 800;
+	}
+
+	.header_area.navbar_fixed .main_menu .navbar .nav .nav-item .nav-link {
+		line-height: 40px;
+    }
+    
+    .main_menu{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+

@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Healthi Story</title>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+            integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css" rel="stylesheet">
+        <link rel="shortcut icon" type="image/x-icon" href="logo1.png" />
+
+        <link rel="stylesheet" href="all.css">
+        <link rel="stylesheet" href="myres.css">
+    </head>
+    <body>
+        <!-- header start -->
+    <header class="header_area">
+        <div class="top_menu row m0">
+            <div class="container">
+                <a class="navbar-brand logo_h" href="home/index.html"><img src="logo1.png" alt="logo"></a>
+
+                <div class="float-right">
+                    <ul class="top-nav">
+
+                        <li class="auth nav-item language-li">
+                            <div id="auth language">
+                                <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown09"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span
+                                        class="flag-icon flag-icon-us"> </span> English</a>
+                                <div class="dropdown-menu" aria-labelledby="dropdown09">
+                                    <a class="dropdown-item" href="#fr"><span class="flag-icon flag-icon-fr">
+                                        </span>
+                                        French</a>
+                                    <a class="dropdown-item" href="#it"><span class="flag-icon flag-icon-it">
+                                        </span>
+                                        Italian</a>
+                                    <a class="dropdown-item" href="#ru"><span class="flag-icon flag-icon-ru">
+                                        </span>
+                                        Russian</a>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="auth nav-item">
+                            <i class="fa fa-user" aria-hidden="true" style="color: lime">
+                                <a class="nav-link"href="login.html">&nbsp;Sign in</a> 
+                            </i>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </header>
+        <div class="wrapper fadeInDown">
+            <div id="formContent">
+              <!-- Tabs Titles -->
+          
+              <!-- Icon -->
+              <div class="fadeIn first">
+                <img src="logo1.png" id="icon" alt="User Icon" />
+              </div>
+          
+              <!-- Login Form -->
+              <form id="loginform">
+                <input type="text" id="login" class="fadeIn second" name="login" placeholder="login" autofocus>
+                <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
+            
+                <button class="fadeIn fourth btn btn-outline-success" type="submit">Log In</button>
+                <button class="fadeIn fourth btn btn-outline-primary" type="submit">Log In with face recognition</button>
+
+              </form>
+          
+              <!-- Remind Passowrd -->
+              <div class="card-footer">
+				<div class="d-flex justify-content-center links">
+					Don't have an account? &nbsp; <a href="register.html"> Sign Up</a>
+				</div>
+				<div class="d-flex justify-content-center">
+					<a href="#">Forgot your password?</a>
+				</div>
+			</div>
+          
+            </div>
+          </div>
+    </body>
+</html>

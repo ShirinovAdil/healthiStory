@@ -1,0 +1,118 @@
+{% extends 'global/base.html' %}
+
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+    Products
+{% endblock title %}
+
+
+
+{% block content%}
+
+    <!-- single product start -->
+    <div class="container-fluid">
+        <div class="container">	
+            <div class="row">
+                <div class="col-md-3 col-sm-5 product mt-3">
+                    <div class="card product-card card-block">
+                        <img src="{% get_static_prefix %}{{product.img}} " class="img-left">
+                    </div>
+                </div>
+                    
+                <div class="col-md-7 col-sm-5 product mt-3">
+                    <div class="product-title">
+                        <h3>{{product.title}}</h3>
+                    </div>
+                    <div class="product-desc">
+                        <p> {{product.subtitle}}</p>
+                    </div>
+                    <hr>
+                    
+                </div>
+            </div>
+       
+            <div class="row">
+                <div class="col-md-3 col-sm-5 product mt-3">
+                    <div class="list-group single-product-list" id="list-tab">
+                        <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Description</a>
+                        <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Order Now</a>
+                    </div>
+                </div>
+                <div class="col-md-7 col-sm-5 product mt-3" id="productt">
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">{{product.description}}</div>
+                        <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
+                            <form method="post">
+                                {% csrf_token %}
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group col-md-12 mb-0">
+                                            {{ form.email|as_crispy_field }}
+                                        </div>
+
+                                        <div class="form-group col-md-12 mb-0">
+                                            {{ form.name|as_crispy_field }}
+                                        </div>
+
+                                        <div class="form-group col-md-12 mb-0">
+                                            {{ form.phone|as_crispy_field }}
+                                        </div>
+
+                                        <div class="form-group col-md-12 mb-0">
+                                            {{ form.address|as_crispy_field }}
+                                        </div>
+                                </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group col-md-12 mb-0">
+                                            {{ form.station_amount|as_crispy_field }}
+                                        </div>
+
+                                        <div class="form-group col-md-12 mb-0">
+                                             {{ form.capacity_number|as_crispy_field }}
+                                        </div>
+
+                                        <div class="form-group col-md-12 mb-0">
+                                             {{ form.card_number|as_crispy_field }}
+                                        </div>
+                                        <div class="form-group col-md-12 mb-0">
+                                            {{ form.lancet_number|as_crispy_field }}
+                                        </div>
+
+                                        <div class="form-group col-md-12 mb-0">
+                                             {{ form.glucose_number|as_crispy_field }}
+                                        </div>
+
+                                        <div class="form-group col-md-12 mb-0">
+                                             {{ form.ketone_number|as_crispy_field }}
+                                        </div>
+                                        <div class="form-group col-md-12 mb-0">
+                                             {{ form.cholesterol_number|as_crispy_field }}
+                                        </div>
+                                        <div class="form-group col-md-12 mb-0">
+                                            {{ form.panel_number|as_crispy_field }}
+                                        </div>
+
+                                        <div class="form-group col-md-12 mb-0">
+                                             {{ form.acid_number|as_crispy_field }}
+                                        </div>
+
+                                        <div class="form-group col-md-12 mb-0">
+                                             {{ form.creatinine_number|as_crispy_field }}
+                                        </div>
+                                        <button type="submit" class="btn btn-primary col-md-12">Send Quotation request</button>
+                                    </div>
+                                </div>
+                              </form>
+                        </div>
+                    </div>
+                </div>
+            </div><br>  
+        </div>  
+    </div>
+
+
+    <!-- end single product -->
+    {% endblock content%}
