@@ -14,7 +14,7 @@ a {
 }
 
 p{
-  font-family: 'Lato', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 1.1rem;
 }
 
@@ -107,7 +107,7 @@ ul {
 }
 .top-nav li .nav-link:last-child{
     color:rgb(9, 218, 9);
-    font-style:bold;
+    font-style: bold;
 }
 .top-nav li .nav-link:last-child:hover{
     color: rgb(0, 255, 0);
@@ -115,7 +115,7 @@ ul {
 
 
 .auth .nav-link{
-    font: 500 12px/80px "B612", sans-serif;
+    font: 500 12px/80px "Roboto", sans-serif;
     /* text-transform: uppercase; */
     color: #020a21;
     padding: 0px;
@@ -182,12 +182,12 @@ body{
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Cairo', sans-serif;
-  color: #0b1c39;
+  font-family: 'Roboto', sans-serif;
+  color: #00b3e3;
 	margin-top: 0px;
 	font-style: normal;
 	font-weight: 700;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
 }
 
 .our-missions .single-missions:hover {

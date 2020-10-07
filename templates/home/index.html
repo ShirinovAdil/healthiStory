@@ -1,5 +1,5 @@
-{% extends 'global/base.html' %}
-
+ {% extends 'global/base.html' %}
+{% load i18n %}
 
 {% block title %}
     HealthiStory
@@ -16,7 +16,7 @@
                     <div class="cl-xl-7 col-lg-8 col-md-10">
                         <!-- Section Tittle -->
                         <div class="section-tittle text-center mb-70">
-                            <h2 class="line-title" style="font-size: 2.5em;">Our Missions</h2>
+                            <h2 class="line-title" style="font-size: 2.5em;">{% trans 'Our Missions' %}</h2>
                         </div>
                     </div>
                 </div>
@@ -29,7 +29,7 @@
                                 </span>
                             </div>
                             <div class="missions-cap">
-                                <p>Train people to a healthy lifestyle.</p>
+                                <p>{% trans 'Train people to a healthy lifestyle.' %}</p>
                             </div>
                         </div>
                     </div>
@@ -41,7 +41,7 @@
                                 </span>
                             </div>
                             <div class="missions-cap">
-                                <p>Self-manage own health and daily lifestyle.</p>
+                                <p>{% trans 'Self-manage own health and daily lifestyle.' %}</p>
                             </div>
                         </div>
                     </div>
@@ -53,7 +53,7 @@
                                 </span>
                             </div>
                             <div class="missions-cap">
-                                <p>Help people to extend healthy life expectancy.</p>
+                                <p>{% trans 'Help people to extend healthy life expectancy.' %}</p>
                             </div>
                         </div>
                     </div>
@@ -66,7 +66,7 @@
                                 </span>
                             </div>
                             <div class="missions-cap">
-                                <p>To help doctors to provide independent remote medical assistance.</p>
+                                <p>{% trans 'To help doctors to provide independent remote medical assistance.' %}</p>
                             </div>
                         </div>
                     </div>
@@ -81,16 +81,22 @@
     <!--content 2-->
     <div class="container">
         <div class="block">
-            <div class="row">
-                <div class="span4">
-                    <div class="content-heading">
-                        <h3 class="text-center">GENERAL HEALTH ISSUES</h3>
-                        <img class="img-right" src="https://www.myhealthistory.com/media/new/image/health.png" />
-                    </div>
-                    <p class="ghi"><br> <br> According to modern medical science, approximately 25% of an individual’s overall health depends from genetics and 75% on the individual; therefore, the long-term health should be managed accurately and precisely. <br> <br>
-                    The only way to manage long-term health is to know what is happening within one’s body and how things change over time. For that reason, frequent health checkups are a must for everyone. <br> <br>
-                    In order to do this, hospital visits are crucial. However, these visits cost too much time, money and are not convenient for people due to these reasons. Moreover, often times these results are received within several days on paper, which is not functional, eco-friendly and is slow.</p>
+            <div class="container">
+                <div class="row">
+                    <div class="span4">
+                        <div class="content-heading">
+                            <h3 class="text-center">{% trans 'General Health Issues' %}</h3>
+                            <img class="img-right" src="https://www.myhealthistory.com/media/new/image/health.png" />
+                        </div>
+                        <p class="ghi"><br> <br> {% trans "According to modern medical science, approximately 25% of an individual’s overall health depends from genetics and 75% on the individual; therefore, the long-term health should be managed accurately and precisely." %} <br> <br>
+                            
+                            
+                            {% trans "The only way to manage long-term health is to know what is happening within one’s body and how things change over time. For that reason, frequent health checkups are a must for everyone." %} <br> <br>
+                            
+                            
+                            {% trans "In order to do this, hospital visits are crucial. However, these visits cost too much time, money and are not convenient for people due to these reasons. Moreover, often times these results are received within several days on paper, which is not functional, eco-friendly and is slow." %}</p>
 
+                    </div>
                 </div>
             </div>
             <br />
@@ -103,13 +109,15 @@
     <!-- WHo are we -->
     <div class="container" style="background-color: #00b3e3;">
         <div class="block">
-            <div class="row">
-                <div class="span4 ">
-                    <div class="content-heading">
-                        <h1 class="text-center mt-3" style="color: white;">What is HealthiStory?</h>
-                    </div>
-                    <div class="col-md-10 offset-md-1 mt-3">
-                        <i><p class="hs">HealthiStory is a health and wellness focused company that performs health checkups outside the hospitals, eliminates all expensive and administrative costs, brings the service to the end-user location, and makes health checkups easily accessible and affordable for everyone. </p></i>
+            <div class="container">
+                <div class="row">
+                    <div class="span4 ">
+                        <div class="content-heading">
+                            <h1 class="text-center mt-3" style="color: white;">{% trans 'What is HealthiStory?' %}</h1>
+                        </div>
+                        <div class="col-md-10 offset-md-1 mt-3">
+                            <i><p class="hs">{% trans "HealthiStory is a health and wellness focused company that performs health checkups outside the hospitals, eliminates all expensive and administrative costs, brings the service to the end-user location, and makes health checkups easily accessible and affordable for everyone." %} </p></i>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -122,21 +130,43 @@
 
 
     <!-- content 3 -->
-    <h1 class="text-center mt-2">Why us?</h1>
+    <h1 class="text-center mt-2">{% trans 'Why us?' %}</h1>
     <div class="container">
         <div class="block">
-            <div class="row">
-                <div class="span4 mt-4">
-                    <h5 style="color: blue;">For B2C:</h5>
-                    <p class="text-left" style="font-size: larger;">You can order your health checkup to your home or office, just like ordering a taxi. Our nearest trained partner with a Mobile Medi-Lab on a backpack comes to you at your time. The checkup takes less than 10 minutes and the results are stored immediately in a secure cloud and are accessible to you through any devices. You can always track your progress, get smart recommendations and receive a notification to visit a doctor, if there are any critical results. </p> <br>
-                    <h5 class="text-left" style="color: darkgreen;">For partners (a person who administers mobile health checkups):</h5>
-                    <p class="text-left " style="font-size: larger;">HealthiStory is a profitable business opportunity, which provides steady work, flexible work hours, and good quality of life (no medical training required).</p><br>
-                    <h5 class="text-left" style="color: darkmagenta;">For employees:</h5>
-                    <p class="text-left" style="font-size: larger;">HealthiStory makes workforces healthy, happy and productive. </p><br>
-                    <h5 class="text-left" style="color: darkorange;">For insurance providers:</h5>
-                    <p class="text-left" style="font-size: larger;">HealthiStory is a new type of policy benefit that makes healthy, loyal and lower risk policy holders. </p><br>
-                    <h5 class="text-left" style="color: darkred;">For governments:</h5>
-                    <p class="text-left" style="font-size: larger;">HealthiStory creates healthy and productive societies with lower long-term healthcare costs. </p>
+            <div class="container">
+                <div class="row">
+                    <div class="span4 mt-4">
+                        <h5 style="color: blue;">
+                            {% trans 'For B2C:' %}
+                        </h5>
+                        <p class="text-left" style="font-size: larger;">
+                            {% trans "You can order your health checkup to your home or office, just like ordering a taxi. Our nearest trained partner with a Mobile Medi-Lab on a backpack comes to you at your time. The checkup takes less than 10 minutes and the results are stored immediately in a secure cloud and are accessible to you through any devices. You can always track your progress, get smart recommendations and receive a notification to visit a doctor, if there are any critical results." %}
+                        </p> <br>
+                        <h5 class="text-left" style="color: darkgreen;">
+                            {% trans 'For partners (a person who administers mobile health checkups):' %}
+                        </h5>
+                        <p class="text-left " style="font-size: larger;">
+                            {% trans "HealthiStory is a profitable business opportunity, which provides steady work, flexible work hours, and good quality of life (no medical training required)." %}
+                        </p><br>
+                        <h5 class="text-left" style="color: darkmagenta;">
+                            {% trans 'For employers:' %}
+                        </h5>
+                        <p class="text-left" style="font-size: larger;">
+                            {% trans 'HealthiStory makes workforces healthy, happy and productive.' %} 
+                        </p><br>
+                        <h5 class="text-left" style="color: darkorange;">
+                            {% trans 'For insurance providers:' %}
+                        </h5>
+                        <p class="text-left" style="font-size: larger;">
+                            {% trans 'HealthiStory is a new type of policy benefit that makes healthy, loyal and lower risk policy holders. ' %}
+                        </p><br>
+                        <h5 class="text-left" style="color: darkred;">
+                            {% trans 'For governments:' %}
+                        </h5>
+                        <p class="text-left" style="font-size: larger;">
+                            {% trans 'HealthiStory creates healthy and productive societies with lower long-term healthcare costs.' %} 
+                        </p>
+                    </div>
                 </div>
             </div>
             <br />
@@ -146,29 +176,31 @@
     <div class="container" id="content3">
         <br>
         <div class="btn-group mr-12 col-md-12" role="group" aria-label="Basic example">
-            
-            <button type="button" class="btn btn-success btn-lg" id="user-more">User Benefits</button>
-            <button type="button" class="btn btn-primary btn-lg" id="doc-more">Doctor Benefits</button>
+
+            <button type="button" class="btn btn-success btn-lg" id="user-more">
+                {% trans 'User Benefits' %}
+            </button>
+            <button type="button" class="btn btn-primary btn-lg" id="doc-more">
+                {% trans 'Doctor Benefits' %}
+            </button>
         </div>
 
         <!-- <<<< start user_benefits   -->
         <div class="box" id="user-benefit-data">
             <div class="container">
-                <p class="text-center" class="intro-benefit" style="font-size: x-large;">Create an online health account in the portal to store personal medical records</p>
+                <h5 class="text-center intro-benefit" style="font-size: x-large;">
+                    {% trans 'Turn your health history into a healthy story.' %}
+                </h5>
                 <div class="row">
 
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                         <div class="box-part text-center">
                             <div class="title">
-                                <h4>Observe health trend</h4>
+                                <h4>{% trans 'Observe health trend' %}</h4>
                             </div>
                             <div class="text">
-                                <span>By accessing the Portal, the user may
-                                    <b>graphically observe</b>
-                                    the latest and previous
-                                    <b>health data trends, get recommendations</b>
-                                    on health parameters to be considered and get notification
-                                    to visit a doctor for critical values.</span>
+                                <span>
+                                    {% trans "By accessing the Portal, the user may <b>graphically observe</b> the latest and previous <b>health data trends, get recommendations</b> on health parameters to be considered and get notification to visit a doctor for critical values." %}</span>
                             </div>
                         </div>
                     </div>
@@ -176,14 +208,11 @@
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                         <div class="box-part text-center">
                             <div class="title">
-                                <h4>Monitoring effectiveness of the treatment</h4>
+                                <h4>{% trans 'Monitoring effectiveness of the treatment' %}</h4>
                             </div>
 
                             <div class="text">
-                                <span>User, who gets a treatment within the framework of the
-                                    system parameters, can perform regular measurements
-                                    and graphical
-                                    <b>monitor the impact of the treatment</b>.</span>
+                                <span>{% trans "User, who gets a treatment within the framework of the system parameters, can perform regular measurements and graphical <b>monitor the impact of the treatment</b>." %}</span>
                             </div>
                         </div>
                     </div>
@@ -191,17 +220,16 @@
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                         <div class="box-part text-center">
                             <div class="title">
-                                <h4>Extend healthy life expectancy </h4>
+                                <h4>{% trans 'Extend healthy life expectancy' %} </h4>
                             </div>
 
                             <div class="text">
-                                <span>By obtaining detailed information about healthy lifestyle
-                                    from the portal and taking early action against
-                                    any warnings, user may
-                                    <b>extend own Healthy Lifetime</b>.</span>
+                                <span>{% trans "By obtaining detailed information about healthy lifestyle from the portal and taking early action against any warnings, user may <b>extend own Healthy Lifetime</b>." %}</span>
                             </div>
                         </div>
+
                     </div>
+                    <i><p class="text-center" style="font-size: x-large;">{% trans "Your data is stored using the latest banking-grade encryption technologies and is available only to you and your chosen doctor. We are GDPR compliant and do not have access to any personal data." %}</p></i>
                 </div>
             </div>
         </div>
@@ -209,22 +237,18 @@
         <!--  start doctor_benefits   -->
         <div class="box" id="doc-benefit-data">
             <div class="container">
-                <h5 class="text-center" class="intro-benefit">Treat own patients anywhere, anytime</h5>
+                <h5 class="text-center" class="intro-benefit">{% trans 'Treat own patients anywhere, anytime.' %}</h5>
                 <div class="row">
 
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                         <div class="box-part text-center">
                             <div class="title">
-                                <h4>Remote health care</h4>
+                                <h4>{% trans 'Remote health care' %}</h4>
                             </div>
 
                             <div class="text">
-                                <span>Remote access to electronic personal health records helps
-                                    doctors to
-                                    <b>accelerate diagnosis and treatment, provide</b>
-                                    highest levels of
-                                    <b>remote health care,</b> reduce inefficiencies, administrative
-                                    costs and ultimately offering better, faster care.</span>
+                                <span>{% trans "Remote access to electronic personal health records helps doctors to <b>accelerate diagnosis and treatment, provide</b> highest levels of <b>remote health care,</b> reduce inefficiencies, administrative costs and ultimately offering better, faster care." %}
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -233,13 +257,13 @@
 
                         <div class="box-part text-center">
                             <div class="title">
-                                <h4>Effectiveness</h4>
+                                <h4>{% trans 'Effectiveness' %}</h4>
                             </div>
 
                             <div class="text">
-                                <span>Increase the number of patients who can be treated during
-                                    a given period of time and effectiveness
-                                    of treatment.</span>
+                                <span>
+                                    {% trans "Increase the number of patients who can be treated during a given period of time and effectiveness of treatment." %}
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -249,14 +273,11 @@
                         <div class="box-part text-center">
 
                             <div class="title">
-                                <h4>New streams of revenue</h4>
+                                <h4>{% trans 'New streams of revenue' %}</h4>
                             </div>
 
                             <div class="text">
-                                <span>Provide
-                                    <b>new</b> streams of
-                                    <b>revenue in the form of virtual consultations</b>
-                                    and assessments.</span>
+                                <span>{% trans "Provide <b>new</b> streams of <b>revenue in the form of virtual consultations</b> and assessments." %}</span>
                             </div>
                         </div>
                     </div>

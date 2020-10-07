@@ -12,12 +12,6 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
-import environ
-
-
-env = environ.Env(DEBUG=(bool, False))
-# reading .env file
-environ.Env.read_env()
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -48,12 +42,15 @@ INSTALLED_APPS = [
     'crispy_forms',
     'home',
     'product',
+    'django_translation_flags',
+    'ckeditor',
 
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -88,13 +85,19 @@ WSGI_APPLICATION = 'HealtiStory.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'healthiStory',
-        'USER': 'myprojectuser',
-        'PASSWORD': 'password',
+        'NAME': 'HealthiStory',
+        'USER': 'emil',
+        'PASSWORD': 'emil',
         'HOST': 'localhost',
         'PORT': '3306',
     }
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
 
 
 # Password validation
@@ -116,10 +119,9 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 # EMAIL SETTINGS
-EMAIL_HOST_USER = env("EMAIL_HOST_USER")
-EMAIL_HOST_PASSWORD = env("EMAIL_HOST_PASSWORD")
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'emil.ojagverdiyev@myhealthistory.com'
+EMAIL_HOST_PASSWORD = 'at7M40c~'
+EMAIL_HOST = 'srv70150.trdns.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 
@@ -142,5 +144,18 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / 'static/']
+LOCALE_PATHS = [
+    BASE_DIR / 'locale'
+]
+
+
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+
+LANGUAGES = [
+    ('en', 'English'),
+    ('az', 'Azərbaycanca'),
+    ('tr', 'Türkçe'),
+    ('ru', 'Pусский'),
+]

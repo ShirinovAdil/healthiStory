@@ -1,6 +1,7 @@
 {% extends 'global/base.html' %}
 
 {% load static %}
+{% load i18n %}
 
 
 {% block title %}
@@ -12,7 +13,7 @@
 {% block content%}
     <!-- block PRODUCTS-->
     <div class="container mt-2 products">
-        <h1 class="text-center">Products</h1>
+        <h1 class="text-center">{% trans 'Products' %}</h1>
         <div class="row">
 
             <div class="col-md-2 store-menu">
