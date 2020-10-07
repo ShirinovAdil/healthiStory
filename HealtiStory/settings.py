@@ -85,13 +85,14 @@ WSGI_APPLICATION = 'HealtiStory.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'HealthiStory',
-        'USER': 'emil',
-        'PASSWORD': 'emil',
+        'NAME': 'healthiStory',
+        'USER': 'myprojectuser',
+        'PASSWORD': 'password',
         'HOST': 'localhost',
         'PORT': '3306',
     }
 }
+
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',

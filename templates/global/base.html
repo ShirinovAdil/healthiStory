@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css" rel="stylesheet">
-    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/logo1.png'%}" />
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/logo111.png'%}" />
 
     <link rel="stylesheet" href="{% static 'css/all.css' %}">
     <link rel="stylesheet" href="{% static 'css/myres.css' %}">
@@ -26,7 +26,7 @@
     <header class="header_area" >
         <div class="top_menu row m0">
             <div class="container">
-                <a class="navbar-brand logo_h" href="{% url 'home' %}"><img src="{% static 'img/logo1.png' %}" alt="logo"></a>
+                <a class="navbar-brand logo_h" href="{% url 'home' %}"><img src="{% static 'img/logo111.png' %}" alt="logo"></a>
 
                 <div class="float-right">
                     <ul class="top-nav">
@@ -34,7 +34,7 @@
 
                         <li class="auth nav-item">
                             <i class="fa fa-user" aria-hidden="true" style="color: lime">
-                                <a class="nav-link"href="/signin">&nbsp;{% trans 'Sign in' %}</a>
+                                <a class="nav-link" href="{% url 'login' %}">&nbsp;{% trans 'Sign in' %}</a>
                             </i>
                         </li>
                             
@@ -138,10 +138,10 @@
         </div>
     </footer>
     <!--end footer-->
-    <script src="{% static 'js/all.js' %}"></script>
 
-    <script src="https://kit.fontawesome.com/0d72fa228f.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="{% static 'js/all.js' %}"></script>
+    <script src="https://kit.fontawesome.com/0d72fa228f.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>

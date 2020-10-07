@@ -1,6 +1,7 @@
 from django.core.mail import send_mail
 from django.conf import settings
 
+
 def mobile_station_order_send_mail(**kwargs):
     """Send mail to user with order information"""
     email_from = settings.EMAIL_HOST_USER

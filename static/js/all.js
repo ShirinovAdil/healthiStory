@@ -19,28 +19,30 @@ try{
             docBenefitData.style.display = "block";
         }); }
         catch(err){
-            console.log("hecne olmuyub")}
-
-        try{
-            $(document).ready(function(){
-                if ($("#inputGender").val() == "female"){
-                    $("#male-only-survey").show();
-                }else{
-                    $("#male-only-survey").hide();
-                }
-            
-                $("#inputGender").change(function(){
-                    if ($("#inputGender").val() == "female"){
-                        $("#male-only-survey").show();
-                    }else{
-                        $("#male-only-survey").hide();
-                    }
-                })
-            
-            });
-        
-        }catch(err){
-            console.log("survey error")
+            console.log("hecne olmuyub")
         }
+
+
+try{
+    $(document).ready(function(){
+        if ($("#inputGender").val() == "female"){
+            $("#female-only-survey").show();
+        }else{
+            $("#female-only-survey").hide();
+        }
+
+        $("#inputGender").change(function(){
+            if ($("#inputGender").val() == "female"){
+                $("#female-only-survey").show();
+            }else{
+                $("#female-only-survey").hide();
+            }
+        })
+
+    });
+
+    }catch(err){
+        console.log("survey error");
+    }
     
     
