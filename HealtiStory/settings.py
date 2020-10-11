@@ -40,11 +40,15 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'crispy_forms',
-    'home',
-    'product',
     'django_translation_flags',
     'ckeditor',
+    'django_countries',
 
+
+
+    'home',
+    'product',
+    'account',
 ]
 
 MIDDLEWARE = [
@@ -103,6 +107,8 @@ DATABASES = {
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
+
+AUTH_USER_MODEL = 'account.User'
 
 AUTH_PASSWORD_VALIDATORS = [
     {
