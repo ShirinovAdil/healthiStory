@@ -1,5 +1,9 @@
 from django.utils.translation import ugettext_lazy as _
 
+
+BOOL_CHOICES = ((True, _('Yes')), (False, _('No')))
+
+
 ENGLISH_LANG = 'EN'
 RUSSIAN_LANG = 'RU'
 TURKISH_LANG = 'TR'
@@ -39,31 +43,31 @@ BLOOD_GROUP_CHOICES = [
 ]
 
 
-ACTIVITY_LOW = 'Low'
-ACTIVITY_MEDIUM = 'Medium'
-ACTIVITY_HIGH = 'High'
+ACTIVITY_LOW = _('Low')
+ACTIVITY_MEDIUM = _('Medium')
+ACTIVITY_HIGH = _('High')
 PHYSICAL_ACTIVITY_CHOICES = [
     (ACTIVITY_LOW, ACTIVITY_LOW),
     (ACTIVITY_MEDIUM, ACTIVITY_MEDIUM),
     (ACTIVITY_HIGH, ACTIVITY_HIGH),
 ]
 
-SMOKER_NON = 'Non-smoker'
-SMOKER_EX = 'Ex-smoker'
-SMOKER_LIGHT = 'Light-smoker'
-SMOKER_MODERATE = 'Moderate-smoker'
-SMOKER_HEAVY = 'Heavy-smoker'
+SMOKER_NON = _('Non-smoker')
+SMOKER_EX = _('Ex-smoker')
+SMOKER_LIGHT = _('Light-smoker')
+SMOKER_MODERATE = _('Moderate-smoker')
+SMOKER_HEAVY = _('Heavy-smoker')
 SMOKING_CHOICES = [
     (SMOKER_NON, SMOKER_NON),
     (SMOKER_EX, SMOKER_EX),
-    (SMOKER_LIGHT, 'Light smoker (less than 10)'),
-    (SMOKER_MODERATE, 'Moderate smoker (10 to 19)'),
-    (SMOKER_HEAVY, 'Heavy smoker (20 or over)'),
+    (SMOKER_LIGHT, _('Light smoker (less than 10)')),
+    (SMOKER_MODERATE, _('Moderate smoker (10 to 19)')),
+    (SMOKER_HEAVY, _('Heavy smoker (20 or over)')),
 ]
 
-DIABET_TYPE_NONE = 'None'
-DIABET_TYPE_ONE = 'Type 1'
-DIABET_TYPE_TWO = 'Type 2'
+DIABET_TYPE_NONE = _('None')
+DIABET_TYPE_ONE = _('Type 1')
+DIABET_TYPE_TWO = _('Type 2')
 DIABETS_CHOICES = [
     (DIABET_TYPE_NONE, DIABET_TYPE_NONE),
     (DIABET_TYPE_ONE, DIABET_TYPE_ONE),
@@ -86,7 +90,6 @@ ETHNICITY_CHOICES = [
     (ETHNICITY_BANGLADESHI, ETHNICITY_BANGLADESHI),
     (ETHNICITY_OTHER_ASIAN, 'Other Asian'),
     (ETHNICITY_BLACK_CARIBBEAN, 'Black Caribbean'),
-    (ETHNICITY_BLACK_AFRICAN, 'White or not stated'),
     (ETHNICITY_BLACK_AFRICAN, 'Black African'),
     (ETHNICITY_CHINESE, ETHNICITY_CHINESE),
     (ETHNICITY_OTHERS, ETHNICITY_OTHERS),

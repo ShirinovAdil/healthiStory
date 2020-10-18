@@ -90,8 +90,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'healthiStory',
-        'USER': 'myprojectuser',
-        'PASSWORD': 'password',
+        'USER': 'emil',
+        'PASSWORD': 'emil',
         'HOST': 'localhost',
         'PORT': '3306',
     }

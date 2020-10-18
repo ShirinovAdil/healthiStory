@@ -11,6 +11,19 @@
     <!-- COntent start-->
     <div class="our-missions section-padding30 mt-4">
         <div class="container">
+            {% if messages %}
+                <ul>
+                    {% for message in messages %}
+                        <li>{{ message | safe}}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+            {% if request.user.is_authenticated %}
+                    <form class="nax-item nav-link" action="{% url 'logout' %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-danger">Log out</button>
+                    </form>
+                {% endif %}
             <div class="block">
                 <div class="row justify-content-sm-center">
                     <div class="cl-xl-7 col-lg-8 col-md-10">

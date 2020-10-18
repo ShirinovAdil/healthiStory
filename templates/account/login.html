@@ -2,6 +2,7 @@
 
 {% load static %}
 {% load i18n %}
+{% load crispy_forms_tags %}
 
 
 {% block title %}
@@ -22,13 +23,16 @@
               </div>
           
               <!-- Login Form -->
-              <form id="loginform">
-                <input type="text" id="login" class="fadeIn second" name="login" placeholder="login" autofocus>
-                <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
+              <form id="loginform" method="post">
+                  {% csrf_token %}
+                  {{ form.username }}
+                  {{ form.password }}
+<!--                <input type="text" plazceholder="{% trans 'Login' %}">-->
+<!--                <input type="text" placeholder="{% trans 'Password' %}">-->
 
-            
-                <button class="fadeIn fourth btn btn-outline-success mt-3" type="submit">Log In</button>
-                <button class="fadeIn fourth btn btn-outline-primary mt-3" type="submit">Log In with face recognition</button>
+
+                <button class="fadeIn fourth btn btn-outline-success mt-3" type="submit">{% trans 'Login' %}</button>
+                <button class="fadeIn fourth btn btn-outline-primary mt-3">{% trans 'Log In with face recognition' %}</button>
                   <br>
 
               </form>
@@ -37,10 +41,10 @@
               <!-- Remind Passowrd -->
               <div class="card-footer">
 				<div class="d-flex justify-content-center links">
-					Don't have an account? &nbsp; <a href="{% url 'register' %}"> Sign Up</a>
+                    {% trans "Don't have an account?" %} &nbsp; <a href="{% url 'register' %}">{% trans 'Sign Up' %} </a>
 				</div>
 				<div class="d-flex justify-content-center">
-					<a href="#">Forgot your password?</a>
+					<a href="#">{% trans 'Forgot your password?' %}</a>
 				</div>
 			</div>
           
