@@ -1,0 +1,528 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-11-02 22:57+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: .\account\choices.py:4
+msgid "Yes"
+msgstr ""
+
+#: .\account\choices.py:4
+msgid "No"
+msgstr ""
+
+#: .\account\choices.py:22
+msgid "Male"
+msgstr ""
+
+#: .\account\choices.py:23
+msgid "Female"
+msgstr ""
+
+#: .\account\choices.py:46
+msgid "Low"
+msgstr ""
+
+#: .\account\choices.py:47
+msgid "Medium"
+msgstr ""
+
+#: .\account\choices.py:48
+msgid "High"
+msgstr ""
+
+#: .\account\choices.py:55
+msgid "Non-smoker"
+msgstr ""
+
+#: .\account\choices.py:56
+msgid "Ex-smoker"
+msgstr ""
+
+#: .\account\choices.py:57
+msgid "Light-smoker"
+msgstr ""
+
+#: .\account\choices.py:58
+msgid "Moderate-smoker"
+msgstr ""
+
+#: .\account\choices.py:59
+msgid "Heavy-smoker"
+msgstr ""
+
+#: .\account\choices.py:63
+msgid "Light smoker (less than 10)"
+msgstr ""
+
+#: .\account\choices.py:64
+msgid "Moderate smoker (10 to 19)"
+msgstr ""
+
+#: .\account\choices.py:65
+msgid "Heavy smoker (20 or over)"
+msgstr ""
+
+#: .\account\choices.py:68
+msgid "None"
+msgstr ""
+
+#: .\account\choices.py:69
+msgid "Type 1"
+msgstr ""
+
+#: .\account\choices.py:70
+msgid "Type 2"
+msgstr ""
+
+#: .\account\models.py:16
+msgid "Name"
+msgstr ""
+
+#: .\account\models.py:17
+msgid "Surname"
+msgstr ""
+
+#: .\account\models.py:18
+msgid "Birthdate"
+msgstr ""
+
+#: .\account\models.py:19
+msgid "Email address"
+msgstr ""
+
+#: .\account\models.py:20
+msgid "Phone"
+msgstr ""
+
+#: .\account\models.py:21
+msgid "User ID(Citizen ID or E-mail or Mobile number)"
+msgstr ""
+
+#: .\account\models.py:22
+msgid "Language"
+msgstr ""
+
+#: .\account\models.py:23
+msgid "Gender"
+msgstr ""
+
+#: .\account\models.py:24
+msgid "Height"
+msgstr ""
+
+#: .\account\models.py:25
+msgid "Blood Group"
+msgstr ""
+
+#: .\account\models.py:26
+msgid "Country"
+msgstr ""
+
+#: .\account\models.py:27
+msgid "City"
+msgstr ""
+
+#: .\account\models.py:28
+msgid "District"
+msgstr ""
+
+#: .\account\models.py:29
+msgid "Town/Village"
+msgstr ""
+
+#: .\account\models.py:30
+msgid "Physical Activity"
+msgstr ""
+
+#: .\account\models.py:31
+msgid "Smoking"
+msgstr ""
+
+#: .\account\models.py:32
+msgid "Diabets"
+msgstr ""
+
+#: .\account\models.py:33
+msgid "Ethnicity"
+msgstr ""
+
+#: .\account\models.py:34
+msgid "ANGINA OR HEART ATTACK IN A 1ST DEGREE RELATIVE &lt;60?"
+msgstr ""
+
+#: .\account\models.py:35
+msgid "Menopause"
+msgstr ""
+
+#: .\account\models.py:36
+msgid "Kidney Disease"
+msgstr ""
+
+#: .\account\models.py:37
+msgid "Arterial Fibrillation"
+msgstr ""
+
+#: .\account\models.py:38
+msgid "DO YOU GETTING PRESSURE TREATMENT?"
+msgstr ""
+
+#: .\account\models.py:39
+msgid "Rheumatoid Arthritis"
+msgstr ""
+
+#: .\account\models.py:41
+msgid "staff status"
+msgstr ""
+
+#: .\account\models.py:43
+msgid "Designates whether the user can log into this admin site."
+msgstr ""
+
+#: .\account\models.py:52
+msgid "user"
+msgstr ""
+
+#: .\account\models.py:53
+msgid "users"
+msgstr ""
+
+#: .\product\views.py:32
+msgid ""
+"<div class=\"alert alert-success alert-dismissable text-center\">\n"
+"                                <button type=\"button\" class=\"close\" data-"
+"dismiss=\"alert\" aria-hidden=\"true\">×</button>\n"
+"                                We received your messages and will come back "
+"to you as soon as possible.\n"
+"                                </div>"
+msgstr ""
+
+#: .\product\views.py:38
+msgid ""
+"<div class=\"alert alert-danger alert-dismissable text-center\">\n"
+"                                            <button type=\"button\" class="
+"\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">×</button>\n"
+"                                            ERROR!!! You have to order at "
+"least 1 component\n"
+"                                            </div>"
+msgstr ""
+
+#: .\templates\account\login.html:32 .\templates\global\base.html:69
+msgid "Login"
+msgstr ""
+
+#: .\templates\account\login.html:33
+msgid "Log In with face recognition"
+msgstr ""
+
+#: .\templates\account\login.html:42
+msgid "Don't have an account?"
+msgstr ""
+
+#: .\templates\account\login.html:42
+msgid "Sign Up"
+msgstr ""
+
+#: .\templates\account\login.html:45
+msgid "Forgot your password?"
+msgstr ""
+
+#: .\templates\account\register.html:31
+msgid "Registration"
+msgstr ""
+
+#: .\templates\account\register.html:138
+msgid " Questions relating to the assessment of cardiovascular disease risk"
+msgstr ""
+
+#: .\templates\account\register.html:204
+msgid "Required fields"
+msgstr ""
+
+#: .\templates\account\register.html:207
+msgid "Register"
+msgstr ""
+
+#: .\templates\global\base.html:36
+msgid "Sign in"
+msgstr ""
+
+#: .\templates\global\base.html:65
+msgid "Home"
+msgstr ""
+
+#: .\templates\global\base.html:66
+msgid "Locations"
+msgstr ""
+
+#: .\templates\global\base.html:67 .\templates\global\base.html:100
+#: .\templates\global\base.html:113 .\templates\product\products.html:16
+msgid "Products"
+msgstr ""
+
+#: .\templates\global\base.html:68
+msgid "Contact"
+msgstr ""
+
+#: .\templates\global\base.html:95
+msgid "About"
+msgstr ""
+
+#: .\templates\global\base.html:96
+msgid ""
+"HealthiStory is a health focused company that revolutionizes how people "
+"access health checkups and use their medical data to manage long term health."
+msgstr ""
+
+#: .\templates\global\base.html:109
+msgid "Quick Links"
+msgstr ""
+
+#: .\templates\global\base.html:111
+msgid "About Us"
+msgstr ""
+
+#: .\templates\global\base.html:112 .\templates\home\contact.html:11
+msgid "Contact Us"
+msgstr ""
+
+#: .\templates\global\base.html:114
+msgid "Privacy Policy"
+msgstr ""
+
+#: .\templates\global\base.html:123
+msgid "Copyright &copy; 2020 All Rights Reserved by"
+msgstr ""
+
+#: .\templates\home\index.html:32
+msgid "Our Missions"
+msgstr ""
+
+#: .\templates\home\index.html:45
+msgid "Train people to a healthy lifestyle."
+msgstr ""
+
+#: .\templates\home\index.html:57
+msgid "Self-manage own health and daily lifestyle."
+msgstr ""
+
+#: .\templates\home\index.html:69
+msgid "Help people to extend healthy life expectancy."
+msgstr ""
+
+#: .\templates\home\index.html:82
+msgid "To help doctors to provide independent remote medical assistance."
+msgstr ""
+
+#: .\templates\home\index.html:101
+msgid "General Health Issues"
+msgstr ""
+
+#: .\templates\home\index.html:104
+#, python-format
+msgid ""
+"According to modern medical science, approximately 25%% of an individual’s "
+"overall health depends from genetics and 75%% on the individual; therefore, "
+"the long-term health should be managed accurately and precisely."
+msgstr ""
+
+#: .\templates\home\index.html:107
+msgid ""
+"The only way to manage long-term health is to know what is happening within "
+"one’s body and how things change over time. For that reason, frequent health "
+"checkups are a must for everyone."
+msgstr ""
+
+#: .\templates\home\index.html:110
+msgid ""
+"In order to do this, hospital visits are crucial. However, these visits cost "
+"too much time, money and are not convenient for people due to these reasons. "
+"Moreover, often times these results are received within several days on "
+"paper, which is not functional, eco-friendly and is slow."
+msgstr ""
+
+#: .\templates\home\index.html:129
+msgid "What is HealthiStory?"
+msgstr ""
+
+#: .\templates\home\index.html:132
+msgid ""
+"HealthiStory is a health and wellness focused company that performs health "
+"checkups outside the hospitals, eliminates all expensive and administrative "
+"costs, brings the service to the end-user location, and makes health "
+"checkups easily accessible and affordable for everyone."
+msgstr ""
+
+#: .\templates\home\index.html:146
+msgid "Why us?"
+msgstr ""
+
+#: .\templates\home\index.html:153
+msgid "For B2C:"
+msgstr ""
+
+#: .\templates\home\index.html:156
+msgid ""
+"You can order your health checkup to your home or office, just like ordering "
+"a taxi. Our nearest trained partner with a Mobile Medi-Lab on a backpack "
+"comes to you at your time. The checkup takes less than 10 minutes and the "
+"results are stored immediately in a secure cloud and are accessible to you "
+"through any devices. You can always track your progress, get smart "
+"recommendations and receive a notification to visit a doctor, if there are "
+"any critical results."
+msgstr ""
+
+#: .\templates\home\index.html:159
+msgid "For partners (a person who administers mobile health checkups):"
+msgstr ""
+
+#: .\templates\home\index.html:162
+msgid ""
+"HealthiStory is a profitable business opportunity, which provides steady "
+"work, flexible work hours, and good quality of life (no medical training "
+"required)."
+msgstr ""
+
+#: .\templates\home\index.html:165
+msgid "For employers:"
+msgstr ""
+
+#: .\templates\home\index.html:168
+msgid "HealthiStory makes workforces healthy, happy and productive."
+msgstr ""
+
+#: .\templates\home\index.html:171
+msgid "For insurance providers:"
+msgstr ""
+
+#: .\templates\home\index.html:174
+msgid ""
+"HealthiStory is a new type of policy benefit that makes healthy, loyal and "
+"lower risk policy holders. "
+msgstr ""
+
+#: .\templates\home\index.html:177
+msgid "For governments:"
+msgstr ""
+
+#: .\templates\home\index.html:180
+msgid ""
+"HealthiStory creates healthy and productive societies with lower long-term "
+"healthcare costs."
+msgstr ""
+
+#: .\templates\home\index.html:194
+msgid "User Benefits"
+msgstr ""
+
+#: .\templates\home\index.html:197
+msgid "Doctor Benefits"
+msgstr ""
+
+#: .\templates\home\index.html:205
+msgid "Turn your health history into a healthy story."
+msgstr ""
+
+#: .\templates\home\index.html:212
+msgid "Observe health trend"
+msgstr ""
+
+#: .\templates\home\index.html:216
+msgid ""
+"By accessing the Portal, the user may <b>graphically observe</b> the latest "
+"and previous <b>health data trends, get recommendations</b> on health "
+"parameters to be considered and get notification to visit a doctor for "
+"critical values."
+msgstr ""
+
+#: .\templates\home\index.html:224
+msgid "Monitoring effectiveness of the treatment"
+msgstr ""
+
+#: .\templates\home\index.html:228
+msgid ""
+"User, who gets a treatment within the framework of the system parameters, "
+"can perform regular measurements and graphical <b>monitor the impact of the "
+"treatment</b>."
+msgstr ""
+
+#: .\templates\home\index.html:236
+msgid "Extend healthy life expectancy"
+msgstr ""
+
+#: .\templates\home\index.html:240
+msgid ""
+"By obtaining detailed information about healthy lifestyle from the portal "
+"and taking early action against any warnings, user may <b>extend own Healthy "
+"Lifetime</b>."
+msgstr ""
+
+#: .\templates\home\index.html:245
+msgid ""
+"Your data is stored using the latest banking-grade encryption technologies "
+"and is available only to you and your chosen doctor. We are GDPR compliant "
+"and do not have access to any personal data."
+msgstr ""
+
+#: .\templates\home\index.html:253
+msgid "Treat own patients anywhere, anytime."
+msgstr ""
+
+#: .\templates\home\index.html:259
+msgid "Remote health care"
+msgstr ""
+
+#: .\templates\home\index.html:263
+msgid ""
+"Remote access to electronic personal health records helps doctors to "
+"<b>accelerate diagnosis and treatment, provide</b> highest levels of "
+"<b>remote health care,</b> reduce inefficiencies, administrative costs and "
+"ultimately offering better, faster care."
+msgstr ""
+
+#: .\templates\home\index.html:273
+msgid "Effectiveness"
+msgstr ""
+
+#: .\templates\home\index.html:278
+msgid ""
+"Increase the number of patients who can be treated during a given period of "
+"time and effectiveness of treatment."
+msgstr ""
+
+#: .\templates\home\index.html:289
+msgid "New streams of revenue"
+msgstr ""
+
+#: .\templates\home\index.html:293
+msgid ""
+"Provide <b>new</b> streams of <b>revenue in the form of virtual "
+"consultations</b> and assessments."
+msgstr ""
+
+#: .\templates\product\single_product.html:48
+msgid "Description"
+msgstr ""
+
+#: .\templates\product\single_product.html:51
+msgid "Order Now"
+msgstr ""
+
+#: .\templates\product\single_product.html:118
+msgid "Send Quotation request"
+msgstr ""

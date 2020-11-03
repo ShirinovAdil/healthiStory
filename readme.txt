@@ -1,7 +1,10 @@
 Before running server there is need to configure database settings. If you already install mysqlclient just go to settings.py file
 and find DATABASES section and configure it, otherwise mysqlclient should be downloaded.
 To do this open terminal and type (for windows) pip install mysqlclient, (for linux) pip3 install mysqlclient
-For linux OS you can also install the package in the project ===>>>>> open terminal: pip3 install mysqlclient-2.0.1-cp38-cp38-linux_x86_64.whl
+In case command above does not work:
+    For Python 3.8:
+        For linux OS you can also install the package in the project ===>>>>> open terminal: pip3 install mysqlclient-2.0.1-cp38-cp38-linux_x86_64.whl
+        For Windows OS you can also install the package in the project ===>>>>> open terminal: pip install mysqlclient-1.4.6-cp38-cp38-win_amd64.whl
 Once everything is fine with DB the next step is to install python packages placed in 'requirements.txt'
 To do it type in terminal ====>>> pip install -r requirements.txt
 To run the server open terminal ====>>> py manage.py runserver

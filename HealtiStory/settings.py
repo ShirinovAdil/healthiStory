@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django_translation_flags',
     'ckeditor',
     'django_countries',
+    'widget_tweaks',
 
 
 

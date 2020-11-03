@@ -28,23 +28,14 @@
 
 
 
-        <h2 class="text-center">{% trans 'Registration' %}</h2>
-        {% if form.non_field_errors %}
-        <div class="alert alert-danger text-center" role="alert">
-            {% for error in form.non_field_errors %}
-            {{ error }}
-            {% endfor %}
-        </div>
-        {% endif %}
+        <h2>{% trans 'Registration' %}</h2>
         <div class="col-md-12 offset">
-            <form class="form-horizontal" role="form" method="post">
+            <form class="form-horizontal" method="post">
                             {% csrf_token %}
 
                 <div class="row mt-3">
                     <div class="form-group col-sm-4">
-                        <div class="col-sm-10">
                             {{ form.name|as_crispy_field }}
-                        </div>
                     </div>
                     <div class="form-group col-sm-4">
                         {{ form.surname|as_crispy_field }}
@@ -55,19 +46,17 @@
                 </div>
                 
                 <hr>
-                <div class="alert alert-info col-md-8 offset-md-2 text-center" role="alert">
-                    {% trans 'Please full fill at least one below(E-mail, ID, Phone)' %}
-                </div>
                 <div class="row">
+                    <div class="form-group col-sm-4">
+                        {{ form.passport|as_crispy_field }}
+                    </div>
                     <div class="form-group col-sm-4">
                         {{ form.email|as_crispy_field }}
                     </div>
                     <div class="form-group col-sm-4">
                         {{ form.phone|as_crispy_field }}
                     </div>
-                    <div class="form-group col-sm-4">
-                        {{ form.passport|as_crispy_field }}
-                    </div>
+
                 </div>
                    <hr>
                 
@@ -114,11 +103,20 @@
                         {{ form.physical_activity|as_crispy_field }}
                     </div>
                 </div>
+                <div class="row" id="turkey_based">
+                    <div class="form-group col-sm-4">
+                        {{ form.district|as_crispy_field }}
+                    </div>
+                    <div class="form-group col-sm-4">
+                       {{ form.town|as_crispy_field }}
+                    </div>
+
+                </div>
 
 
                 <hr>
-                <div class="alert alert-info col-md-8 offset-md-2 text-center" role="alert">
-                    {% trans 'Questions relating to the assessment of cardiovascular disease risk' %}
+                <div class="alert alert-info" role="alert">
+                   <h4> {% trans ' Questions relating to the assessment of cardiovascular disease risk' %}</h4>
                 </div>
 
                 <div class="row">
@@ -139,8 +137,8 @@
                     </div>
                 </div>
 
-                <div class="row survey">
-                    <div class="col-md-6 col-sm-12 offset-md-3 mb-3">
+                <div class="row survey container">
+                    <div class="col-md-12 col-sm-12 offset-md-3 mb-3">
                         <hr class="survey-separator">
                         <div class="row">
                             {{ form.angina_or_heart_attack|as_crispy_field }}

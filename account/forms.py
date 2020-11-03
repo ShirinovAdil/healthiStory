@@ -7,7 +7,8 @@ class UserLoginForm(AuthenticationForm):
     username = forms.CharField(widget=forms.TextInput(
         attrs={'placeholder': 'Citizen ID'}))
     password = forms.CharField(widget=forms.PasswordInput(
-        attrs={'placeholder': 'Password'}))
+        attrs={'placeholder': 'Password',
+               'id': 'passwordlogin'}))
 
 
 class UserRegistrationForm(forms.ModelForm):
@@ -30,8 +31,10 @@ class UserRegistrationForm(forms.ModelForm):
             'password', 'language', 'gender', 'height', 'blood_group',
             'country', 'city', 'physical_activity', 'smoking', 'diabets',
             'ethnicity', 'angina_or_heart_attack', 'menopause', 'kidney_disease',
-            'atrial_fibrillation', 'pressure_treatment', 'rheumatoid_arthritis'
+            'atrial_fibrillation', 'pressure_treatment', 'rheumatoid_arthritis',
+            'district', 'town'
         ]
+
 
     def clean(self):
         cleaned_data = super(UserRegistrationForm, self).clean()

@@ -605,7 +605,7 @@ h2.active {
 
 
 
-#loginform input[type=text] {
+#loginform input[type=text], #passwordlogin {
   background-color: #f6f6f6;
   border: none;
   color: #0d0d0d;
@@ -764,4 +764,7 @@ new custom
   background-color: #f6f9fb;
   border-left: 2px solid #5b9bd1;
   margin-left: -2px;
+}
+.form-check{
+display: inline;
 }

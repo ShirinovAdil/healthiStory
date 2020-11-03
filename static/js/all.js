@@ -25,14 +25,14 @@ try{
 
 try{
     $(document).ready(function(){
-        if ($("#inputGender").val() == "female"){
+        if ($("#id_gender").val() == "F"){
             $("#female-only-survey").show();
         }else{
             $("#female-only-survey").hide();
         }
 
-        $("#inputGender").change(function(){
-            if ($("#inputGender").val() == "female"){
+        $("#id_gender").change(function(){
+            if ($("#id_gender").val() == "F"){
                 $("#female-only-survey").show();
             }else{
                 $("#female-only-survey").hide();
@@ -43,6 +43,28 @@ try{
 
     }catch(err){
         console.log("survey error");
+    }
+
+
+try{
+    $(document).ready(function(){
+        if ($("#id_country").val() == "TR"){
+            $("#turkey_based").show();
+        }else{
+            $("#turkey_based").hide();
+        }
+        $("#id_country").change(function(){
+            if ($("#id_country").val() == "TR"){
+                 $("#turkey_based").show();
+            }else{
+                $("#turkey_based").hide();
+            }
+        })
+
+    });
+
+    }catch(err){
+        console.log("Village/Town error");
     }
     
     
