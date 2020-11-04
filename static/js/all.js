@@ -51,13 +51,14 @@ try{
         if ($("#id_country").val() == "TR"){
             $("#turkey_based").show();
         }else{
-            $("#turkey_based").hide();
+            $("#turkey_based").hide().prop('required',false);
+            console.log($("#turkey_based"));
         }
         $("#id_country").change(function(){
             if ($("#id_country").val() == "TR"){
                  $("#turkey_based").show();
             }else{
-                $("#turkey_based").hide();
+                $("#turkey_based").hide().prop('required',false);
             }
         })
 

@@ -18,6 +18,7 @@ class Product(models.Model):
     subtitle = models.CharField(max_length=250)
     description = RichTextField()
     img = models.CharField(max_length=250)
+    language = models.CharField(max_length=255, default='English')
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
 
     def __str__(self):

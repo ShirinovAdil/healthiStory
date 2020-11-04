@@ -1,4 +1,4 @@
-from .models import User
+from .models import User, Country
 from django import forms
 from django.contrib.auth.forms import AuthenticationForm
 
@@ -13,6 +13,7 @@ class UserLoginForm(AuthenticationForm):
 
 class UserRegistrationForm(forms.ModelForm):
     confirm_password = forms.CharField(widget=forms.PasswordInput())
+    country = forms.ModelChoiceField(queryset=Country.objects.all(), empty_label=None)
 
     class Meta:
         model = User
