@@ -1,4 +1,4 @@
-from .models import User, Country
+from .models import User, Country, City, District
 from django import forms
 from django.contrib.auth.forms import AuthenticationForm
 
@@ -14,6 +14,9 @@ class UserLoginForm(AuthenticationForm):
 class UserRegistrationForm(forms.ModelForm):
     confirm_password = forms.CharField(widget=forms.PasswordInput())
     country = forms.ModelChoiceField(queryset=Country.objects.all(), empty_label=None)
+    district = forms.ModelChoiceField(queryset=District.objects.all(), empty_label=None)
+    city = forms.ModelChoiceField(queryset=None, empty_label=None)
+    city2 = forms.CharField(max_length=255, label="City")
 
     class Meta:
         model = User
@@ -36,7 +39,6 @@ class UserRegistrationForm(forms.ModelForm):
             'district', 'town'
         ]
 
-
     def clean(self):
         cleaned_data = super(UserRegistrationForm, self).clean()
         password = cleaned_data.get("password")
@@ -57,7 +59,34 @@ class UserRegistrationForm(forms.ModelForm):
         # Save the provided password in hashed format
         user = super().save(commit=False)
         user.set_password(self.cleaned_data["password"])
+        if self.cleaned_data['country'] == 1:
+            user.city = self.cleaned_data["city"]
+        else:
+            user.city = self.cleaned_data["city2"]
+
         if commit:
             user.save()
         return user
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['city'].queryset = City.objects.none()
+        self.fields['district'].queryset = District.objects.none()
+
+        if 'country' in self.data:
+            try:
+                self.fields['city'].queryset = City.objects.filter(country=1)
+            except (ValueError, TypeError):
+                pass  # invalid input from the client; ignore and fallback to empty City queryset
+        elif self.instance.pk:
+            self.fields['city'].queryset = self.instance.country.city_set.order_by('name')
+
+        if 'district' in self.data:
+            try:
+                city_id = int(self.data.get('city_id'))
+                self.fields['district'].queryset = District.objects.filter(city=city_id)
+            except (ValueError, TypeError):
+                pass  # invalid input from the client; ignore and fallback to empty City queryset
+        elif self.instance.pk:
+            self.fields['district'].queryset = self.instance.city.district_set.order_by('name')
 
