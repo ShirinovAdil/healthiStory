@@ -1,10 +1,9 @@
-try {
-    var userBenefit = document.getElementById("user-benefit");
-    var userBenefitData = document.getElementById("user-benefit-data");
-    var docBenefit = document.getElementById("doc-benefit");
-    var docBenefitData = document.getElementById("doc-benefit-data");
-    var userMore = document.getElementById("user-more");
-    var docMore = document.getElementById("doc-more");
+if (document.getElementById("user-benefit-data")) {
+
+    let userBenefitData = document.getElementById("user-benefit-data");
+    let docBenefitData = document.getElementById("doc-benefit-data");
+    let userMore = document.getElementById("user-more");
+    let docMore = document.getElementById("doc-more");
 
     window.addEventListener("load", function (e) {
         userBenefitData.style.display = "block";
@@ -18,21 +17,19 @@ try {
         userBenefitData.style.display = "none";
         docBenefitData.style.display = "block";
     });
-} catch (err) {
-    console.log("hecne olmuyub")
 }
 
 
 try {
     $(document).ready(function () {
-        if ($("#id_gender").val() == "F") {
+        if ($("#id_gender").val() === "F") {
             $("#female-only-survey").show();
         } else {
             $("#female-only-survey").hide();
         }
 
         $("#id_gender").change(function () {
-            if ($("#id_gender").val() == "F") {
+            if ($("#id_gender").val() === "F") {
                 $("#female-only-survey").show();
             } else {
                 $("#female-only-survey").hide();
@@ -40,7 +37,6 @@ try {
         })
 
     });
-
 } catch (err) {
     console.log("survey error");
 }
@@ -49,7 +45,7 @@ try {
 try {
     let url = $("#personForm").attr("data-cities-url");
     $(document).ready(function () {
-        if ($("#id_country").val() == 1) {
+        if ($("#id_country").val() === "1") {
             $("#city2_country").css("display", "none");
             $("#turkey_based").show();
             $.ajax({
@@ -57,52 +53,59 @@ try {
                 success: function (data) {
                     $("#id_city").html(data);
                 }
+            }).done(function () {
+                let url = $("#personForm").attr("data-districts-url");
+                $.ajax({
+                    url: url,
+                    data: {
+                        'city': $("#id_city").val()
+                    },
+                    success: function (data) {
+                        $("#id_district").html(data);
+                    }
+                });
             });
-
         } else {
             $("#turkey_based").hide();
-            $("#city_country").css("display", "none").removeAttr('required');
+            $("#city_country").css("display", "none");
             $("#city2_country").css("display", "block");
         }
         $("#id_country").change(function () {
-            if ($("#id_country").val() == 1) {
+            if ($("#id_country").val() === "1") {
                 $("#turkey_based").show();
+                $("#city2_country").css("display", "none");
+                $("#city_country").show();
                 $.ajax({
                     url: url,
                     success: function (data) {
                         $("#id_city").html(data);
                     }
                 });
-                $("#city2_country").css("display", "none");
-                $("#city_country").show();
-
             } else {
                 $("#turkey_based").hide();
-                $("#city_country").css("display", "none").removeAttr('required');
+                $("#city_country").css("display", "none");
                 $("#city2_country").css("display", "block");
             }
         })
     });
 } catch (err) {
-    console.log("shh");
+    console.log(err);
 }
 
-try{
+try {
     $("#id_city").change(function () {
-      var url = $("#personForm").attr("data-districts-url");  // get the url of the `load_cities` view
-      var cityID = $(this).val();  // get the selected country ID from the HTML input
-
-      $.ajax({                       // initialize an AJAX request
-        url: url,                    // set the url of the request (= localhost:8000/hr/ajax/load-cities/)
-        data: {
-          'city': cityID       // add the country id to the GET parameters
-        },
-        success: function (data) {   // `data` is the return of the `load_cities` view function
-          $("#id_district").html(data);  // replace the contents of the city input with the data that came from the server
-        }
-      });
-
+        let url = $("#personForm").attr("data-districts-url");
+        let cityID = $("#id_city").val();
+        $.ajax({
+            url: url,
+            data: {
+                'city': cityID
+            },
+            success: function (data) {
+                $("#id_district").html(data);
+            }
+        });
     });
-}catch (err){
-    console.log("shh");
+} catch (err) {
+    console.log(err);
 }

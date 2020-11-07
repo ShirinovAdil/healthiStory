@@ -30,6 +30,14 @@
 
         <h2>{% trans 'Registration' %}</h2>
         <div class="col-md-12 offset">
+            {% if form.non_field_errors %}
+                <div class="non-field-errors">
+                    {% for err in form.non_field_errors %}
+                        <p class="alert alert-danger text-center">{{ err }}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
+
             <form class="form-horizontal" method="post" id="personForm"
                   data-cities-url="{% url 'ajax_load_cities' %}"
                   data-districts-url="{% url 'ajax_load_districts' %}"

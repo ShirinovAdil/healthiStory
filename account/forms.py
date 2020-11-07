@@ -14,9 +14,9 @@ class UserLoginForm(AuthenticationForm):
 class UserRegistrationForm(forms.ModelForm):
     confirm_password = forms.CharField(widget=forms.PasswordInput())
     country = forms.ModelChoiceField(queryset=Country.objects.all(), empty_label=None)
-    district = forms.ModelChoiceField(queryset=District.objects.all(), empty_label=None)
+    district = forms.ModelChoiceField(queryset=None, empty_label=None)
     city = forms.ModelChoiceField(queryset=None, empty_label=None)
-    city2 = forms.CharField(max_length=255, label="City")
+    city2 = forms.CharField(max_length=255, label="City*", required=False)
 
     class Meta:
         model = User
@@ -46,6 +46,23 @@ class UserRegistrationForm(forms.ModelForm):
         email = cleaned_data.get('email')
         phone = cleaned_data.get('phone')
         passport = cleaned_data.get('passport')
+        country = cleaned_data.get('country')
+        city = cleaned_data.get('city')
+        city2 = cleaned_data.get('city2')
+        district = cleaned_data.get('district')
+        town = cleaned_data.get('town')
+
+        if country == Country.objects.get(pk=1):
+            if not city:
+                raise forms.ValidationError("City is required")
+            elif not district:
+                raise forms.ValidationError("District is required")
+            elif not town:
+                raise forms.ValidationError("Town is required")
+        else:
+            if not city2:
+                raise forms.ValidationError("City is required")
+
         if password != confirm_password:
             raise forms.ValidationError(
                 "Your passwords do not match"
@@ -59,10 +76,13 @@ class UserRegistrationForm(forms.ModelForm):
         # Save the provided password in hashed format
         user = super().save(commit=False)
         user.set_password(self.cleaned_data["password"])
-        if self.cleaned_data['country'] == 1:
+
+        if self.cleaned_data['country'] == Country.objects.get(pk=1):
             user.city = self.cleaned_data["city"]
         else:
             user.city = self.cleaned_data["city2"]
+            user.district = None
+            user.town = None
 
         if commit:
             user.save()
@@ -81,9 +101,9 @@ class UserRegistrationForm(forms.ModelForm):
         elif self.instance.pk:
             self.fields['city'].queryset = self.instance.country.city_set.order_by('name')
 
-        if 'district' in self.data:
+        if 'city' in self.data:
             try:
-                city_id = int(self.data.get('city_id'))
+                city_id = int(self.data.get('city'))
                 self.fields['district'].queryset = District.objects.filter(city=city_id)
             except (ValueError, TypeError):
                 pass  # invalid input from the client; ignore and fallback to empty City queryset
