@@ -1,47 +1,3 @@
-if (document.getElementById("user-benefit-data")) {
-
-    let userBenefitData = document.getElementById("user-benefit-data");
-    let docBenefitData = document.getElementById("doc-benefit-data");
-    let userMore = document.getElementById("user-more");
-    let docMore = document.getElementById("doc-more");
-
-    window.addEventListener("load", function (e) {
-        userBenefitData.style.display = "block";
-        docBenefitData.style.display = "none";
-    });
-    userMore.addEventListener("click", function (e) {
-        docBenefitData.style.display = "none";
-        userBenefitData.style.display = "block";
-    });
-    docMore.addEventListener("click", function (e) {
-        userBenefitData.style.display = "none";
-        docBenefitData.style.display = "block";
-    });
-}
-
-
-try {
-    $(document).ready(function () {
-        if ($("#id_gender").val() === "F") {
-            $("#female-only-survey").show();
-        } else {
-            $("#female-only-survey").hide();
-        }
-
-        $("#id_gender").change(function () {
-            if ($("#id_gender").val() === "F") {
-                $("#female-only-survey").show();
-            } else {
-                $("#female-only-survey").hide();
-            }
-        })
-
-    });
-} catch (err) {
-    console.log("survey error");
-}
-
-
 try {
     let url = $("#personForm").attr("data-cities-url");
     $(document).ready(function () {
@@ -62,6 +18,17 @@ try {
                     },
                     success: function (data) {
                         $("#id_district").html(data);
+                        let url = $("#personForm").attr("data-towns-url");
+                        $.ajax({
+                            url: url,
+                            data: {
+                                'district': $("#id_district").val()
+                            },
+                            success: function (data) {
+                                $("#id_town").html(data);
+                                console.log(data)
+                            }
+                        });
                     }
                 });
             });
@@ -103,6 +70,19 @@ try {
             },
             success: function (data) {
                 $("#id_district").html(data);
+
+                let url = $("#personForm").attr("data-towns-url");
+                let districtID = $("#id_district").val();
+                $.ajax({
+                    url: url,
+                    data: {
+                        'district': districtID
+                    },
+                    success: function (data) {
+                        $("#id_town").html(data);
+                    }
+                });
+
             }
         });
     });

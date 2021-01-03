@@ -1,10 +1,12 @@
  {% extends 'global/base.html' %}
-{% load i18n %}
+{% load i18n static %}
 
 {% block title %}
     HealthiStory
 {% endblock title %}
-
+{% block script %}
+    <script src="{% static 'js/home.js' %}"></script>
+{% endblock script %}
 
 {% block content%}
 
@@ -208,7 +210,7 @@
                             </div>
                             <div class="text">
                                 <span>
-                                    {% trans "By accessing the Portal, the user may <b>graphically observe</b> the latest and previous <b>health data trends, get recommendations</b> on health parameters to be considered and get notification to visit a doctor for critical values." %}</span>
+                                    {% trans "By accessing the Portal, the user may graphically observe the latest and previous health data trends, get recommendations on health parameters to be considered and get notification to visit a doctor for critical values." %}</span>
                             </div>
                         </div>
                     </div>
@@ -220,7 +222,7 @@
                             </div>
 
                             <div class="text">
-                                <span>{% trans "User, who gets a treatment within the framework of the system parameters, can perform regular measurements and graphical <b>monitor the impact of the treatment</b>." %}</span>
+                                <span>{% trans "User, who gets a treatment within the framework of the system parameters, can perform regular measurements and graphical monitor the impact of the treatment." %}</span>
                             </div>
                         </div>
                     </div>
@@ -232,7 +234,7 @@
                             </div>
 
                             <div class="text">
-                                <span>{% trans "By obtaining detailed information about healthy lifestyle from the portal and taking early action against any warnings, user may <b>extend own Healthy Lifetime</b>." %}</span>
+                                <span>{% trans "By obtaining detailed information about healthy lifestyle from the portal and taking early action against any warnings, user may extend own Healthy Lifetime." %}</span>
                             </div>
                         </div>
 
@@ -255,7 +257,7 @@
                             </div>
 
                             <div class="text">
-                                <span>{% trans "Remote access to electronic personal health records helps doctors to <b>accelerate diagnosis and treatment, provide</b> highest levels of <b>remote health care,</b> reduce inefficiencies, administrative costs and ultimately offering better, faster care." %}
+                                <span>{% trans "Remote access to electronic personal health records helps doctors to accelerate diagnosis and treatment, provide highest levels of remote health care, reduce inefficiencies, administrative costs and ultimately offering better, faster care." %}
                                 </span>
                             </div>
                         </div>
@@ -285,7 +287,7 @@
                             </div>
 
                             <div class="text">
-                                <span>{% trans "Provide <b>new</b> streams of <b>revenue in the form of virtual consultations</b> and assessments." %}</span>
+                                <span>{% trans "Provide new streams of revenue in the form of virtual consultations and assessments." %}</span>
                             </div>
                         </div>
                     </div>

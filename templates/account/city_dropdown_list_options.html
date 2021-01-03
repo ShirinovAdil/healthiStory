@@ -1,10 +1,22 @@
-
+{#{% if request.user.is_authenticated %}#}
+{#<option value="">{{ request.user.city.pk }} {{ request.user.city }}</option>#}
+{#{% endif %}#}
 {% for city in cities %}
     <option value="{{ city.pk }}">{{ city.name }}</option>
 {% endfor %}
 
 
+{#{% if request.user.is_authenticated %}#}
+{#<option value="{{ request.user.district.pk }}">{{ request.user.district }}</option>#}
+{#{% endif %}#}
 {% for district in districts %}
     <option value="{{ district.pk }}">{{ district.name }}</option>
 {% endfor %}
 
+
+{#{% if request.user.is_authenticated %}#}
+{#<option value="{{ request.user.town.pk }}">{{ request.user.town }}</option>#}
+{#{% endif %}#}
+{% for town in towns %}
+    <option value="{{ town.pk }}">{{ town.name }}</option>
+{% endfor %}

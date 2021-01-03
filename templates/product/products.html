@@ -19,7 +19,7 @@
             <div class="col-md-2 store-menu">
                 <ul class="category-nav">
                     {% for category in categories %}
-                    <li><a href="{% url 'categorized' category %}"><i class="fa fa-angle-right"></i>{{ category }} </a></li>
+                    <li><a href="{% url 'categorized' category.category_code %}"><i class="fa fa-angle-right"></i>{{ category }} </a></li>
                     {% endfor %}
                 </ul>
             </div>
@@ -27,21 +27,21 @@
             <div class="col-md-10">
                 <div class="row">
                     {% for product in products %}
-                    
+
                     <div class="col-md-4 col-sm-5 product mt-1">
                         <div class="card product-card card-block">
-                            <a href="{% url 'single_product' product.pk %}"><img src="{% get_static_prefix %}{{product.img}} " alt="Photo of product"></a>
+                            <a href="{% url 'single_product' product.product_code %}"><img src="{% get_static_prefix %}{{product.img}} " alt="Photo of product"></a>
                             <h5 class="product-card-title mt-3 mb-3 text-center">{{ product.title }}</h5>
                         </div>
                     </div>
-                    {% endfor %}        
-                    
+                    {% endfor %}
+
                 </div>
             </div>
-            
+
         </div>
     </div><br>
-        
+
     <!-- endblock PRODUCTS-->
 
     {% endblock content%}

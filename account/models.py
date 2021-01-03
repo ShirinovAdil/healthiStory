@@ -1,14 +1,58 @@
 from __future__ import unicode_literals
-
 from django.db import models
 from django.core.mail import send_mail
 from django.contrib.auth.models import PermissionsMixin
 from django.contrib.auth.base_user import AbstractBaseUser
-from django_countries.fields import CountryField
-
 from django.utils.translation import ugettext_lazy as _
 from .managers import UserManager
 from . import choices as c
+from django.utils import translation
+
+
+class Country(models.Model):
+    name_tr = models.CharField(max_length=255)
+    name_en = models.CharField(max_length=255, null=True)
+    name_az = models.CharField(max_length=255, null=True)
+    name_ru = models.CharField(max_length=255, null=True)
+
+    def __str__(self):
+        lang = translation.get_language()
+        if lang == 'az':
+            return self.name_az
+        elif lang == 'ru':
+            return self.name_ru
+        elif lang == 'tr':
+            return self.name_tr
+        else:
+            return self.name_en
+
+
+class City(models.Model):
+    code = models.IntegerField(verbose_name=_('Code'), null=True)
+    name = models.CharField(verbose_name=_('City'), max_length=255)
+    phone_code = models.IntegerField(verbose_name=_('Phone code'))
+    country = models.ForeignKey(Country, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.name
+
+
+class District(models.Model):
+    name = models.CharField(verbose_name=_('District'), max_length=255)
+    city = models.ForeignKey(City, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.name
+
+
+class Town(models.Model):
+    hood = models.CharField(verbose_name=_('Neighborhood'), max_length=255)
+    name = models.CharField(verbose_name=_('Town/Village'), max_length=255)
+    postal_code = models.CharField(verbose_name=_('Postal code'), max_length=255)
+    district = models.ForeignKey(District, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.name
 
 
 class User(AbstractBaseUser, PermissionsMixin):
@@ -24,11 +68,11 @@ class User(AbstractBaseUser, PermissionsMixin):
     gender = models.CharField(choices=c.GENDER_CHOICES, default=c.FEMALE_GENDER, max_length=50, null=True, verbose_name=_("Gender"))
     height = models.IntegerField(null=True, verbose_name=_("Height(cm)"))
     blood_group = models.CharField(choices=c.BLOOD_GROUP_CHOICES, default=c.A_PLUS, max_length=50, blank=True, null=True, verbose_name=_("Blood Group"))
-    #country = CountryField(blank=False, null=True, verbose_name=_("Country"))
-    country = models.CharField(max_length=255, verbose_name=_('Country'), null=True)
-    city = models.CharField(_('City*'), max_length=255, blank=True, null=True)
-    district = models.CharField(_('District*'), max_length=255, blank=True, null=True)
-    town = models.CharField(_('Town/Village*'), max_length=255, blank=True, null=True)
+    country = models.ForeignKey(Country, on_delete=models.SET_NULL, blank=True, null=True, verbose_name=_('Country'))
+    city = models.ForeignKey(City, on_delete=models.SET_NULL, blank=True, null=True)
+    city2 = models.CharField(_('City*'), max_length=50, blank=True, null=True)
+    district = models.ForeignKey(District, on_delete=models.SET_NULL, blank=True, null=True, verbose_name=_('District'))
+    town = models.ForeignKey(Town, on_delete=models.SET_NULL, blank=True, null=True, verbose_name=_('Town/Village'))
     physical_activity = models.CharField(_('Physical Activity'), choices=c.PHYSICAL_ACTIVITY_CHOICES, default=c.ACTIVITY_LOW, max_length=50, null=True)
     smoking = models.CharField(_('Smoking'), choices=c.SMOKING_CHOICES, default=c.SMOKER_NON, max_length=50, null=True, blank=True)
     diabets = models.CharField(_('Diabets'), choices=c.DIABETS_CHOICES, default=c.DIABET_TYPE_NONE, max_length=50, null=True, blank=True)
@@ -75,42 +119,6 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     def __str__(self):
         return f"{self.name} {self.surname} passport ID: {self.passport}"
-
-
-class Country(models.Model):
-    name = models.CharField(max_length=255)
-
-    def __str__(self):
-        return self.name
-
-
-class City(models.Model):
-    code = models.IntegerField(verbose_name=_('Code'), null=True)
-    name = models.CharField(verbose_name=_('City'), max_length=255)
-    phone_code = models.IntegerField(verbose_name=_('Phone code'))
-    country = models.ForeignKey(Country, on_delete=models.CASCADE)
-
-    def __str__(self):
-        return self.name
-
-
-class District(models.Model):
-    name = models.CharField(verbose_name=_('District'), max_length=255)
-    city = models.ForeignKey(City, on_delete=models.CASCADE)
-
-    def __str__(self):
-        return self.name
-
-
-class Town(models.Model):
-    hood = models.CharField(verbose_name=_('Neighborhood'), max_length=255)
-    name = models.CharField(verbose_name=_('Town/Village'), max_length=255)
-    postal_code = models.CharField(verbose_name=_('Postal code'), max_length=255)
-    district = models.ForeignKey(District, on_delete=models.CASCADE)
-
-    def __str__(self):
-        return self.name
-
 
 
 

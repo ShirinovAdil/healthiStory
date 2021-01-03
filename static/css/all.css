@@ -163,10 +163,6 @@ ul {
     line-height: 70px;
 }
 
-.top_menu {
-    border-bottom: 1px solid #e8edf1;
-}
-
 .auth.nav-item{
     display: flex;
     align-items: center;
@@ -196,61 +192,61 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 #blue:hover{
-  background: rgb(146, 185, 243);
-}
-#blue:hover #bluei{
-  color: rgb(146, 185, 243);
-}
-#green:hover{
-  background: rgb(156, 238, 148);
-
-}
-#green:hover #greeni{
-  color: rgb(156, 238, 148);
-
-}
-#orange:hover{
-  background: rgb(241, 209, 150);
-
-}
-#orange:hover #orangei{
-  color: rgb(241, 209, 150);
-
-}
-#purple:hover{
-  background: rgb(243, 155, 231);
-  
-}
-#purple:hover #purplei{
-  color: rgb(243, 155, 231);
-  
-}
-#blue{
   background: rgb(201, 208, 248);
 }
-#green{
+#blue:hover #bluei{
+  color: rgb(201, 208, 248);
+}
+#green:hover{
   background: rgb(209, 245, 205);
 
 }
-#orange{
+#green:hover #greeni{
+  color: rgb(209, 245, 205);
+
+}
+#orange:hover{
   background: rgb(245, 233, 204);
 
 }
-#purple{
+#orange:hover #orangei{
+  color: rgb(245, 233, 204);
+
+}
+#purple:hover{
   background: rgb(245, 212, 234);
+  
+}
+#purple:hover #purplei{
+  color: rgb(245, 212, 234);
+  
+}
+#blue{
+  background: rgb(146, 185, 243);
+}
+#green{
+  background: rgb(156, 238, 148);
+
+}
+#orange{
+  background: rgb(241, 209, 150);
+
+}
+#purple{
+  background: rgb(243, 155, 231);
 
 }
 #purplei{
-  color: rgb(245, 212, 234);
+  color: rgb(243, 155, 231);
 }
 #bluei{
-  color: rgb(210, 216, 248);
+  color: rgb(146, 185, 243);
 }
 #greeni{
-  color: rgb(214, 243, 211);
+  color: rgb(156, 238, 148);
 }
 #orangei{
-  color: rgb(245, 235, 212);
+  color: rgb(241, 209, 150);
 }
 
 .our-missions .single-missions {
@@ -529,7 +525,7 @@ span{
   border-radius:0;
   padding:60px 10px;
   margin:30px 0px;
-  height:400px
+  height:80%;
 }
 .text{
   margin:20px 0px;
@@ -764,4 +760,8 @@ new custom
   background-color: #f6f9fb;
   border-left: 2px solid #5b9bd1;
   margin-left: -2px;
+}
+.vl{
+  border-left: 6px solid #00b3e3;
+  height: 21em;
 }

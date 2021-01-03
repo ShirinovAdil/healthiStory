@@ -3,7 +3,10 @@
 {% load static %}
 {% load i18n %}
 {% load crispy_forms_tags %}
-
+{% block script %}
+    <script src="{% static 'js/registration.js' %}"></script>
+    <script src="{% static 'js/survey.js' %}"></script>
+{% endblock script %}
 
 {% block title %}
     Register
@@ -17,31 +20,34 @@
 
     <div class="container">
 
-        {% if messages %}
-            <ul>
-                {% for message in messages %}
-                    <li>{{ message | safe }}</li>
-                {% endfor %}
-            </ul>
-        {% endif %}
+<!--        {% if messages %}-->
+<!--            <ul>-->
+<!--                {% for message in messages %}-->
+<!--                    <li>{{ message | safe }}</li>-->
+<!--                {% endfor %}-->
+<!--            </ul>-->
+<!--        {% endif %}-->
 
 
 
 
-        <h2>{% trans 'Registration' %}</h2>
+
         <div class="col-md-12 offset">
-            {% if form.non_field_errors %}
-                <div class="non-field-errors">
-                    {% for err in form.non_field_errors %}
-                        <p class="alert alert-danger text-center">{{ err }}</p>
-                    {% endfor %}
-                </div>
-            {% endif %}
+<!--            {% if form.non_field_errors %}-->
+<!--                <div class="non-field-errors">-->
+<!--                    {% for err in form.non_field_errors %}-->
+<!--                        <p class="alert alert-danger text-center">{{ err }}</p>-->
+<!--                    {% endfor %}-->
+<!--                </div>-->
+<!--            {% endif %}-->
 
             <form class="form-horizontal" method="post" id="personForm"
                   data-cities-url="{% url 'ajax_load_cities' %}"
                   data-districts-url="{% url 'ajax_load_districts' %}"
+                  data-towns-url="{% url 'ajax_load_towns' %}"
                   novalidate>
+                  <h2>{% trans 'Registration' %}</h2>
+
                 {% csrf_token %}
 
                 <div class="row mt-3">
@@ -132,7 +138,7 @@
 
                 <hr>
                 <div class="alert alert-info" role="alert">
-                    <h4> {% trans ' Questions relating to the assessment of cardiovascular disease risk' %}</h4>
+                    <h4> {% trans 'Questions relating to the assessment of cardiovascular disease risk' %}</h4>
                 </div>
 
                 <div class="row">
@@ -153,41 +159,26 @@
                 </div>
 
                 <!-- YES NO -->
-                <div class="row survey container">
-                    <div class="col-md-12 col-sm-12 mb-3">
-                        <hr class="survey-separator">
-                        <div class="row offset-md-2">
-                            <div class="col-md col-sm-12">{{ form.angina_or_heart_attack|as_crispy_field }}</div>
-                            <div class="col-md col-sm-12">{{ form.kidney_disease|as_crispy_field }}</div>
+                    <div class="row">
+                        <div class="col-md col-sm-12">
+                            <div>{{ form.angina_or_heart_attack|as_crispy_field }}</div>
+                            <hr class="survey-separator">
+                            <div>{{ form.pressure_treatment|as_crispy_field }}</div>
+                            <hr class="survey-separator">
+                            <div>{{ form.rheumatoid_arthritis|as_crispy_field }}</div>
+                        </div>
+                        <div class="vl"></div>
+                        <div class="col-md col-sm-12">
+                            <div>{{ form.kidney_disease|as_crispy_field }}</div>
+                            <hr class="survey-separator">
+                            <div>{{ form.atrial_fibrillation|as_crispy_field }}</div>
+                            <hr class="survey-separator">
+                            <div id="female-only-survey">{{ form.menopause|as_crispy_field }}</div>
                         </div>
                     </div>
-
-
-                    <div class="col-md-12 col-sm-12 mb-3">
-                        <hr class="survey-separator">
-                        <div class="row offset-md-2">
-                            <div class="col-md col-sm-12">{{ form.pressure_treatment|as_crispy_field }}</div>
-                            <div class="col-md col-sm-12">{{ form.atrial_fibrillation|as_crispy_field }}</div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-md-12 col-sm-12 mb-3">
-                        <hr class="survey-separator">
-                        <div class="row offset-md-2">
-                            <div class="col-md col-sm-12">{{ form.rheumatoid_arthritis|as_crispy_field }}</div>
-                            <div class="col-md col-sm-12"
-                                 id="female-only-survey">{{ form.menopause|as_crispy_field }}</div>
-                        </div>
-                        <hr class="survey-separator">
-                    </div>
-
-                </div>
 
                 <div class="form-group">
-                    <div class="col-sm-9 col-sm-offset-3">
-                        <small>*{% trans 'Required fields' %}</small>
-                    </div>
+                    <small>*{% trans 'Required fields' %}</small>
                 </div>
                 <button type="submit" class="btn btn-primary btn-block">{% trans 'Register' %}</button>
             </form>

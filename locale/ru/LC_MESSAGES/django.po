@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-02 22:57+0400\n"
+"POT-Creation-Date: 2021-01-02 10:17+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,41 +20,58 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: .\account\choices.py:4
+#: .\account\choices.py:4 .\env\Lib\site-packages\django\forms\widgets.py:710
 msgid "Yes"
-msgstr ""
+msgstr "Да"
 
-#: .\account\choices.py:4
+#: .\account\choices.py:4 .\env\Lib\site-packages\django\forms\widgets.py:711
 msgid "No"
-msgstr ""
+msgstr "Нет"
 
-#: .\account\choices.py:22
+#: .\account\choices.py:12 .\env\Lib\site-packages\tests\settings.py:44
+#: .\product\choices.py:7
+msgid "English"
+msgstr "Английский"
+
+#: .\account\choices.py:13 .\product\choices.py:8
+msgid "Russian"
+msgstr "Русский"
+
+#: .\account\choices.py:14 .\product\choices.py:9
+msgid "Turkish"
+msgstr "Турецкий"
+
+#: .\account\choices.py:15 .\product\choices.py:10
+msgid "Azerbaijan"
+msgstr "Азербайджанский"
+
+#: .\account\choices.py:22 .\templates\account\account.html:96
 msgid "Male"
-msgstr ""
+msgstr "Мужской"
 
-#: .\account\choices.py:23
+#: .\account\choices.py:23 .\templates\account\account.html:98
 msgid "Female"
-msgstr ""
+msgstr "Женский"
 
 #: .\account\choices.py:46
 msgid "Low"
-msgstr ""
+msgstr "Низкий"
 
 #: .\account\choices.py:47
 msgid "Medium"
-msgstr ""
+msgstr "Средняя"
 
 #: .\account\choices.py:48
 msgid "High"
-msgstr ""
+msgstr "Высоко"
 
 #: .\account\choices.py:55
 msgid "Non-smoker"
-msgstr ""
+msgstr "Некурящий"
 
 #: .\account\choices.py:56
 msgid "Ex-smoker"
-msgstr ""
+msgstr "Экс-курящий"
 
 #: .\account\choices.py:57
 msgid "Light-smoker"
@@ -70,315 +87,1847 @@ msgstr ""
 
 #: .\account\choices.py:63
 msgid "Light smoker (less than 10)"
-msgstr ""
+msgstr "Мало курящий (менее 10)"
 
 #: .\account\choices.py:64
 msgid "Moderate smoker (10 to 19)"
-msgstr ""
+msgstr "Умеренно курящий(между 10-19)"
 
 #: .\account\choices.py:65
 msgid "Heavy smoker (20 or over)"
-msgstr ""
+msgstr "Заядлый курящий (20 или выше)"
 
 #: .\account\choices.py:68
 msgid "None"
-msgstr ""
+msgstr "Никакой"
 
 #: .\account\choices.py:69
 msgid "Type 1"
-msgstr ""
+msgstr "Тип 1"
 
 #: .\account\choices.py:70
 msgid "Type 2"
+msgstr "Тип 2"
+
+#: .\account\choices.py:77
+msgid "White"
 msgstr ""
 
-#: .\account\models.py:16
-msgid "Name"
+#: .\account\choices.py:78
+msgid "Indian"
+msgstr "Индус"
+
+#: .\account\choices.py:79
+msgid "Pakistani"
+msgstr "Пакистанец"
+
+#: .\account\choices.py:80
+msgid "Bangladeshi"
+msgstr "Бангладеш"
+
+#: .\account\choices.py:81
+msgid "Asian"
 msgstr ""
 
-#: .\account\models.py:17
-msgid "Surname"
+#: .\account\choices.py:82
+msgid "Caribbean"
 msgstr ""
 
-#: .\account\models.py:18
-msgid "Birthdate"
+#: .\account\choices.py:83
+msgid "African"
 msgstr ""
 
-#: .\account\models.py:19
-msgid "Email address"
+#: .\account\choices.py:84
+msgid "Chinese"
 msgstr ""
 
-#: .\account\models.py:20
-msgid "Phone"
+#: .\account\choices.py:85
+msgid "Others"
 msgstr ""
 
-#: .\account\models.py:21
-msgid "User ID(Citizen ID or E-mail or Mobile number)"
+#: .\account\choices.py:87
+msgid "White or not stated"
+msgstr "Белый или не указано"
+
+#: .\account\choices.py:91
+msgid "Other Asian"
+msgstr "Азиат (Другой)"
+
+#: .\account\choices.py:92
+msgid "Black Caribbean"
+msgstr "Черный (Карибский)"
+
+#: .\account\choices.py:93
+msgid "Black African"
+msgstr "Черный (Африка)"
+
+#: .\account\forms.py:9 .\templates\account\account.html:84
+msgid "User ID"
+msgstr "ID Пользователя"
+
+#: .\account\forms.py:11
+msgid "Password"
+msgstr "пароль"
+
+#: .\account\forms.py:16 .\account\forms.py:116 .\account\models.py:63
+msgid "Country"
+msgstr "Страна"
+
+#: .\account\forms.py:17 .\account\forms.py:117 .\account\models.py:32
+#: .\account\models.py:66
+msgid "District"
+msgstr "Район"
+
+#: .\account\forms.py:18 .\account\forms.py:118 .\account\models.py:41
+#: .\account\models.py:67
+msgid "Town/Village"
+msgstr "Город/Деревня"
+
+#: .\account\forms.py:19 .\account\forms.py:119 .\account\models.py:23
+msgid "City"
+msgstr "Город"
+
+#: .\account\forms.py:115
+msgid "Confirm Password"
+msgstr "Подтвердить Пароль"
+
+#: .\account\forms.py:155 .\account\forms.py:162
+msgid "City is required"
+msgstr ""
+
+#: .\account\forms.py:157
+msgid "District is required"
+msgstr ""
+
+#: .\account\forms.py:159
+msgid "Town is required"
+msgstr ""
+
+#: .\account\forms.py:166
+msgid "Your passwords do not match"
+msgstr ""
+
+#: .\account\forms.py:171
+msgid "Your passwords must be at least 6 characters"
+msgstr ""
+
+#: .\account\forms.py:175
+msgid ""
+"You have to enter one of EMAIL, PHONE or Citizen ID into the User ID field"
 msgstr ""
 
 #: .\account\models.py:22
-msgid "Language"
-msgstr ""
-
-#: .\account\models.py:23
-msgid "Gender"
-msgstr ""
+msgid "Code"
+msgstr "Код"
 
 #: .\account\models.py:24
-msgid "Height"
+msgid "Phone code"
 msgstr ""
 
-#: .\account\models.py:25
+#: .\account\models.py:40
+msgid "Neighborhood"
+msgstr ""
+
+#: .\account\models.py:42
+msgid "Postal code"
+msgstr "Почтовый Код"
+
+#: .\account\models.py:51
+msgid "Name"
+msgstr "Имя"
+
+#: .\account\models.py:52
+msgid "Surname"
+msgstr "Фамилия"
+
+#: .\account\models.py:53
+msgid "Birthdate"
+msgstr "Дата рождения"
+
+#: .\account\models.py:54
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1589
+msgid "Email address"
+msgstr "Адрес электронной почты"
+
+#: .\account\models.py:55 .\product\forms.py:9 .\product\forms.py:33
+#: .\templates\account\account.html:112
+msgid "Phone"
+msgstr "Телефон"
+
+#: .\account\models.py:56
+msgid "User ID(Citizen ID or E-mail or Mobile number)"
+msgstr ""
+"ID пользователя (Номер удостоверения личности или Адрес электронной почты "
+"или номер мобильного телефона)"
+
+#: .\account\models.py:57
+msgid "Card number"
+msgstr "Номер карты"
+
+#: .\account\models.py:58
+msgid "Language"
+msgstr "Язык"
+
+#: .\account\models.py:59 .\templates\account\account.html:92
+msgid "Gender"
+msgstr "Пол"
+
+#: .\account\models.py:60
+msgid "Height(cm)"
+msgstr "Рост (см)"
+
+#: .\account\models.py:61
 msgid "Blood Group"
-msgstr ""
+msgstr "Группа крови"
 
-#: .\account\models.py:26
-msgid "Country"
-msgstr ""
+#: .\account\models.py:65
+msgid "City*"
+msgstr "Город*"
 
-#: .\account\models.py:27
-msgid "City"
-msgstr ""
-
-#: .\account\models.py:28
-msgid "District"
-msgstr ""
-
-#: .\account\models.py:29
-msgid "Town/Village"
-msgstr ""
-
-#: .\account\models.py:30
+#: .\account\models.py:68
 msgid "Physical Activity"
-msgstr ""
+msgstr "Физическая активность"
 
-#: .\account\models.py:31
+#: .\account\models.py:69
 msgid "Smoking"
-msgstr ""
+msgstr "Курение"
 
-#: .\account\models.py:32
+#: .\account\models.py:70
 msgid "Diabets"
-msgstr ""
+msgstr "Диабет"
 
-#: .\account\models.py:33
+#: .\account\models.py:71
 msgid "Ethnicity"
-msgstr ""
+msgstr "Этническая принадлежность"
 
-#: .\account\models.py:34
+#: .\account\models.py:72
 msgid "ANGINA OR HEART ATTACK IN A 1ST DEGREE RELATIVE &lt;60?"
-msgstr ""
+msgstr "У ПЕРВОСТЕПЕННЫХ РОДСТВЕННИКОВ ДО 60 ЛЕТ НАЛИЧИЕ ИНФАРКТА"
 
-#: .\account\models.py:35
+#: .\account\models.py:73
 msgid "Menopause"
-msgstr ""
+msgstr "ПЕРИОД МЕНОПАУЗЫ "
 
-#: .\account\models.py:36
+#: .\account\models.py:74
 msgid "Kidney Disease"
-msgstr ""
+msgstr "ХРОНИЧЕСКОЕ ЗАБОЛЕВАНИЕ ПОЧЕК "
 
-#: .\account\models.py:37
+#: .\account\models.py:75
 msgid "Arterial Fibrillation"
-msgstr ""
+msgstr "АРТЕРИАЛЬНАЯ ФИБРИЛЛЯЦИЯ "
 
-#: .\account\models.py:38
+#: .\account\models.py:76
 msgid "DO YOU GETTING PRESSURE TREATMENT?"
-msgstr ""
+msgstr "ЛЕЧИТЕСЬ ЛИ ОТ ГИПЕРТОНИИ?"
 
-#: .\account\models.py:39
+#: .\account\models.py:77
 msgid "Rheumatoid Arthritis"
-msgstr ""
+msgstr "РЕВМАТОИДНЫЙ АРТРИТ"
 
-#: .\account\models.py:41
+#: .\account\models.py:79
 msgid "staff status"
 msgstr ""
 
-#: .\account\models.py:43
+#: .\account\models.py:81
 msgid "Designates whether the user can log into this admin site."
 msgstr ""
 
-#: .\account\models.py:52
+#: .\account\models.py:90
 msgid "user"
 msgstr ""
 
-#: .\account\models.py:53
+#: .\account\models.py:91
 msgid "users"
 msgstr ""
 
-#: .\product\views.py:32
+#: .\env\Lib\site-packages\crispy_forms\tests\test_form_helper.py:129
+#: .\env\Lib\site-packages\crispy_forms\tests\test_form_helper.py:139
+#: .\env\Lib\site-packages\django\forms\fields.py:54
+msgid "This field is required."
+msgstr ""
+
+#: .\env\Lib\site-packages\crispy_forms\tests\test_layout.py:361
+msgid "i18n text"
+msgstr ""
+
+#: .\env\Lib\site-packages\crispy_forms\tests\test_layout.py:361
+msgid "i18n legend"
+msgstr ""
+
+#: .\env\Lib\site-packages\crispy_forms\tests\test_layout_objects.py:129
+#: .\env\Lib\site-packages\django\core\validators.py:20
+msgid "Enter a valid value."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\contrib\messages\apps.py:7
+msgid "Messages"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\contrib\sitemaps\apps.py:7
+msgid "Site Maps"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\contrib\staticfiles\apps.py:9
+msgid "Static Files"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\contrib\syndication\apps.py:7
+#, fuzzy
+#| msgid "Locations"
+msgid "Syndication"
+msgstr "Локации"
+
+#: .\env\Lib\site-packages\django\core\paginator.py:48
+msgid "That page number is not an integer"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\core\paginator.py:50
+#, fuzzy
+#| msgid "Light smoker (less than 10)"
+msgid "That page number is less than 1"
+msgstr "Мало курящий (менее 10)"
+
+#: .\env\Lib\site-packages\django\core\paginator.py:55
+msgid "That page contains no results"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\core\validators.py:91
+#: .\env\Lib\site-packages\django\forms\fields.py:671
+msgid "Enter a valid URL."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\core\validators.py:145
+msgid "Enter a valid integer."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\core\validators.py:156
+#, fuzzy
+#| msgid "Email address"
+msgid "Enter a valid email address."
+msgstr "Адрес электронной почты"
+
+#. Translators: "letters" means latin letters: a-z and A-Z.
+#: .\env\Lib\site-packages\django\core\validators.py:230
 msgid ""
+"Enter a valid “slug” consisting of letters, numbers, underscores or hyphens."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\core\validators.py:237
+msgid ""
+"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or "
+"hyphens."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\core\validators.py:246
+#: .\env\Lib\site-packages\django\core\validators.py:266
+msgid "Enter a valid IPv4 address."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\core\validators.py:251
+#: .\env\Lib\site-packages\django\core\validators.py:267
+msgid "Enter a valid IPv6 address."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\core\validators.py:261
+#: .\env\Lib\site-packages\django\core\validators.py:265
+msgid "Enter a valid IPv4 or IPv6 address."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\core\validators.py:295
+msgid "Enter only digits separated by commas."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\core\validators.py:301
+#, python-format
+msgid "Ensure this value is %(limit_value)s (it is %(show_value)s)."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\core\validators.py:334
+#, python-format
+msgid "Ensure this value is less than or equal to %(limit_value)s."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\core\validators.py:343
+#, python-format
+msgid "Ensure this value is greater than or equal to %(limit_value)s."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\core\validators.py:353
+#, python-format
+msgid ""
+"Ensure this value has at least %(limit_value)d character (it has "
+"%(show_value)d)."
+msgid_plural ""
+"Ensure this value has at least %(limit_value)d characters (it has "
+"%(show_value)d)."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: .\env\Lib\site-packages\django\core\validators.py:368
+#, python-format
+msgid ""
+"Ensure this value has at most %(limit_value)d character (it has "
+"%(show_value)d)."
+msgid_plural ""
+"Ensure this value has at most %(limit_value)d characters (it has "
+"%(show_value)d)."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: .\env\Lib\site-packages\django\core\validators.py:387
+#: .\env\Lib\site-packages\django\forms\fields.py:292
+#: .\env\Lib\site-packages\django\forms\fields.py:327
+#, fuzzy
+#| msgid "Card number"
+msgid "Enter a number."
+msgstr "Номер карты"
+
+#: .\env\Lib\site-packages\django\core\validators.py:389
+#, python-format
+msgid "Ensure that there are no more than %(max)s digit in total."
+msgid_plural "Ensure that there are no more than %(max)s digits in total."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: .\env\Lib\site-packages\django\core\validators.py:394
+#, python-format
+msgid "Ensure that there are no more than %(max)s decimal place."
+msgid_plural "Ensure that there are no more than %(max)s decimal places."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: .\env\Lib\site-packages\django\core\validators.py:399
+#, python-format
+msgid ""
+"Ensure that there are no more than %(max)s digit before the decimal point."
+msgid_plural ""
+"Ensure that there are no more than %(max)s digits before the decimal point."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: .\env\Lib\site-packages\django\core\validators.py:461
+#, python-format
+msgid ""
+"File extension “%(extension)s” is not allowed. Allowed extensions are: "
+"%(allowed_extensions)s."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\core\validators.py:513
+msgid "Null characters are not allowed."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\base.py:1190
+#: .\env\Lib\site-packages\django\forms\models.py:760
+msgid "and"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\base.py:1192
+#, python-format
+msgid "%(model_name)s with this %(field_labels)s already exists."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:100
+#, python-format
+msgid "Value %(value)r is not a valid choice."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:101
+msgid "This field cannot be null."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:102
+msgid "This field cannot be blank."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:103
+#, python-format
+msgid "%(model_name)s with this %(field_label)s already exists."
+msgstr ""
+
+#. Translators: The 'lookup_type' is one of 'date', 'year' or 'month'.
+#. Eg: "Title must be unique for pub_date year"
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:107
+#, python-format
+msgid ""
+"%(field_label)s must be unique for %(date_field_label)s %(lookup_type)s."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:126
+#, python-format
+msgid "Field of type: %(field_type)s"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:939
+#, python-format
+msgid "“%(value)s” value must be either True or False."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:940
+#, python-format
+msgid "“%(value)s” value must be either True, False, or None."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:942
+msgid "Boolean (Either True or False)"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:983
+#, python-format
+msgid "String (up to %(max_length)s)"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1047
+msgid "Comma-separated integers"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1096
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid date format. It must be in YYYY-MM-DD "
+"format."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1098
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1241
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (YYYY-MM-DD) but it is an invalid "
+"date."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1101
+msgid "Date (without time)"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1239
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[."
+"uuuuuu]][TZ] format."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1243
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
+"[TZ]) but it is an invalid date/time."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1247
+msgid "Date (with time)"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1395
+#, python-format
+msgid "“%(value)s” value must be a decimal number."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1397
+#, fuzzy
+#| msgid "Card number"
+msgid "Decimal number"
+msgstr "Номер карты"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1536
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in [DD] [[HH:]MM:]ss[."
+"uuuuuu] format."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1539
+#, fuzzy
+#| msgid "Description"
+msgid "Duration"
+msgstr "Описание"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1612
+msgid "File path"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1678
+#, python-format
+msgid "“%(value)s” value must be a float."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1680
+msgid "Floating point number"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1718
+#, python-format
+msgid "“%(value)s” value must be an integer."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1720
+msgid "Integer"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1803
+msgid "Big (8 byte) integer"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1819
+#, fuzzy
+#| msgid "Email address"
+msgid "IPv4 address"
+msgstr "Адрес электронной почты"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1850
+#, fuzzy
+#| msgid "Email address"
+msgid "IP address"
+msgstr "Адрес электронной почты"
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1930
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1931
+#, python-format
+msgid "“%(value)s” value must be either None, True or False."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1933
+msgid "Boolean (Either True, False or None)"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1976
+msgid "Positive big integer"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1989
+msgid "Positive integer"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2002
+msgid "Positive small integer"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2016
+#, python-format
+msgid "Slug (up to %(max_length)s)"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2048
+msgid "Small integer"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2055
+msgid "Text"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2083
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in HH:MM[:ss[.uuuuuu]] "
+"format."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2085
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (HH:MM[:ss[.uuuuuu]]) but it is an "
+"invalid time."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2088
+msgid "Time"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2214
+msgid "URL"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2236
+msgid "Raw binary data"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2301
+#, python-format
+msgid "“%(value)s” is not a valid UUID."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\__init__.py:2303
+msgid "Universally unique identifier"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\files.py:231
+msgid "File"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\files.py:377
+msgid "Image"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\json.py:18
+msgid "A JSON object"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\json.py:20
+msgid "Value must be valid JSON."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\related.py:790
+#, python-format
+msgid "%(model)s instance with %(field)s %(value)r does not exist."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\related.py:792
+msgid "Foreign Key (type determined by related field)"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\related.py:1045
+msgid "One-to-one relationship"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\related.py:1099
+#, python-format
+msgid "%(from)s-%(to)s relationship"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\related.py:1100
+#, python-format
+msgid "%(from)s-%(to)s relationships"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\db\models\fields\related.py:1142
+msgid "Many-to-many relationship"
+msgstr ""
+
+#. Translators: If found as last label character, these punctuation
+#. characters will prevent the default label_suffix to be appended to the label
+#: .\env\Lib\site-packages\django\forms\boundfield.py:150
+msgid ":?.!"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\fields.py:247
+msgid "Enter a whole number."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\fields.py:398
+#: .\env\Lib\site-packages\django\forms\fields.py:1139
+msgid "Enter a valid date."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\fields.py:422
+#: .\env\Lib\site-packages\django\forms\fields.py:1140
+msgid "Enter a valid time."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\fields.py:450
+msgid "Enter a valid date/time."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\fields.py:484
+msgid "Enter a valid duration."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\fields.py:485
+#, python-brace-format
+msgid "The number of days must be between {min_days} and {max_days}."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\fields.py:545
+msgid "No file was submitted. Check the encoding type on the form."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\fields.py:546
+msgid "No file was submitted."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\fields.py:547
+msgid "The submitted file is empty."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\fields.py:549
+#, python-format
+msgid "Ensure this filename has at most %(max)d character (it has %(length)d)."
+msgid_plural ""
+"Ensure this filename has at most %(max)d characters (it has %(length)d)."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: .\env\Lib\site-packages\django\forms\fields.py:552
+msgid "Please either submit a file or check the clear checkbox, not both."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\fields.py:613
+msgid ""
+"Upload a valid image. The file you uploaded was either not an image or a "
+"corrupted image."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\fields.py:775
+#: .\env\Lib\site-packages\django\forms\fields.py:865
+#: .\env\Lib\site-packages\django\forms\models.py:1296
+#, python-format
+msgid "Select a valid choice. %(value)s is not one of the available choices."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\fields.py:866
+#: .\env\Lib\site-packages\django\forms\fields.py:981
+#: .\env\Lib\site-packages\django\forms\models.py:1295
+msgid "Enter a list of values."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\fields.py:982
+msgid "Enter a complete value."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\fields.py:1198
+msgid "Enter a valid UUID."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\fields.py:1228
+msgid "Enter a valid JSON."
+msgstr ""
+
+#. Translators: This is the default suffix added to form field labels
+#: .\env\Lib\site-packages\django\forms\forms.py:78
+msgid ":"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\forms.py:205
+#, python-format
+msgid "(Hidden field %(name)s) %(error)s"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\formsets.py:93
+msgid "ManagementForm data is missing or has been tampered with"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\formsets.py:345
+#, python-format
+msgid "Please submit %d or fewer forms."
+msgid_plural "Please submit %d or fewer forms."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: .\env\Lib\site-packages\django\forms\formsets.py:352
+#, python-format
+msgid "Please submit %d or more forms."
+msgid_plural "Please submit %d or more forms."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: .\env\Lib\site-packages\django\forms\formsets.py:379
+#: .\env\Lib\site-packages\django\forms\formsets.py:386
+#, fuzzy
+#| msgid "Order Now"
+msgid "Order"
+msgstr "Заказать сейчас"
+
+#: .\env\Lib\site-packages\django\forms\formsets.py:391
+msgid "Delete"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\models.py:755
+#, python-format
+msgid "Please correct the duplicate data for %(field)s."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\models.py:759
+#, python-format
+msgid "Please correct the duplicate data for %(field)s, which must be unique."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\models.py:765
+#, python-format
+msgid ""
+"Please correct the duplicate data for %(field_name)s which must be unique "
+"for the %(lookup)s in %(date_field)s."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\models.py:774
+msgid "Please correct the duplicate values below."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\models.py:1096
+msgid "The inline value did not match the parent instance."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\models.py:1180
+msgid "Select a valid choice. That choice is not one of the available choices."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\models.py:1298
+#, python-format
+msgid "“%(pk)s” is not a valid value."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\utils.py:167
+#, python-format
+msgid ""
+"%(datetime)s couldn’t be interpreted in time zone %(current_timezone)s; it "
+"may be ambiguous or it may not exist."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\widgets.py:398
+msgid "Clear"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\widgets.py:399
+msgid "Currently"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\forms\widgets.py:400
+#, fuzzy
+#| msgid "Save Changes"
+msgid "Change"
+msgstr "Сохранить изменения"
+
+#: .\env\Lib\site-packages\django\forms\widgets.py:709
+msgid "Unknown"
+msgstr ""
+
+#. Translators: Please do not add spaces around commas.
+#: .\env\Lib\site-packages\django\template\defaultfilters.py:790
+msgid "yes,no,maybe"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\template\defaultfilters.py:819
+#: .\env\Lib\site-packages\django\template\defaultfilters.py:836
+#, python-format
+msgid "%(size)d byte"
+msgid_plural "%(size)d bytes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: .\env\Lib\site-packages\django\template\defaultfilters.py:838
+#, python-format
+msgid "%s KB"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\template\defaultfilters.py:840
+#, python-format
+msgid "%s MB"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\template\defaultfilters.py:842
+#, python-format
+msgid "%s GB"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\template\defaultfilters.py:844
+#, python-format
+msgid "%s TB"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\template\defaultfilters.py:846
+#, python-format
+msgid "%s PB"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dateformat.py:65
+msgid "p.m."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dateformat.py:66
+msgid "a.m."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dateformat.py:71
+msgid "PM"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dateformat.py:72
+msgid "AM"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dateformat.py:149
+msgid "midnight"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dateformat.py:151
+msgid "noon"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:6
+msgid "Monday"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:6
+msgid "Tuesday"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:6
+msgid "Wednesday"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:6
+msgid "Thursday"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:6
+msgid "Friday"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:7
+msgid "Saturday"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:7
+msgid "Sunday"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:10
+msgid "Mon"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:10
+msgid "Tue"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:10
+msgid "Wed"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:10
+msgid "Thu"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:10
+msgid "Fri"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:11
+msgid "Sat"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:11
+#, fuzzy
+#| msgid "Surname"
+msgid "Sun"
+msgstr "Фамилия"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:14
+msgid "January"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:14
+msgid "February"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:14
+msgid "March"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:14
+msgid "April"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:14
+msgid "May"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:14
+msgid "June"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:15
+msgid "July"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:15
+msgid "August"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:15
+msgid "September"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:15
+msgid "October"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:15
+msgid "November"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:16
+msgid "December"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:19
+msgid "jan"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:19
+msgid "feb"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:19
+msgid "mar"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:19
+msgid "apr"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:19
+msgid "may"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:19
+msgid "jun"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:20
+msgid "jul"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:20
+msgid "aug"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:20
+msgid "sep"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:20
+#, fuzzy
+#| msgid "Contact"
+msgid "oct"
+msgstr "Kонтакты"
+
+#: .\env\Lib\site-packages\django\utils\dates.py:20
+msgid "nov"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:20
+msgid "dec"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:23
+msgctxt "abbrev. month"
+msgid "Jan."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:24
+msgctxt "abbrev. month"
+msgid "Feb."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:25
+msgctxt "abbrev. month"
+msgid "March"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:26
+msgctxt "abbrev. month"
+msgid "April"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:27
+msgctxt "abbrev. month"
+msgid "May"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:28
+msgctxt "abbrev. month"
+msgid "June"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:29
+msgctxt "abbrev. month"
+msgid "July"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:30
+msgctxt "abbrev. month"
+msgid "Aug."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:31
+msgctxt "abbrev. month"
+msgid "Sept."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:32
+msgctxt "abbrev. month"
+msgid "Oct."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:33
+msgctxt "abbrev. month"
+msgid "Nov."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:34
+msgctxt "abbrev. month"
+msgid "Dec."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:37
+msgctxt "alt. month"
+msgid "January"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:38
+msgctxt "alt. month"
+msgid "February"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:39
+msgctxt "alt. month"
+msgid "March"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:40
+msgctxt "alt. month"
+msgid "April"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:41
+msgctxt "alt. month"
+msgid "May"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:42
+msgctxt "alt. month"
+msgid "June"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:43
+msgctxt "alt. month"
+msgid "July"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:44
+msgctxt "alt. month"
+msgid "August"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:45
+msgctxt "alt. month"
+msgid "September"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:46
+msgctxt "alt. month"
+msgid "October"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:47
+msgctxt "alt. month"
+msgid "November"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\dates.py:48
+msgctxt "alt. month"
+msgid "December"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\ipv6.py:8
+msgid "This is not a valid IPv6 address."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\text.py:70
+#, python-format
+msgctxt "String to return when truncating text"
+msgid "%(truncated_text)s…"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\text.py:236
+msgid "or"
+msgstr ""
+
+#. Translators: This string is used as a separator between list elements
+#: .\env\Lib\site-packages\django\utils\text.py:255
+#: .\env\Lib\site-packages\django\utils\timesince.py:83
+msgid ", "
+msgstr ""
+
+#: .\env\Lib\site-packages\django\utils\timesince.py:9
+#, python-format
+msgid "%d year"
+msgid_plural "%d years"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: .\env\Lib\site-packages\django\utils\timesince.py:10
+#, python-format
+msgid "%d month"
+msgid_plural "%d months"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: .\env\Lib\site-packages\django\utils\timesince.py:11
+#, python-format
+msgid "%d week"
+msgid_plural "%d weeks"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: .\env\Lib\site-packages\django\utils\timesince.py:12
+#, python-format
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: .\env\Lib\site-packages\django\utils\timesince.py:13
+#, python-format
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: .\env\Lib\site-packages\django\utils\timesince.py:14
+#, python-format
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: .\env\Lib\site-packages\django\views\csrf.py:110
+msgid "Forbidden"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\csrf.py:111
+msgid "CSRF verification failed. Request aborted."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\csrf.py:115
+msgid ""
+"You are seeing this message because this HTTPS site requires a “Referer "
+"header” to be sent by your Web browser, but none was sent. This header is "
+"required for security reasons, to ensure that your browser is not being "
+"hijacked by third parties."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\csrf.py:120
+msgid ""
+"If you have configured your browser to disable “Referer” headers, please re-"
+"enable them, at least for this site, or for HTTPS connections, or for “same-"
+"origin” requests."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\csrf.py:124
+msgid ""
+"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or "
+"including the “Referrer-Policy: no-referrer” header, please remove them. The "
+"CSRF protection requires the “Referer” header to do strict referer checking. "
+"If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+"\" …> for links to third-party sites."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\csrf.py:132
+msgid ""
+"You are seeing this message because this site requires a CSRF cookie when "
+"submitting forms. This cookie is required for security reasons, to ensure "
+"that your browser is not being hijacked by third parties."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\csrf.py:137
+msgid ""
+"If you have configured your browser to disable cookies, please re-enable "
+"them, at least for this site, or for “same-origin” requests."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\csrf.py:142
+msgid "More information is available with DEBUG=True."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\generic\dates.py:41
+msgid "No year specified"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\generic\dates.py:61
+#: .\env\Lib\site-packages\django\views\generic\dates.py:111
+#: .\env\Lib\site-packages\django\views\generic\dates.py:208
+msgid "Date out of range"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\generic\dates.py:90
+msgid "No month specified"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\generic\dates.py:142
+msgid "No day specified"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\generic\dates.py:188
+msgid "No week specified"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\generic\dates.py:338
+#: .\env\Lib\site-packages\django\views\generic\dates.py:367
+#, python-format
+msgid "No %(verbose_name_plural)s available"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\generic\dates.py:589
+#, python-format
+msgid ""
+"Future %(verbose_name_plural)s not available because %(class_name)s."
+"allow_future is False."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\generic\dates.py:623
+#, python-format
+msgid "Invalid date string “%(datestr)s” given format “%(format)s”"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\generic\detail.py:54
+#, python-format
+msgid "No %(verbose_name)s found matching the query"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\generic\list.py:67
+msgid "Page is not “last”, nor can it be converted to an int."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\generic\list.py:72
+#, python-format
+msgid "Invalid page (%(page_number)s): %(message)s"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\generic\list.py:154
+#, python-format
+msgid "Empty list and “%(class_name)s.allow_empty” is False."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\static.py:40
+msgid "Directory indexes are not allowed here."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\static.py:42
+#, python-format
+msgid "“%(path)s” does not exist"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\static.py:80
+#, python-format
+msgid "Index of %(directory)s"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:7
+msgid "Django: the Web framework for perfectionists with deadlines."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:346
+#, python-format
+msgid ""
+"View <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
+"target=\"_blank\" rel=\"noopener\">release notes</a> for Django %(version)s"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:368
+msgid "The install worked successfully! Congratulations!"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:369
+#, python-format
+msgid ""
+"You are seeing this page because <a href=\"https://docs.djangoproject.com/en/"
+"%(version)s/ref/settings/#debug\" target=\"_blank\" rel=\"noopener"
+"\">DEBUG=True</a> is in your settings file and you have not configured any "
+"URLs."
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:384
+msgid "Django Documentation"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:385
+msgid "Topics, references, &amp; how-to’s"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:396
+msgid "Tutorial: A Polling App"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:397
+msgid "Get started with Django"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:408
+msgid "Django Community"
+msgstr ""
+
+#: .\env\Lib\site-packages\django\views\templates\default_urlconf.html:409
+msgid "Connect, get help, or contribute"
+msgstr ""
+
+#: .\env\Lib\site-packages\tests\settings.py:45
+msgid "Brazilian Portuguese"
+msgstr ""
+
+#: .\product\forms.py:7 .\product\forms.py:31
+#: .\templates\account\account.html:104
+msgid "Email"
+msgstr "Адрес электронной почты"
+
+#: .\product\forms.py:8 .\product\forms.py:32
+msgid "Name and Surname"
+msgstr "Имя и Фамилия"
+
+#: .\product\forms.py:10 .\product\forms.py:34
+msgid "Delivery address"
+msgstr "Адрес доставки"
+
+#: .\product\forms.py:12
+msgid "Number of required Mobile Medi-Lab"
+msgstr "Требуемое количество Мобильных Меди-Лаб"
+
+#: .\product\forms.py:13
+msgid "Number of required Checkup Capacity"
+msgstr "Требуемое количество Медосмотра"
+
+#: .\product\forms.py:14
+msgid "Number of required RFID Card"
+msgstr "Требуемое количество RFID-карты"
+
+#: .\product\forms.py:15
+msgid "Number of required Lancet"
+msgstr "Требуемое количество Ланцет"
+
+#: .\product\forms.py:16
+msgid "Number of required Glucose/Hematocrit strip"
+msgstr "Требуемое количество полосы Глюкозы/Гематокрита"
+
+#: .\product\forms.py:17
+msgid "Number of required Ketone strip"
+msgstr "Требуемое количество полосы Кетона"
+
+#: .\product\forms.py:19
+msgid ""
+"Number of required Total Cholesterol (TC) + HDL strip + pipet (for "
+"postprandial)"
+msgstr ""
+"Требуемое количество полосы Общего Холестерина (TC) + ЛПВП + пипетка "
+"(постпрандиальный)"
+
+#: .\product\forms.py:23
+msgid ""
+"Number of required Lipid Panel (TC + HDL + Triglyceride) + pipet (for "
+"fasting)"
+msgstr ""
+"Требуемое количество полосы Липидной Панели (TC + ЛПВП + Tриглицерид) + "
+"пипетка (натощак)"
+
+#: .\product\forms.py:26
+msgid "Number of required Uric Acid strip"
+msgstr "Требуемое количество полосы Мочевой Кислоты"
+
+#: .\product\forms.py:27
+msgid "Number of required Creatinine strip"
+msgstr "Требуемое количество полосы Креатинина"
+
+#: .\product\forms.py:36
+#, fuzzy
+#| msgid "Number of required Ketone strip"
+msgid "Number of required Symptom Check set"
+msgstr "Количество требуемых наборов для \"Symptom Check\""
+
+#: .\product\models.py:10
+msgid "Category Name"
+msgstr "Название категории"
+
+#: .\product\views.py:38 .\product\views.py:58
+msgid ""
+"<div class=\"alert alert-success alert-dismissable text-center\">\n"
+"                                    <button type=\"button\" class=\"close\" "
+"data-dismiss=\"alert\" aria-hidden=\"true\">×</button>\n"
+"                                    We received your messages and will come "
+"back to you as soon as possible.\n"
+"                                    </div>"
+msgstr ""
 "<div class=\"alert alert-success alert-dismissable text-center\">\n"
 "                                <button type=\"button\" class=\"close\" data-"
 "dismiss=\"alert\" aria-hidden=\"true\">×</button>\n"
-"                                We received your messages and will come back "
-"to you as soon as possible.\n"
+"                                Мы получили ваши сообщения и вернемся к вам "
+"в ближайшее время.\n"
 "                                </div>"
-msgstr ""
 
-#: .\product\views.py:38
+#: .\product\views.py:44
 msgid ""
+"<div class=\"alert alert-danger alert-dismissable text-center\">\n"
+"                                                <button type=\"button\" "
+"class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">×</button>\n"
+"                                                ERROR: Please fill at least "
+"one field in \"Quantity of products\"\n"
+"                                                </div>"
+msgstr ""
 "<div class=\"alert alert-danger alert-dismissable text-center\">\n"
 "                                            <button type=\"button\" class="
 "\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">×</button>\n"
-"                                            ERROR!!! You have to order at "
-"least 1 component\n"
+"                                            ОШИБКА: Заполните хотя бы одно поле "
+"в \"Количество товаров\".\n"
 "                                            </div>"
+
+#: .\readme.txt:5
+msgid "Mətn"
 msgstr ""
 
-#: .\templates\account\login.html:32 .\templates\global\base.html:69
-msgid "Login"
+#: .\templates\account\account.html:24
+msgid "Welcome"
+msgstr "Добро пожаловать"
+
+#: .\templates\account\account.html:27
+msgid "Last Log In"
+msgstr "Последний вход"
+
+#: .\templates\account\account.html:44
+#: .\templates\account\change_password.html:34
+#: .\templates\account\editAccount.html:37
+msgid "Profile Info"
+msgstr "Информация о профиле"
+
+#: .\templates\account\account.html:47
+#: .\templates\account\change_password.html:37
+#: .\templates\account\editAccount.html:40
+#: .\templates\account\editAccount.html:62
+msgid "Edit Profile"
+msgstr "Редактировать профиль"
+
+#: .\templates\account\account.html:50
+#: .\templates\account\change_password.html:40
+#: .\templates\account\change_password.html:58
+#: .\templates\account\editAccount.html:43
+msgid "Change Password"
+msgstr "Сменить пароль"
+
+#: .\templates\account\account.html:53
+#: .\templates\account\change_password.html:43
+#: .\templates\account\editAccount.html:46
+msgid "Reports"
 msgstr ""
+
+#: .\templates\account\account.html:56
+#: .\templates\account\change_password.html:46
+#: .\templates\account\editAccount.html:49
+msgid "Ask the expert"
+msgstr ""
+
+#: .\templates\account\account.html:68
+msgid "Full Name"
+msgstr "Имя Фамилия"
+
+#: .\templates\account\account.html:76
+msgid "Birthday"
+msgstr "Дата Рождения"
+
+#: .\templates\account\account.html:120
+msgid "Card Number"
+msgstr "Номер Карты"
+
+#: .\templates\account\editAccount.html:133
+#: .\templates\account\register.html:141
+msgid "Questions relating to the assessment of cardiovascular disease risk"
+msgstr "Вопросы, касающиеся оценки риска сердечно-сосудистых заболеваний"
+
+#: .\templates\account\editAccount.html:184
+#: .\templates\account\register.html:181
+msgid "Required fields"
+msgstr "Обязательные поля"
+
+#: .\templates\account\editAccount.html:189
+msgid "Save Changes"
+msgstr "Сохранить изменения"
+
+#: .\templates\account\login.html:32 .\templates\global\base.html:84
+msgid "Login"
+msgstr "Войти"
 
 #: .\templates\account\login.html:33
 msgid "Log In with face recognition"
-msgstr ""
+msgstr "Вход с распознаванием лиц"
 
-#: .\templates\account\login.html:42
+#: .\templates\account\login.html:41
 msgid "Don't have an account?"
-msgstr ""
+msgstr "Нет учетной записи?"
 
-#: .\templates\account\login.html:42
+#: .\templates\account\login.html:41
 msgid "Sign Up"
-msgstr ""
+msgstr "Регистрация"
 
-#: .\templates\account\login.html:45
+#: .\templates\account\login.html:44
 msgid "Forgot your password?"
-msgstr ""
+msgstr "Забыли пароль?"
 
-#: .\templates\account\register.html:31
+#: .\templates\account\register.html:49
 msgid "Registration"
-msgstr ""
+msgstr "Регистрация"
 
-#: .\templates\account\register.html:138
-msgid " Questions relating to the assessment of cardiovascular disease risk"
-msgstr ""
-
-#: .\templates\account\register.html:204
-msgid "Required fields"
-msgstr ""
-
-#: .\templates\account\register.html:207
+#: .\templates\account\register.html:183
 msgid "Register"
-msgstr ""
+msgstr "Создать"
 
-#: .\templates\global\base.html:36
+#: .\templates\global\base.html:39
 msgid "Sign in"
-msgstr ""
+msgstr "Войти"
 
-#: .\templates\global\base.html:65
+#: .\templates\global\base.html:45
+msgid "Log out"
+msgstr "Выход"
+
+#: .\templates\global\base.html:72
 msgid "Home"
-msgstr ""
+msgstr "Главная"
 
-#: .\templates\global\base.html:66
+#: .\templates\global\base.html:73
 msgid "Locations"
-msgstr ""
+msgstr "Локации"
 
-#: .\templates\global\base.html:67 .\templates\global\base.html:100
-#: .\templates\global\base.html:113 .\templates\product\products.html:16
+#: .\templates\global\base.html:74 .\templates\global\base.html:123
+#: .\templates\product\products.html:16
 msgid "Products"
-msgstr ""
+msgstr "Продукты"
 
-#: .\templates\global\base.html:68
+#: .\templates\global\base.html:76
 msgid "Contact"
-msgstr ""
+msgstr "Kонтакты"
 
-#: .\templates\global\base.html:95
+#: .\templates\global\base.html:79
+msgid "My Account"
+msgstr "Мой аккаунт"
+
+#: .\templates\global\base.html:111
 msgid "About"
-msgstr ""
+msgstr "О нас"
 
-#: .\templates\global\base.html:96
+#: .\templates\global\base.html:112
 msgid ""
 "HealthiStory is a health focused company that revolutionizes how people "
 "access health checkups and use their medical data to manage long term health."
 msgstr ""
+"HealthiStory - это компания, ориентированная на здоровье, которая "
+"революционизирует то, как люди получают доступ к медицинским осмотрам и "
+"используют свои медицинские данные для долгосрочного управления здоровьем."
 
-#: .\templates\global\base.html:109
+#: .\templates\global\base.html:119
 msgid "Quick Links"
-msgstr ""
+msgstr "Быстрые Ссылки"
 
-#: .\templates\global\base.html:111
+#: .\templates\global\base.html:121
 msgid "About Us"
-msgstr ""
+msgstr "О нас"
 
-#: .\templates\global\base.html:112 .\templates\home\contact.html:11
+#: .\templates\global\base.html:122 .\templates\home\contact.html:11
 msgid "Contact Us"
-msgstr ""
+msgstr "Связаться с нами"
 
-#: .\templates\global\base.html:114
+#: .\templates\global\base.html:124
 msgid "Privacy Policy"
-msgstr ""
+msgstr "Политика Конфиденциальности"
 
-#: .\templates\global\base.html:123
+#: .\templates\global\base.html:133
 msgid "Copyright &copy; 2020 All Rights Reserved by"
-msgstr ""
+msgstr "Авторские права &copy; 2020 Все права защищены"
 
-#: .\templates\home\index.html:32
+#: .\templates\home\index.html:29
 msgid "Our Missions"
-msgstr ""
+msgstr "Наша Миссия"
 
-#: .\templates\home\index.html:45
+#: .\templates\home\index.html:42
 msgid "Train people to a healthy lifestyle."
-msgstr ""
+msgstr "Приучить людей к здоровому образу жизни"
 
-#: .\templates\home\index.html:57
+#: .\templates\home\index.html:54
 msgid "Self-manage own health and daily lifestyle."
-msgstr ""
+msgstr "Управлять собственным здоровьем и повседневной жизню"
 
-#: .\templates\home\index.html:69
+#: .\templates\home\index.html:66
 msgid "Help people to extend healthy life expectancy."
-msgstr ""
+msgstr "Продлить продолжительность здоровой жизни"
 
-#: .\templates\home\index.html:82
+#: .\templates\home\index.html:79
 msgid "To help doctors to provide independent remote medical assistance."
-msgstr ""
+msgstr "Помочь врачам обеспечить независимую дистанционную медицинскую услугу"
+
+#: .\templates\home\index.html:98
+msgid "General Health Issues"
+msgstr "Общие Проблемы со Здоровьем"
 
 #: .\templates\home\index.html:101
-msgid "General Health Issues"
-msgstr ""
-
-#: .\templates\home\index.html:104
 #, python-format
 msgid ""
 "According to modern medical science, approximately 25%% of an individual’s "
 "overall health depends from genetics and 75%% on the individual; therefore, "
 "the long-term health should be managed accurately and precisely."
 msgstr ""
+"Согласно современной медицинской науке, примерно 25%% общего состояния "
+"здоровья человека зависит от генетики, а 75%% - от человека; следовательно, "
+"долгосрочное здоровье должно управляться аккуратно и точно."
 
-#: .\templates\home\index.html:107
+#: .\templates\home\index.html:104
 msgid ""
 "The only way to manage long-term health is to know what is happening within "
 "one’s body and how things change over time. For that reason, frequent health "
 "checkups are a must for everyone."
 msgstr ""
+"Единственный способ сохранить здоровье в долгосрочной перспективе - это "
+"знать, что происходит в организме и как все меняется со временем. По этой "
+"причине частые медицинские осмотры необходимы каждому."
 
-#: .\templates\home\index.html:110
+#: .\templates\home\index.html:107
 msgid ""
 "In order to do this, hospital visits are crucial. However, these visits cost "
 "too much time, money and are not convenient for people due to these reasons. "
 "Moreover, often times these results are received within several days on "
 "paper, which is not functional, eco-friendly and is slow."
 msgstr ""
+"Для того, чтобы сделать это, посещение больницы имеет решающее значение. "
+"Однако такие посещения отнимают слишком много времени, денег и по этим "
+"причинам неудобны для людей. Более того, часто эти результаты получают в "
+"течении нескольких дней на бумаге, что не является функциональным и "
+"экологичным."
+
+#: .\templates\home\index.html:126
+msgid "What is HealthiStory?"
+msgstr "Что такое HealthiStory?"
 
 #: .\templates\home\index.html:129
-msgid "What is HealthiStory?"
-msgstr ""
-
-#: .\templates\home\index.html:132
 msgid ""
 "HealthiStory is a health and wellness focused company that performs health "
 "checkups outside the hospitals, eliminates all expensive and administrative "
 "costs, brings the service to the end-user location, and makes health "
 "checkups easily accessible and affordable for everyone."
 msgstr ""
+"HealthiStory - это компания, ориентированная на здоровье, которая выполняет "
+"медицинские осмотры вне больниц, устраняет все дорогостоящие и "
+"административные расходы, доставляет услуги к местонахождению пользователей "
+"и делает медицинские осмотры легко достижимым и доступным для всех."
 
-#: .\templates\home\index.html:146
+#: .\templates\home\index.html:143
 msgid "Why us?"
-msgstr ""
+msgstr "Почему мы?"
+
+#: .\templates\home\index.html:150
+msgid "For B2C:"
+msgstr "Для B2C:"
 
 #: .\templates\home\index.html:153
-msgid "For B2C:"
-msgstr ""
-
-#: .\templates\home\index.html:156
 msgid ""
 "You can order your health checkup to your home or office, just like ordering "
 "a taxi. Our nearest trained partner with a Mobile Medi-Lab on a backpack "
@@ -388,143 +1937,186 @@ msgid ""
 "recommendations and receive a notification to visit a doctor, if there are "
 "any critical results."
 msgstr ""
+"Вы можете заказать медицинское обследование на дом или в офис, так же, как "
+"заказывать такси. Наш ближайший обученный партнер с Mobile Medi-Lab в "
+"рюкзаке приходит к вам в ваше время. Проверка занимает менее 10 минут, а "
+"результаты немедленно сохраняются в безопасном облаке и доступны вам с любых "
+"устройств. Вы всегда можете отслеживать свой прогресс, получать умные "
+"рекомендации и получать уведомление о посещении врача, если будут какие-либо "
+"критические результаты."
+
+#: .\templates\home\index.html:156
+msgid "For partners (a person who administers mobile health checkups):"
+msgstr "Для партнеров (лицо, которое проводит мобильные медицинские осмотры):"
 
 #: .\templates\home\index.html:159
-msgid "For partners (a person who administers mobile health checkups):"
-msgstr ""
-
-#: .\templates\home\index.html:162
 msgid ""
 "HealthiStory is a profitable business opportunity, which provides steady "
 "work, flexible work hours, and good quality of life (no medical training "
 "required)."
 msgstr ""
+"HealthiStory - это выгодная возможность для бизнеса, которая обеспечивает "
+"стабильный, гибкий график работы и хорошее качество жизни (не требуется "
+"медицинская подготовка)."
+
+#: .\templates\home\index.html:162
+msgid "For employers:"
+msgstr "Для работодателей:"
 
 #: .\templates\home\index.html:165
-msgid "For employers:"
-msgstr ""
+msgid "HealthiStory makes workforces healthy, happy and productive."
+msgstr "HealthiStory делает персонал здоровым, счастливым и продуктивным."
 
 #: .\templates\home\index.html:168
-msgid "HealthiStory makes workforces healthy, happy and productive."
-msgstr ""
+msgid "For insurance providers:"
+msgstr "Для страховых компаний:"
 
 #: .\templates\home\index.html:171
-msgid "For insurance providers:"
-msgstr ""
-
-#: .\templates\home\index.html:174
 msgid ""
 "HealthiStory is a new type of policy benefit that makes healthy, loyal and "
 "lower risk policy holders. "
 msgstr ""
+"HealthiStory - это новый тип полисов, который делает их здоровыми, лояльными "
+"и менее рискованными."
+
+#: .\templates\home\index.html:174
+msgid "For governments:"
+msgstr "Для правительств:"
 
 #: .\templates\home\index.html:177
-msgid "For governments:"
-msgstr ""
-
-#: .\templates\home\index.html:180
 msgid ""
 "HealthiStory creates healthy and productive societies with lower long-term "
 "healthcare costs."
 msgstr ""
+"HealthiStory создает здоровые и продуктивные общества с более низкими "
+"долгосрочными затратами на здравоохранение."
+
+#: .\templates\home\index.html:191
+msgid "User Benefits"
+msgstr "Преимущества для пользователей"
 
 #: .\templates\home\index.html:194
-msgid "User Benefits"
-msgstr ""
-
-#: .\templates\home\index.html:197
 msgid "Doctor Benefits"
-msgstr ""
+msgstr "Преимущества для врачей"
 
-#: .\templates\home\index.html:205
+#: .\templates\home\index.html:202
 msgid "Turn your health history into a healthy story."
-msgstr ""
+msgstr "Превратите историю своего здоровья в здоровую историю."
 
-#: .\templates\home\index.html:212
+#: .\templates\home\index.html:209
 msgid "Observe health trend"
-msgstr ""
+msgstr "Наблюдать тенденции здоровья"
 
-#: .\templates\home\index.html:216
+#: .\templates\home\index.html:213
 msgid ""
-"By accessing the Portal, the user may <b>graphically observe</b> the latest "
-"and previous <b>health data trends, get recommendations</b> on health "
-"parameters to be considered and get notification to visit a doctor for "
-"critical values."
+"By accessing the Portal, the user may graphically observe the latest and "
+"previous health data trends, get recommendations on health parameters to be "
+"considered and get notification to visit a doctor for critical values."
 msgstr ""
+"При доступе к порталу, пользователь может графически наблюдать тенденции "
+"последних и предыдущих медицинских данных, получить рекомендации по "
+"параметрам здоровья, которые будут рассмотрены и получить уведомление "
+"посетить врача для критических значений."
 
-#: .\templates\home\index.html:224
+#: .\templates\home\index.html:221
 msgid "Monitoring effectiveness of the treatment"
-msgstr ""
+msgstr "Мониторинг эффективности лечения"
 
-#: .\templates\home\index.html:228
+#: .\templates\home\index.html:225
 msgid ""
 "User, who gets a treatment within the framework of the system parameters, "
-"can perform regular measurements and graphical <b>monitor the impact of the "
-"treatment</b>."
+"can perform regular measurements and graphical monitor the impact of the "
+"treatment."
 msgstr ""
+"Пользователь, который получает лечение в рамках параметров системы, может "
+"выполнять регулярные измерения и графически контролировать эффект лечения. "
 
-#: .\templates\home\index.html:236
+#: .\templates\home\index.html:233
 msgid "Extend healthy life expectancy"
-msgstr ""
+msgstr "Продлить продолжительность здоровой жизни "
 
-#: .\templates\home\index.html:240
+#: .\templates\home\index.html:237
 msgid ""
 "By obtaining detailed information about healthy lifestyle from the portal "
-"and taking early action against any warnings, user may <b>extend own Healthy "
-"Lifetime</b>."
+"and taking early action against any warnings, user may extend own Healthy "
+"Lifetime."
 msgstr ""
+"Получив подробную информацию о здоровом образе жизни от портала и о "
+"скорейшем принятии мер в отношении каких-либо предупреждений, пользователь "
+"может продлить продолжительность здоровой жизни."
 
-#: .\templates\home\index.html:245
+#: .\templates\home\index.html:242
 msgid ""
 "Your data is stored using the latest banking-grade encryption technologies "
 "and is available only to you and your chosen doctor. We are GDPR compliant "
 "and do not have access to any personal data."
 msgstr ""
+"Ваши данные хранятся с использованием новейших технологий шифрования "
+"банковского уровня и доступны только вам и выбранному вами врачу. Мы "
+"соблюдаем GDPR и не имеем доступа к каким-либо личным данным."
 
-#: .\templates\home\index.html:253
+#: .\templates\home\index.html:250
 msgid "Treat own patients anywhere, anytime."
-msgstr ""
+msgstr "Лечить собственных пациентов в любом месте, в любое время."
 
-#: .\templates\home\index.html:259
+#: .\templates\home\index.html:256
 msgid "Remote health care"
-msgstr ""
+msgstr "Дистанционное медицинское обслуживание"
 
-#: .\templates\home\index.html:263
+#: .\templates\home\index.html:260
 msgid ""
 "Remote access to electronic personal health records helps doctors to "
-"<b>accelerate diagnosis and treatment, provide</b> highest levels of "
-"<b>remote health care,</b> reduce inefficiencies, administrative costs and "
-"ultimately offering better, faster care."
+"accelerate diagnosis and treatment, provide highest levels of remote health "
+"care, reduce inefficiencies, administrative costs and ultimately offering "
+"better, faster care."
 msgstr ""
+"Удаленный доступ к электронным записям личного здоровья помогает врачам "
+"ускорить диагностику и лечение, обеспечивает высочайший уровень "
+"дистанционного медицинского обслуживания, снизить неэффективность, "
+"административные расходы и в конечном итоге предлагает лучший, быстрый уход."
 
-#: .\templates\home\index.html:273
+#: .\templates\home\index.html:270
 msgid "Effectiveness"
-msgstr ""
+msgstr "Эффективность"
 
-#: .\templates\home\index.html:278
+#: .\templates\home\index.html:275
 msgid ""
 "Increase the number of patients who can be treated during a given period of "
 "time and effectiveness of treatment."
 msgstr ""
+"Увеличение числа пациентов, которых можно лечить в течение заданного периода "
+"времени и повысить эффективность лечения."
 
-#: .\templates\home\index.html:289
+#: .\templates\home\index.html:286
 msgid "New streams of revenue"
-msgstr ""
+msgstr "Новые потоки доходов"
 
-#: .\templates\home\index.html:293
+#: .\templates\home\index.html:290
 msgid ""
-"Provide <b>new</b> streams of <b>revenue in the form of virtual "
-"consultations</b> and assessments."
+"Provide new streams of revenue in the form of virtual consultations and "
+"assessments."
 msgstr ""
+"Обеспечить новые потоки доходов в виде виртуальных консультаций и оценок."
 
 #: .\templates\product\single_product.html:48
 msgid "Description"
-msgstr ""
+msgstr "Описание"
 
 #: .\templates\product\single_product.html:51
 msgid "Order Now"
-msgstr ""
+msgstr "Заказать сейчас"
 
-#: .\templates\product\single_product.html:118
+#: .\templates\product\single_product.html:65
+#: .\templates\product\single_product.html:139
+msgid "Customer Information"
+msgstr "Информации клиента"
+
+#: .\templates\product\single_product.html:86
+#: .\templates\product\single_product.html:160
+msgid "Quantity of products"
+msgstr "Количество товаров"
+
+#: .\templates\product\single_product.html:128
+#: .\templates\product\single_product.html:167
 msgid "Send Quotation request"
-msgstr ""
+msgstr "Отправить запрос коммерческого предложения"

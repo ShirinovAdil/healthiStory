@@ -56,70 +56,119 @@
                     <div class="tab-content" id="nav-tabContent">
                         <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">{{product.description|safe}}</div>
                         <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
+                            {% if product_code == 'Mobile_Medi-Lab' %}
+                                <form method="post">
+                                    {% csrf_token %}
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="container">
+                                                <h3>{% trans 'Customer Information' %}</h3>
+                                            </div>
+                                            <div class="form-group col-md-12 mb-0">
+                                                {{ form.email|as_crispy_field }}
+                                            </div>
+
+                                            <div class="form-group col-md-12 mb-0">
+                                                {{ form.name|as_crispy_field }}
+                                            </div>
+
+                                            <div class="form-group col-md-12 mb-0">
+                                                {{ form.phone|as_crispy_field }}
+                                            </div>
+
+                                            <div class="form-group col-md-12 mb-0">
+                                                {{ form.address|as_crispy_field }}
+                                            </div>
+                                    </div>
+
+                                        <div class="col-md-6">
+                                            <div class="container">
+                                                <h3>{% trans 'Quantity of products' %}</h3>
+                                            </div>
+                                            <div class="form-group col-md-12 mb-0">
+                                                {{ form.station_amount|as_crispy_field }}
+                                            </div>
+
+                                            <div class="form-group col-md-12 mb-0">
+                                                 {{ form.capacity_number|as_crispy_field }}
+                                            </div>
+
+                                            <div class="form-group col-md-12 mb-0">
+                                                 {{ form.card_number|as_crispy_field }}
+                                            </div>
+                                            <div class="form-group col-md-12 mb-0">
+                                                {{ form.lancet_number|as_crispy_field }}
+                                            </div>
+
+                                            <div class="form-group col-md-12 mb-0">
+                                                 {{ form.glucose_number|as_crispy_field }}
+                                            </div>
+
+                                            <div class="form-group col-md-12 mb-0">
+                                                 {{ form.ketone_number|as_crispy_field }}
+                                            </div>
+                                            <div class="form-group col-md-12 mb-0">
+                                                 {{ form.cholesterol_number|as_crispy_field }}
+                                            </div>
+                                            <div class="form-group col-md-12 mb-0">
+                                                {{ form.panel_number|as_crispy_field }}
+                                            </div>
+
+                                            <div class="form-group col-md-12 mb-0">
+                                                 {{ form.acid_number|as_crispy_field }}
+                                            </div>
+
+                                            <div class="form-group col-md-12 mb-0">
+                                                 {{ form.creatinine_number|as_crispy_field }}
+                                            </div>
+    <!--                                {{ form }}&ndash;&gt;-->
+    <!--                                {{form.name|as_crispy_field}}-->
+    <!--                                {{form.email|as_crispy_field}}-->
+                                            <button type="submit" class="btn btn-primary col-md-12">
+                                                {% trans 'Send Quotation request' %}
+                                            </button>
+                                        </div>
+                                    </div>
+                                  </form>
+                            {% else %}
                             <form method="post">
                                 {% csrf_token %}
                                 <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group col-md-12 mb-0">
-                                            {{ form.email|as_crispy_field }}
-                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="container">
+                                                <h3>{% trans 'Customer Information' %}</h3>
+                                            </div>
+                                            <div class="form-group col-md-12 mb-0">
+                                                {{ form.email|as_crispy_field }}
+                                            </div>
 
-                                        <div class="form-group col-md-12 mb-0">
-                                            {{ form.name|as_crispy_field }}
-                                        </div>
+                                            <div class="form-group col-md-12 mb-0">
+                                                {{ form.name|as_crispy_field }}
+                                            </div>
 
-                                        <div class="form-group col-md-12 mb-0">
-                                            {{ form.phone|as_crispy_field }}
-                                        </div>
+                                            <div class="form-group col-md-12 mb-0">
+                                                {{ form.phone|as_crispy_field }}
+                                            </div>
 
-                                        <div class="form-group col-md-12 mb-0">
-                                            {{ form.address|as_crispy_field }}
-                                        </div>
-                                </div>
+                                            <div class="form-group col-md-12 mb-0">
+                                                {{ form.address|as_crispy_field }}
+                                            </div>
+                                    </div>
 
-                                    <div class="col-md-6">
-                                        <div class="form-group col-md-12 mb-0">
-                                            {{ form.station_amount|as_crispy_field }}
-                                        </div>
-
-                                        <div class="form-group col-md-12 mb-0">
-                                             {{ form.capacity_number|as_crispy_field }}
-                                        </div>
-
-                                        <div class="form-group col-md-12 mb-0">
-                                             {{ form.card_number|as_crispy_field }}
-                                        </div>
-                                        <div class="form-group col-md-12 mb-0">
-                                            {{ form.lancet_number|as_crispy_field }}
-                                        </div>
-
-                                        <div class="form-group col-md-12 mb-0">
-                                             {{ form.glucose_number|as_crispy_field }}
-                                        </div>
-
-                                        <div class="form-group col-md-12 mb-0">
-                                             {{ form.ketone_number|as_crispy_field }}
-                                        </div>
-                                        <div class="form-group col-md-12 mb-0">
-                                             {{ form.cholesterol_number|as_crispy_field }}
-                                        </div>
-                                        <div class="form-group col-md-12 mb-0">
-                                            {{ form.panel_number|as_crispy_field }}
-                                        </div>
-
-                                        <div class="form-group col-md-12 mb-0">
-                                             {{ form.acid_number|as_crispy_field }}
-                                        </div>
-
-                                        <div class="form-group col-md-12 mb-0">
-                                             {{ form.creatinine_number|as_crispy_field }}
+                                        <div class="col-md-6">
+                                            <div class="container">
+                                                <h3>{% trans 'Quantity of products' %}</h3>
+                                            </div>
+                                            <div class="form-group col-md-12 mb-0">
+                                                {{ form.symptom_check_set_amount|as_crispy_field }}
+                                            </div>
                                         </div>
                                         <button type="submit" class="btn btn-primary col-md-12">
                                             {% trans 'Send Quotation request' %}
                                         </button>
                                     </div>
-                                </div>
-                              </form>
+                            </form>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
