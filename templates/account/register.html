@@ -29,17 +29,14 @@
 <!--        {% endif %}-->
 
 
-
-
-
         <div class="col-md-12 offset">
-<!--            {% if form.non_field_errors %}-->
-<!--                <div class="non-field-errors">-->
-<!--                    {% for err in form.non_field_errors %}-->
-<!--                        <p class="alert alert-danger text-center">{{ err }}</p>-->
-<!--                    {% endfor %}-->
-<!--                </div>-->
-<!--            {% endif %}-->
+            {% if form.non_field_errors %}
+                <div class="non-field-errors">
+                    {% for err in form.non_field_errors %}
+                        <p class="alert alert-danger text-center">{{ err }}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
 
             <form class="form-horizontal" method="post" id="personForm"
                   data-cities-url="{% url 'ajax_load_cities' %}"
@@ -66,6 +63,7 @@
                 <div class="row">
                     <div class="form-group col-sm-4">
                         {{ form.passport|as_crispy_field }}
+                        <p style="font-size: medium; color: #474747">{% trans '(Citizen ID or E-mail or Mobile number)' %}</p>
                     </div>
                     <div class="form-group col-sm-4">
                         {{ form.email|as_crispy_field }}
@@ -97,7 +95,6 @@
                         {{ form.gender|as_crispy_field }}
                     </div>
 
-
                     <div class="form-group col-sm-4">
                         {{ form.height|as_crispy_field }}
                     </div>
@@ -107,6 +104,9 @@
                 </div>
 
                 <div class="row">
+                    <div class="form-group col-sm-4">
+                        {{ form.physical_activity|as_crispy_field }}
+                    </div>
                     <div class="form-group col-sm-4">
                         {{ form.country|as_crispy_field }}
                     </div>
@@ -118,11 +118,6 @@
                         <div id="city2_country">
                             {{ form.city2|as_crispy_field }}
                         </div>
-                    </div>
-
-
-                    <div class="form-group col-sm-4">
-                        {{ form.physical_activity|as_crispy_field }}
                     </div>
                 </div>
                 <div class="row" id="turkey_based">
@@ -137,8 +132,8 @@
 
 
                 <hr>
-                <div class="alert alert-info" role="alert">
-                    <h4> {% trans 'Questions relating to the assessment of cardiovascular disease risk' %}</h4>
+                <div class="alert alert-info submitButton" role="alert">
+                    <h4 class="mt-3" style="color: white;"> {% trans 'Questions relating to the assessment of cardiovascular disease risk' %}</h4>
                 </div>
 
                 <div class="row">
@@ -180,7 +175,7 @@
                 <div class="form-group">
                     <small>*{% trans 'Required fields' %}</small>
                 </div>
-                <button type="submit" class="btn btn-primary btn-block">{% trans 'Register' %}</button>
+                <button type="submit" class="btn btn-block submitButton">{% trans 'Register' %}</button>
             </form>
             <br>
 

@@ -96,7 +96,7 @@
                     <div class="span4">
                         <div class="content-heading">
                             <h3 class="text-center">{% trans 'General Health Issues' %}</h3>
-                            <img class="img-right" src="https://www.myhealthistory.com/media/new/image/health.png" />
+                            <img class="img-right" src="{% static 'img/health.png' %}" />
                         </div>
                         <p class="ghi"><br> <br> {% trans "According to modern medical science, approximately 25% of an individual’s overall health depends from genetics and 75% on the individual; therefore, the long-term health should be managed accurately and precisely." %} <br> <br>
                             
@@ -297,6 +297,5 @@
         <!-- end doctor_benefits  -->
     </div><br>
     <!-- content 3 end -->
-
 
     {% endblock content%}

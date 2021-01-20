@@ -41,10 +41,10 @@
                                         <li class="nav-item"><a href="{% url 'change_password' %}"
                                                                 class="nav-link"><b
                                                 style="color: #00b3e3;">{% trans 'Change Password' %}</b></a></li>
-                                        <li class="nav-item"><a href=""
+                                        <li class="nav-item"><a href="{% url 'reports' %}"
                                                                 class="nav-link"><b
                                                 style="color: #00b3e3;">{% trans 'Reports' %}</b></a></li>
-                                        <li class="nav-item"><a href=""
+                                        <li class="nav-item"><a href="{% url 'ask_expert' %}"
                                                                 class="nav-link"><b
                                                 style="color: #00b3e3;">{% trans 'Ask the expert' %}</b></a></li>
                                     </ul>
@@ -186,7 +186,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <div class="col-sm-9 col-sm-offset-3">
-                                                    <button class="btn btn-primary" type="submit">{% trans 'Save Changes' %}</button>
+                                                    <button class="btn submitButton" type="submit">{% trans 'Save Changes' %}</button>
                                                 </div>
                                             </div>
 

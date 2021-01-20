@@ -33,9 +33,9 @@
 
                     <li class="auth nav-item">
                         {% if not request.user.is_authenticated %}
-                            <i class="fa fa-user" aria-hidden="true" style="color: lime">
+                            <i class="fa fa-user" aria-hidden="true" style="color: #83bc00; font-size: large">
 
-                            <a class="nav-link" style="color: #7af848"
+                            <a class="nav-link" style="color: #83bc00; font-size: large;"
                                href="{% url 'login' %}">{% trans 'Sign in' %}</a>
                             </i>
                         {% else %}

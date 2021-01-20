@@ -47,3 +47,4 @@ def symptom_check_order_send_mail(**kwargs):
             Number of required Symptom Check set:      {kwargs['symptom_check_set_amount']}"""
     recipient_list = ['shahlar.pashayev@myhealthistory.com']
     send_mail(subject, message, email_from, recipient_list)
+    return 1

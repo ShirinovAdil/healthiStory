@@ -1,9 +1,9 @@
-from django.shortcuts import render, redirect
-from .forms import UserRegistrationForm, UserLoginForm, UserUpdateForm
+from django.shortcuts import render, redirect, HttpResponse
+from .forms import UserRegistrationForm, UserLoginForm, UserUpdateForm, CustomPasswordChangeForm
 from django.contrib.auth import login, logout, authenticate, update_session_auth_hash
 from django.contrib import messages
 from .models import City, District, Town
-from django.contrib.auth.forms import AuthenticationForm, PasswordChangeForm
+from django.contrib.auth.forms import AuthenticationForm
 
 
 def user_register(request):
@@ -76,19 +76,27 @@ def user_account_edit(request):
 def user_password_change(request):
     if request.user.is_authenticated:
         if request.method == "POST":
-            form = PasswordChangeForm(request.user, request.POST)
+            form = CustomPasswordChangeForm(request.user, request.POST)
             if form.is_valid():
                 form.save()
                 update_session_auth_hash(request, form.user)
                 messages.success(request, 'Your password was successfully updated!')
                 return redirect('profile')
             else:
-                return redirect('change_password')
+                return render(request, 'account/change_password.html', {'form': form})
         else:
-            form = PasswordChangeForm(user=request.user)
+            form = CustomPasswordChangeForm(user=request.user)
         return render(request, 'account/change_password.html', {'form': form})
     else:
         return redirect('login')
+
+
+def user_ask_expert(request):
+    return HttpResponse('<h1>Soon available...</h1>')
+
+
+def user_reports(request):
+    return HttpResponse('<h1>Soon available...</h1>')
 
 
 def load_cities(request):

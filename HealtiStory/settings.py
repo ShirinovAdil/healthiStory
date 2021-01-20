@@ -115,23 +115,26 @@ AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
     },
-    {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-    },
+    # {
+    #     'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+    # },
     {
         'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
     },
     {
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
+    {
+        'NAME': 'account.validators.CustomPasswordValidator',
+    },
 ]
 
 # EMAIL SETTINGS
 EMAIL_HOST_USER = 'emil.ojagverdiyev@myhealthistory.com'
 EMAIL_HOST_PASSWORD = 'at7M40c~'
-EMAIL_HOST = 'srv70150.trdns.com'
+EMAIL_HOST = 'myhealthistory.com'
 EMAIL_USE_TLS = True
-EMAIL_PORT = 587
+EMAIL_PORT = 25
 
 
 # Internationalization

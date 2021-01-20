@@ -43,12 +43,17 @@ def single_product_view(request, product_code):
                 else:
                     output = gettext("""<div class="alert alert-danger alert-dismissable text-center">
                                                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                                                ERROR!!! You have to order at least 1 component
+                                                ERROR: Please fill at least one field in \"Quantity of products\"
                                                 </div>""")
                     messages.success(request, output)
                 return render(request, "product/single_product.html",
                               {"product": model1, "form": form, "product_code": product_code})
             else:
+                output = gettext("""<div class="alert alert-danger alert-dismissable text-center">
+                                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                                                    ERROR: Please fill the mandatory fields in the \"Order Now\" form!
+                                                    </div>""")
+                messages.success(request, output)
                 return render(request, "product/single_product.html", {"product": model1, "form": form, "product_code": product_code})
         elif product_code == 'Symptom_Check':
             form = SymptomCheckOrderForm(request.POST)
@@ -63,6 +68,11 @@ def single_product_view(request, product_code):
                 return render(request, "product/single_product.html",
                               {"product": model1, "form": form, "product_code": product_code})
             else:
+                output = gettext("""<div class="alert alert-danger alert-dismissable text-center">
+                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                                    ERROR: Please fill the mandatory fields in the \"Order Now\" form!
+                                    </div>""")
+                messages.success(request, output)
                 return render(request, "product/single_product.html", {"product": model1, "form": form, "product_code": product_code})
     else:
         return render(request, "product/single_product.html", {"product": model1, "form": form, "product_code": product_code})

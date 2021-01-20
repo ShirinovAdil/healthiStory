@@ -1,7 +1,9 @@
+from django.contrib.auth import password_validation
 from .models import User, Country, City, District, Town
 from django import forms
 from django.contrib.auth.forms import AuthenticationForm, PasswordChangeForm
 from django.utils.translation import ugettext_lazy as _
+from django.core.exceptions import ValidationError
 
 
 class UserLoginForm(AuthenticationForm):
@@ -166,7 +168,7 @@ class UserRegistrationForm(forms.ModelForm):
                 _("Your passwords do not match")
             )
         if password:
-            if len(password)<6:
+            if len(password) < 6:
                 raise forms.ValidationError(
                     _("Your passwords must be at least 6 characters")
                 )
@@ -233,4 +235,22 @@ class UserRegistrationForm(forms.ModelForm):
             else:
                 pass
 
+
+class CustomPasswordChangeForm(PasswordChangeForm):
+    old_password = forms.CharField(
+        label=_("Old password"),
+        strip=False,
+        widget=forms.PasswordInput(attrs={'autocomplete': 'current-password', 'autofocus': True}),
+    )
+    new_password1 = forms.CharField(
+        label=_("New password"),
+        widget=forms.PasswordInput(attrs={'autocomplete': 'new-password', 'id': 'password'}),
+        strip=False,
+        help_text=password_validation.password_validators_help_text_html(),
+    )
+    new_password2 = forms.CharField(
+        label=_("New password confirmation"),
+        strip=False,
+        widget=forms.PasswordInput(attrs={'autocomplete': 'new-password', 'id': 'confirm_password'}),
+    )
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-02 10:17+0400\n"
+"POT-Creation-Date: 2021-01-10 22:07+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -45,11 +45,11 @@ msgstr "Турецкий"
 msgid "Azerbaijan"
 msgstr "Азербайджанский"
 
-#: .\account\choices.py:22 .\templates\account\account.html:96
+#: .\account\choices.py:22 .\templates\account\account.html:97
 msgid "Male"
 msgstr "Мужской"
 
-#: .\account\choices.py:23 .\templates\account\account.html:98
+#: .\account\choices.py:23 .\templates\account\account.html:99
 msgid "Female"
 msgstr "Женский"
 
@@ -141,9 +141,10 @@ msgstr ""
 msgid "Chinese"
 msgstr ""
 
-#: .\account\choices.py:85
+#: .\account\choices.py:85 .\templates\product\single_product.html:208
+#: .\templates\product\single_product.html:228
 msgid "Others"
-msgstr ""
+msgstr "Прочие"
 
 #: .\account\choices.py:87
 msgid "White or not stated"
@@ -161,184 +162,200 @@ msgstr "Черный (Карибский)"
 msgid "Black African"
 msgstr "Черный (Африка)"
 
-#: .\account\forms.py:9 .\templates\account\account.html:84
+#: .\account\forms.py:11 .\account\models.py:65
+#: .\templates\account\account.html:85
 msgid "User ID"
 msgstr "ID Пользователя"
 
-#: .\account\forms.py:11
+#: .\account\forms.py:13
 msgid "Password"
 msgstr "пароль"
 
-#: .\account\forms.py:16 .\account\forms.py:116 .\account\models.py:63
+#: .\account\forms.py:18 .\account\forms.py:118 .\account\models.py:71
 msgid "Country"
 msgstr "Страна"
 
-#: .\account\forms.py:17 .\account\forms.py:117 .\account\models.py:32
-#: .\account\models.py:66
+#: .\account\forms.py:19 .\account\forms.py:119 .\account\models.py:41
+#: .\account\models.py:74
 msgid "District"
 msgstr "Район"
 
-#: .\account\forms.py:18 .\account\forms.py:118 .\account\models.py:41
-#: .\account\models.py:67
+#: .\account\forms.py:20 .\account\forms.py:120 .\account\models.py:50
+#: .\account\models.py:75
 msgid "Town/Village"
 msgstr "Город/Деревня"
 
-#: .\account\forms.py:19 .\account\forms.py:119 .\account\models.py:23
+#: .\account\forms.py:21 .\account\forms.py:121 .\account\models.py:32
 msgid "City"
 msgstr "Город"
 
-#: .\account\forms.py:115
+#: .\account\forms.py:117
 msgid "Confirm Password"
 msgstr "Подтвердить Пароль"
 
-#: .\account\forms.py:155 .\account\forms.py:162
+#: .\account\forms.py:157 .\account\forms.py:164
 msgid "City is required"
 msgstr ""
 
-#: .\account\forms.py:157
+#: .\account\forms.py:159
 msgid "District is required"
 msgstr ""
 
-#: .\account\forms.py:159
+#: .\account\forms.py:161
 msgid "Town is required"
 msgstr ""
 
-#: .\account\forms.py:166
+#: .\account\forms.py:168
 msgid "Your passwords do not match"
 msgstr ""
 
-#: .\account\forms.py:171
+#: .\account\forms.py:173
 msgid "Your passwords must be at least 6 characters"
 msgstr ""
 
-#: .\account\forms.py:175
+#: .\account\forms.py:177
 msgid ""
 "You have to enter one of EMAIL, PHONE or Citizen ID into the User ID field"
 msgstr ""
 
-#: .\account\models.py:22
+#: .\account\forms.py:241
+#, fuzzy
+#| msgid "Password"
+msgid "Old password"
+msgstr "пароль"
+
+#: .\account\forms.py:246
+#, fuzzy
+#| msgid "Password"
+msgid "New password"
+msgstr "пароль"
+
+#: .\account\forms.py:252
+msgid "New password confirmation"
+msgstr ""
+
+#: .\account\models.py:31
 msgid "Code"
 msgstr "Код"
 
-#: .\account\models.py:24
+#: .\account\models.py:33
 msgid "Phone code"
 msgstr ""
 
-#: .\account\models.py:40
+#: .\account\models.py:49
 msgid "Neighborhood"
 msgstr ""
 
-#: .\account\models.py:42
+#: .\account\models.py:51
 msgid "Postal code"
 msgstr "Почтовый Код"
 
-#: .\account\models.py:51
+#: .\account\models.py:60
 msgid "Name"
 msgstr "Имя"
 
-#: .\account\models.py:52
+#: .\account\models.py:61
 msgid "Surname"
 msgstr "Фамилия"
 
-#: .\account\models.py:53
+#: .\account\models.py:62
 msgid "Birthdate"
 msgstr "Дата рождения"
 
-#: .\account\models.py:54
+#: .\account\models.py:63
 #: .\env\Lib\site-packages\django\db\models\fields\__init__.py:1589
 msgid "Email address"
 msgstr "Адрес электронной почты"
 
-#: .\account\models.py:55 .\product\forms.py:9 .\product\forms.py:33
-#: .\templates\account\account.html:112
+#: .\account\models.py:64 .\product\forms.py:9 .\product\forms.py:33
+#: .\templates\account\account.html:113
 msgid "Phone"
 msgstr "Телефон"
 
-#: .\account\models.py:56
-msgid "User ID(Citizen ID or E-mail or Mobile number)"
-msgstr ""
-"ID пользователя (Номер удостоверения личности или Адрес электронной почты "
-"или номер мобильного телефона)"
-
-#: .\account\models.py:57
+#: .\account\models.py:66
 msgid "Card number"
 msgstr "Номер карты"
 
-#: .\account\models.py:58
+#: .\account\models.py:67
 msgid "Language"
 msgstr "Язык"
 
-#: .\account\models.py:59 .\templates\account\account.html:92
+#: .\account\models.py:68 .\templates\account\account.html:93
 msgid "Gender"
 msgstr "Пол"
 
-#: .\account\models.py:60
+#: .\account\models.py:69
 msgid "Height(cm)"
 msgstr "Рост (см)"
 
-#: .\account\models.py:61
+#: .\account\models.py:70
 msgid "Blood Group"
 msgstr "Группа крови"
 
-#: .\account\models.py:65
+#: .\account\models.py:73
 msgid "City*"
 msgstr "Город*"
 
-#: .\account\models.py:68
+#: .\account\models.py:76
 msgid "Physical Activity"
 msgstr "Физическая активность"
 
-#: .\account\models.py:69
+#: .\account\models.py:77
 msgid "Smoking"
 msgstr "Курение"
 
-#: .\account\models.py:70
+#: .\account\models.py:78
 msgid "Diabets"
 msgstr "Диабет"
 
-#: .\account\models.py:71
+#: .\account\models.py:79
 msgid "Ethnicity"
 msgstr "Этническая принадлежность"
 
-#: .\account\models.py:72
+#: .\account\models.py:80
 msgid "ANGINA OR HEART ATTACK IN A 1ST DEGREE RELATIVE &lt;60?"
 msgstr "У ПЕРВОСТЕПЕННЫХ РОДСТВЕННИКОВ ДО 60 ЛЕТ НАЛИЧИЕ ИНФАРКТА"
 
-#: .\account\models.py:73
+#: .\account\models.py:81
 msgid "Menopause"
 msgstr "ПЕРИОД МЕНОПАУЗЫ "
 
-#: .\account\models.py:74
+#: .\account\models.py:82
 msgid "Kidney Disease"
 msgstr "ХРОНИЧЕСКОЕ ЗАБОЛЕВАНИЕ ПОЧЕК "
 
-#: .\account\models.py:75
+#: .\account\models.py:83
 msgid "Arterial Fibrillation"
 msgstr "АРТЕРИАЛЬНАЯ ФИБРИЛЛЯЦИЯ "
 
-#: .\account\models.py:76
+#: .\account\models.py:84
 msgid "DO YOU GETTING PRESSURE TREATMENT?"
 msgstr "ЛЕЧИТЕСЬ ЛИ ОТ ГИПЕРТОНИИ?"
 
-#: .\account\models.py:77
+#: .\account\models.py:85
 msgid "Rheumatoid Arthritis"
 msgstr "РЕВМАТОИДНЫЙ АРТРИТ"
 
-#: .\account\models.py:79
+#: .\account\models.py:87
 msgid "staff status"
 msgstr ""
 
-#: .\account\models.py:81
+#: .\account\models.py:89
 msgid "Designates whether the user can log into this admin site."
 msgstr ""
 
-#: .\account\models.py:90
+#: .\account\models.py:98
 msgid "user"
 msgstr ""
 
-#: .\account\models.py:91
+#: .\account\models.py:99
 msgid "users"
 msgstr ""
+
+#: .\account\validators.py:12 .\account\validators.py:15
+#, python-format
+msgid "Your password must contain at least %(min_length)d characters."
+msgstr "Ваш пароль должен содержать не менее %(min_length)d символов."
 
 #: .\env\Lib\site-packages\crispy_forms\tests\test_form_helper.py:129
 #: .\env\Lib\site-packages\crispy_forms\tests\test_form_helper.py:139
@@ -356,8 +373,10 @@ msgstr ""
 
 #: .\env\Lib\site-packages\crispy_forms\tests\test_layout_objects.py:129
 #: .\env\Lib\site-packages\django\core\validators.py:20
+#, fuzzy
+#| msgid "Email address"
 msgid "Enter a valid value."
-msgstr ""
+msgstr "Адрес электронной почты"
 
 #: .\env\Lib\site-packages\django\contrib\messages\apps.py:7
 msgid "Messages"
@@ -378,8 +397,10 @@ msgid "Syndication"
 msgstr "Локации"
 
 #: .\env\Lib\site-packages\django\core\paginator.py:48
+#, fuzzy
+#| msgid "Light smoker (less than 10)"
 msgid "That page number is not an integer"
-msgstr ""
+msgstr "Мало курящий (менее 10)"
 
 #: .\env\Lib\site-packages\django\core\paginator.py:50
 #, fuzzy
@@ -393,12 +414,16 @@ msgstr ""
 
 #: .\env\Lib\site-packages\django\core\validators.py:91
 #: .\env\Lib\site-packages\django\forms\fields.py:671
+#, fuzzy
+#| msgid "Email address"
 msgid "Enter a valid URL."
-msgstr ""
+msgstr "Адрес электронной почты"
 
 #: .\env\Lib\site-packages\django\core\validators.py:145
+#, fuzzy
+#| msgid "Email address"
 msgid "Enter a valid integer."
-msgstr ""
+msgstr "Адрес электронной почты"
 
 #: .\env\Lib\site-packages\django\core\validators.py:156
 #, fuzzy
@@ -420,18 +445,24 @@ msgstr ""
 
 #: .\env\Lib\site-packages\django\core\validators.py:246
 #: .\env\Lib\site-packages\django\core\validators.py:266
+#, fuzzy
+#| msgid "Email address"
 msgid "Enter a valid IPv4 address."
-msgstr ""
+msgstr "Адрес электронной почты"
 
 #: .\env\Lib\site-packages\django\core\validators.py:251
 #: .\env\Lib\site-packages\django\core\validators.py:267
+#, fuzzy
+#| msgid "Email address"
 msgid "Enter a valid IPv6 address."
-msgstr ""
+msgstr "Адрес электронной почты"
 
 #: .\env\Lib\site-packages\django\core\validators.py:261
 #: .\env\Lib\site-packages\django\core\validators.py:265
+#, fuzzy
+#| msgid "Email address"
 msgid "Enter a valid IPv4 or IPv6 address."
-msgstr ""
+msgstr "Адрес электронной почты"
 
 #: .\env\Lib\site-packages\django\core\validators.py:295
 msgid "Enter only digits separated by commas."
@@ -809,26 +840,36 @@ msgid ":?.!"
 msgstr ""
 
 #: .\env\Lib\site-packages\django\forms\fields.py:247
+#, fuzzy
+#| msgid "Card number"
 msgid "Enter a whole number."
-msgstr ""
+msgstr "Номер карты"
 
 #: .\env\Lib\site-packages\django\forms\fields.py:398
 #: .\env\Lib\site-packages\django\forms\fields.py:1139
+#, fuzzy
+#| msgid "Email address"
 msgid "Enter a valid date."
-msgstr ""
+msgstr "Адрес электронной почты"
 
 #: .\env\Lib\site-packages\django\forms\fields.py:422
 #: .\env\Lib\site-packages\django\forms\fields.py:1140
+#, fuzzy
+#| msgid "Email address"
 msgid "Enter a valid time."
-msgstr ""
+msgstr "Адрес электронной почты"
 
 #: .\env\Lib\site-packages\django\forms\fields.py:450
+#, fuzzy
+#| msgid "Email address"
 msgid "Enter a valid date/time."
-msgstr ""
+msgstr "Адрес электронной почты"
 
 #: .\env\Lib\site-packages\django\forms\fields.py:484
+#, fuzzy
+#| msgid "Email address"
 msgid "Enter a valid duration."
-msgstr ""
+msgstr "Адрес электронной почты"
 
 #: .\env\Lib\site-packages\django\forms\fields.py:485
 #, python-brace-format
@@ -877,20 +918,26 @@ msgstr ""
 #: .\env\Lib\site-packages\django\forms\fields.py:866
 #: .\env\Lib\site-packages\django\forms\fields.py:981
 #: .\env\Lib\site-packages\django\forms\models.py:1295
+#, fuzzy
+#| msgid "Email address"
 msgid "Enter a list of values."
-msgstr ""
+msgstr "Адрес электронной почты"
 
 #: .\env\Lib\site-packages\django\forms\fields.py:982
 msgid "Enter a complete value."
 msgstr ""
 
 #: .\env\Lib\site-packages\django\forms\fields.py:1198
+#, fuzzy
+#| msgid "Email address"
 msgid "Enter a valid UUID."
-msgstr ""
+msgstr "Адрес электронной почты"
 
 #: .\env\Lib\site-packages\django\forms\fields.py:1228
+#, fuzzy
+#| msgid "Email address"
 msgid "Enter a valid JSON."
-msgstr ""
+msgstr "Адрес электронной почты"
 
 #. Translators: This is the default suffix added to form field labels
 #: .\env\Lib\site-packages\django\forms\forms.py:78
@@ -1161,8 +1208,10 @@ msgid "November"
 msgstr ""
 
 #: .\env\Lib\site-packages\django\utils\dates.py:16
+#, fuzzy
+#| msgid "Card number"
 msgid "December"
-msgstr ""
+msgstr "Номер карты"
 
 #: .\env\Lib\site-packages\django\utils\dates.py:19
 msgid "jan"
@@ -1185,8 +1234,10 @@ msgid "may"
 msgstr ""
 
 #: .\env\Lib\site-packages\django\utils\dates.py:19
+#, fuzzy
+#| msgid "Surname"
 msgid "jun"
-msgstr ""
+msgstr "Фамилия"
 
 #: .\env\Lib\site-packages\django\utils\dates.py:20
 msgid "jul"
@@ -1330,13 +1381,17 @@ msgid "November"
 msgstr ""
 
 #: .\env\Lib\site-packages\django\utils\dates.py:48
+#, fuzzy
+#| msgid "Card number"
 msgctxt "alt. month"
 msgid "December"
-msgstr ""
+msgstr "Номер карты"
 
 #: .\env\Lib\site-packages\django\utils\ipv6.py:8
+#, fuzzy
+#| msgid "Email address"
 msgid "This is not a valid IPv6 address."
-msgstr ""
+msgstr "Адрес электронной почты"
 
 #: .\env\Lib\site-packages\django\utils\text.py:70
 #, python-format
@@ -1583,7 +1638,7 @@ msgid "Brazilian Portuguese"
 msgstr ""
 
 #: .\product\forms.py:7 .\product\forms.py:31
-#: .\templates\account\account.html:104
+#: .\templates\account\account.html:105
 msgid "Email"
 msgstr "Адрес электронной почты"
 
@@ -1653,7 +1708,7 @@ msgstr "Количество требуемых наборов для \"Symptom 
 msgid "Category Name"
 msgstr "Название категории"
 
-#: .\product\views.py:38 .\product\views.py:58
+#: .\product\views.py:38 .\product\views.py:63
 msgid ""
 "<div class=\"alert alert-success alert-dismissable text-center\">\n"
 "                                    <button type=\"button\" class=\"close\" "
@@ -1681,8 +1736,24 @@ msgstr ""
 "<div class=\"alert alert-danger alert-dismissable text-center\">\n"
 "                                            <button type=\"button\" class="
 "\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">×</button>\n"
-"                                            ОШИБКА: Заполните хотя бы одно поле "
-"в \"Количество товаров\".\n"
+"                                            ОШИБКА: Заполните хотя бы одно "
+"поле в \"Количество товаров\".\n"
+"                                            </div>"
+
+#: .\product\views.py:52 .\product\views.py:71
+msgid ""
+"<div class=\"alert alert-danger alert-dismissable text-center\">\n"
+"                                                    <button type=\"button\" "
+"class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">×</button>\n"
+"                                                    ERROR: Please fill the "
+"mandatory fields in the \"Order Now\" form!\n"
+"                                                    </div>"
+msgstr ""
+"<div class=\"alert alert-danger alert-dismissable text-center\">\n"
+"                                            <button type=\"button\" class="
+"\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">×</button>\n"
+"                                            ОШИБКА: Пожалуйста, заполните "
+"обязательные поле в форме \"Заказать сейчас\"!\n"
 "                                            </div>"
 
 #: .\readme.txt:5
@@ -1697,57 +1768,61 @@ msgstr "Добро пожаловать"
 msgid "Last Log In"
 msgstr "Последний вход"
 
-#: .\templates\account\account.html:44
-#: .\templates\account\change_password.html:34
+#: .\templates\account\account.html:45
+#: .\templates\account\change_password.html:37
 #: .\templates\account\editAccount.html:37
 msgid "Profile Info"
 msgstr "Информация о профиле"
 
-#: .\templates\account\account.html:47
-#: .\templates\account\change_password.html:37
+#: .\templates\account\account.html:48
+#: .\templates\account\change_password.html:40
 #: .\templates\account\editAccount.html:40
 #: .\templates\account\editAccount.html:62
 msgid "Edit Profile"
 msgstr "Редактировать профиль"
 
-#: .\templates\account\account.html:50
-#: .\templates\account\change_password.html:40
-#: .\templates\account\change_password.html:58
+#: .\templates\account\account.html:51
+#: .\templates\account\change_password.html:43
+#: .\templates\account\change_password.html:63
 #: .\templates\account\editAccount.html:43
 msgid "Change Password"
 msgstr "Сменить пароль"
 
-#: .\templates\account\account.html:53
-#: .\templates\account\change_password.html:43
+#: .\templates\account\account.html:54
+#: .\templates\account\change_password.html:46
 #: .\templates\account\editAccount.html:46
 msgid "Reports"
 msgstr ""
 
-#: .\templates\account\account.html:56
-#: .\templates\account\change_password.html:46
+#: .\templates\account\account.html:57
+#: .\templates\account\change_password.html:49
 #: .\templates\account\editAccount.html:49
 msgid "Ask the expert"
 msgstr ""
 
-#: .\templates\account\account.html:68
+#: .\templates\account\account.html:69
 msgid "Full Name"
 msgstr "Имя Фамилия"
 
-#: .\templates\account\account.html:76
+#: .\templates\account\account.html:77
 msgid "Birthday"
 msgstr "Дата Рождения"
 
-#: .\templates\account\account.html:120
+#: .\templates\account\account.html:121
 msgid "Card Number"
 msgstr "Номер Карты"
 
+#: .\templates\account\change_password.html:62
+msgid "Your passwords are not matching"
+msgstr "Ваши пароли не совпадают"
+
 #: .\templates\account\editAccount.html:133
-#: .\templates\account\register.html:141
+#: .\templates\account\register.html:136
 msgid "Questions relating to the assessment of cardiovascular disease risk"
 msgstr "Вопросы, касающиеся оценки риска сердечно-сосудистых заболеваний"
 
 #: .\templates\account\editAccount.html:184
-#: .\templates\account\register.html:181
+#: .\templates\account\register.html:176
 msgid "Required fields"
 msgstr "Обязательные поля"
 
@@ -1775,11 +1850,17 @@ msgstr "Регистрация"
 msgid "Forgot your password?"
 msgstr "Забыли пароль?"
 
-#: .\templates\account\register.html:49
+#: .\templates\account\register.html:46
 msgid "Registration"
 msgstr "Регистрация"
 
-#: .\templates\account\register.html:183
+#: .\templates\account\register.html:66
+msgid "(Citizen ID or E-mail or Mobile number)"
+msgstr ""
+"(Номер удостоверения личности или Адрес электронной почты или номер "
+"мобильного телефона)"
+
+#: .\templates\account\register.html:178
 msgid "Register"
 msgstr "Создать"
 
@@ -2098,25 +2179,225 @@ msgid ""
 msgstr ""
 "Обеспечить новые потоки доходов в виде виртуальных консультаций и оценок."
 
-#: .\templates\product\single_product.html:48
+#: .\templates\product\single_product.html:42
+msgid "Supported Parameters"
+msgstr "Поддерживаемые Параметры"
+
+#: .\templates\product\single_product.html:58
+#: .\templates\product\single_product.html:84
+msgid "Cardiovascular System"
+msgstr "Сердечно-Сосудистая Система"
+
+#: .\templates\product\single_product.html:65
+msgid "\"Highest\" Pressure (Systolic)"
+msgstr "Систолическое Давление"
+
+#: .\templates\product\single_product.html:66
+msgid "\"Lowest\" Pressure (Diastolic)"
+msgstr "Диастолическое Давление"
+
+#: .\templates\product\single_product.html:67
+msgid "Pulse Pressure"
+msgstr "Пульсовое Давление"
+
+#: .\templates\product\single_product.html:68
+msgid "Pulse"
+msgstr "Пульс"
+
+#: .\templates\product\single_product.html:69
+msgid "Mean Arterial Pressure"
+msgstr "Среднее Артериальное Давление"
+
+#: .\templates\product\single_product.html:70
+msgid "Arrhythmia"
+msgstr "Aритмия"
+
+#: .\templates\product\single_product.html:71
+msgid "Total Cholesterol (TC)"
+msgstr "Общий Холестерин"
+
+#: .\templates\product\single_product.html:72
+msgid "\"Good\" Cholesterol (HDL)"
+msgstr "Хороший Холестерин (ЛПВП)"
+
+#: .\templates\product\single_product.html:73
+msgid "\"Bad\" Cholesterol (LDL)"
+msgstr "Плохой Холестерин (ЛПНП)"
+
+#: .\templates\product\single_product.html:74
+msgid "Triglyceride"
+msgstr "Триглицерид"
+
+#: .\templates\product\single_product.html:75
+msgid "VLDL"
+msgstr "ЛПОНП"
+
+#: .\templates\product\single_product.html:76
+msgid "TC/HDL Ratio"
+msgstr "Соотношение Общего Холестерина к ЛПВП"
+
+#: .\templates\product\single_product.html:77
+msgid "Non-HDL"
+msgstr "Без-ЛПВП"
+
+#: .\templates\product\single_product.html:78
+msgid "LDL/HDL Ratio"
+msgstr "Соотношение ЛПНП к ЛПВП"
+
+#: .\templates\product\single_product.html:79
+msgid "10-Years Risk of Cardiovascular Diseases"
+msgstr "10-и Летний Риск Сердечно-сосудистых Заболеваний"
+
+#: .\templates\product\single_product.html:101
+#: .\templates\product\single_product.html:115
+msgid "Blood Glucose"
+msgstr "Сахар в Крови"
+
+#: .\templates\product\single_product.html:108
+msgid "Fasting Blood Glucose"
+msgstr "Сахар Крови Натощак"
+
+#: .\templates\product\single_product.html:109
+msgid "Postprandial Blood Glucose"
+msgstr "Постпрандиальный Сахар Крови"
+
+#: .\templates\product\single_product.html:132
+#: .\templates\product\single_product.html:151
+msgid "Complete Blood Count"
+msgstr "Общий Анализ Крови"
+
+#: .\templates\product\single_product.html:139
+msgid "Hematocrit"
+msgstr "Гематокрит"
+
+#: .\templates\product\single_product.html:140
+msgid "Hemoglobin"
+msgstr "Гемоглобин"
+
+#: .\templates\product\single_product.html:141
+msgid "Red Blood Cell count (RBC)"
+msgstr "Эритроциты (RBC)"
+
+#: .\templates\product\single_product.html:142
+msgid "Mean Cell Volume (MCV)"
+msgstr "Средний объем эритроцита (MCV)"
+
+#: .\templates\product\single_product.html:143
+msgid "Mean Cell Hemoglobin (MCH)"
+msgstr "Среднее содержание гемоглобина в эритроците (MCH)"
+
+#: .\templates\product\single_product.html:144
+msgid "Mean Cell Hemoglobin Concentration (MCHC)"
+msgstr "Средняя концентрация гемоглобина в эритроците (MCHC)"
+
+#: .\templates\product\single_product.html:168
+#: .\templates\product\single_product.html:191
+msgid "Body Analysis"
+msgstr "Анализ Тела"
+
+#: .\templates\product\single_product.html:175
+msgid "Weight"
+msgstr "Вес Тела"
+
+#: .\templates\product\single_product.html:176
+msgid "Recommended Ideal Weight"
+msgstr "Рекомендуемый идеальный вес"
+
+#: .\templates\product\single_product.html:177
+msgid "Body Mass Index"
+msgstr "Индекс Массы Тела"
+
+#: .\templates\product\single_product.html:178
+msgid "Body Fat Ratio"
+msgstr "Соотношение Жира в Организме"
+
+#: .\templates\product\single_product.html:179
+msgid "Lean Body Mass"
+msgstr "Вес Тела без Жира"
+
+#: .\templates\product\single_product.html:180
+msgid "Lean Body Mass Ratio"
+msgstr "Соотношение Веса Тела без Жира"
+
+#: .\templates\product\single_product.html:181
+msgid "Body Surface Area"
+msgstr "Площадь Поверхности Тела"
+
+#: .\templates\product\single_product.html:182
+msgid "Total Body Water (in liters)"
+msgstr "Общая Вода Тела (в литрах)"
+
+#: .\templates\product\single_product.html:183
+msgid "Total Body Water Ratio"
+msgstr "Соотношение Общей Воды Тела"
+
+#: .\templates\product\single_product.html:184
+msgid "Resting Basal Metabolic Rate"
+msgstr "Базальная Метаболическая Скорость"
+
+#: .\templates\product\single_product.html:185
+msgid "Recommended Fluid Intake Per Day"
+msgstr "Рекомендуемое Потребление Жидкости в День"
+
+#: .\templates\product\single_product.html:186
+msgid "Recommended Water Intake Per Day"
+msgstr "Рекомендуемое Потребление Воды в День"
+
+#: .\templates\product\single_product.html:215
+msgid "Temperature"
+msgstr "Температура Тела"
+
+#: .\templates\product\single_product.html:216
+msgid "Amount of Ketone in the Blood"
+msgstr "Количество Кетона в Крови"
+
+#: .\templates\product\single_product.html:217
+msgid "Amount of Creatinine in the Blood"
+msgstr "Количество Креатинина в Крови"
+
+#: .\templates\product\single_product.html:218
+msgid "Glomerular Filtration Rate"
+msgstr "Скорость клубочковой фильтрации"
+
+#: .\templates\product\single_product.html:219
+msgid "Unadjusted Glomerular Filtration Rate"
+msgstr "Не регулированный скорость клубочковой фильтрации"
+
+#: .\templates\product\single_product.html:220
+msgid "Creatinine Clearance"
+msgstr "Клиренс креатинина"
+
+#: .\templates\product\single_product.html:221
+msgid "Corrected Creatinine Clearance"
+msgstr "Регулированный клиренс креатинина"
+
+#: .\templates\product\single_product.html:222
+msgid "Uric Acid in Blood"
+msgstr "Мочевая кислота в крови"
+
+#: .\templates\product\single_product.html:223
+msgid "Glucose Ketone Index (GKI)"
+msgstr "Индекс Глюкозы Кетона (GKI)"
+
+#: .\templates\product\single_product.html:243
 msgid "Description"
 msgstr "Описание"
 
-#: .\templates\product\single_product.html:51
+#: .\templates\product\single_product.html:247
 msgid "Order Now"
 msgstr "Заказать сейчас"
 
-#: .\templates\product\single_product.html:65
-#: .\templates\product\single_product.html:139
+#: .\templates\product\single_product.html:263
+#: .\templates\product\single_product.html:334
 msgid "Customer Information"
 msgstr "Информации клиента"
 
-#: .\templates\product\single_product.html:86
-#: .\templates\product\single_product.html:160
+#: .\templates\product\single_product.html:284
+#: .\templates\product\single_product.html:355
 msgid "Quantity of products"
 msgstr "Количество товаров"
 
-#: .\templates\product\single_product.html:128
-#: .\templates\product\single_product.html:167
+#: .\templates\product\single_product.html:322
+#: .\templates\product\single_product.html:366
 msgid "Send Quotation request"
 msgstr "Отправить запрос коммерческого предложения"
