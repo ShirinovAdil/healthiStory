@@ -1,48 +1,91 @@
-try{
-        var userBenefit = document.getElementById("user-benefit");
-        var userBenefitData = document.getElementById("user-benefit-data");
-        var docBenefit = document.getElementById("doc-benefit");
-        var docBenefitData = document.getElementById("doc-benefit-data");
-        var userMore = document.getElementById("user-more");
-        var docMore = document.getElementById("doc-more");
- 
-        window.addEventListener("load", function(e){
-            userBenefitData.style.display = "block";
-            docBenefitData.style.display = "none";
-        });
-        userMore.addEventListener("click", function(e){
-            docBenefitData.style.display = "none";
-            userBenefitData.style.display = "block";
-        });
-        docMore.addEventListener("click", function(e){
-            userBenefitData.style.display = "none";
-            docBenefitData.style.display = "block";
-        }); }
-        catch(err){
-            console.log("hecne olmuyub")
+try {
+    let url = $("#personForm").attr("data-cities-url");
+    $(document).ready(function () {
+        if ($("#id_country").val() === "1") {
+            $("#city2_country").css("display", "none");
+            $("#turkey_based").show();
+            $.ajax({
+                url: url,
+                success: function (data) {
+                    $("#id_city").html(data);
+                }
+            }).done(function () {
+                let url = $("#personForm").attr("data-districts-url");
+                $.ajax({
+                    url: url,
+                    data: {
+                        'city': $("#id_city").val()
+                    },
+                    success: function (data) {
+                        $("#id_district").html(data);
+                        let url = $("#personForm").attr("data-towns-url");
+                        $.ajax({
+                            url: url,
+                            data: {
+                                'district': $("#id_district").val()
+                            },
+                            success: function (data) {
+                                $("#id_town").html(data);
+                                console.log(data)
+                            }
+                        });
+                    }
+                });
+            });
+        } else {
+            $("#turkey_based").hide();
+            $("#city_country").css("display", "none");
+            $("#city2_country").css("display", "block");
         }
-
-
-try{
-    $(document).ready(function(){
-        if ($("#inputGender").val() == "female"){
-            $("#female-only-survey").show();
-        }else{
-            $("#female-only-survey").hide();
-        }
-
-        $("#inputGender").change(function(){
-            if ($("#inputGender").val() == "female"){
-                $("#female-only-survey").show();
-            }else{
-                $("#female-only-survey").hide();
+        $("#id_country").change(function () {
+            if ($("#id_country").val() === "1") {
+                $("#turkey_based").show();
+                $("#city2_country").css("display", "none");
+                $("#city_country").show();
+                $.ajax({
+                    url: url,
+                    success: function (data) {
+                        $("#id_city").html(data);
+                    }
+                });
+            } else {
+                $("#turkey_based").hide();
+                $("#city_country").css("display", "none");
+                $("#city2_country").css("display", "block");
             }
         })
-
     });
+} catch (err) {
+    console.log(err);
+}
 
-    }catch(err){
-        console.log("survey error");
-    }
-    
-    
+try {
+    $("#id_city").change(function () {
+        let url = $("#personForm").attr("data-districts-url");
+        let cityID = $("#id_city").val();
+        $.ajax({
+            url: url,
+            data: {
+                'city': cityID
+            },
+            success: function (data) {
+                $("#id_district").html(data);
+
+                let url = $("#personForm").attr("data-towns-url");
+                let districtID = $("#id_district").val();
+                $.ajax({
+                    url: url,
+                    data: {
+                        'district': districtID
+                    },
+                    success: function (data) {
+                        $("#id_town").html(data);
+                    }
+                });
+
+            }
+        });
+    });
+} catch (err) {
+    console.log(err);
+}

@@ -107,7 +107,7 @@ ul {
 }
 .top-nav li .nav-link:last-child{
     color:rgb(9, 218, 9);
-    font-style: bold;
+    font-weight: bold;
 }
 .top-nav li .nav-link:last-child:hover{
     color: rgb(0, 255, 0);
@@ -139,7 +139,7 @@ ul {
 }
 
 .header_area .navbar .nav .nav-item:hover .nav-link, .header_area .navbar .nav .nav-item.active .nav-link {
-    color: #7af848;
+    color: #83bc00;
 }
 
 .header_area .navbar .nav .nav-item:last-child {
@@ -163,10 +163,6 @@ ul {
     line-height: 70px;
 }
 
-.top_menu {
-    border-bottom: 1px solid #e8edf1;
-}
-
 .auth.nav-item{
     display: flex;
     align-items: center;
@@ -182,7 +178,7 @@ body{
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Roboto', sans-serif;
-  color: #00b3e3;
+  color: #83bc00;
 	margin-top: 0px;
 	font-style: normal;
 	font-weight: 700;
@@ -196,61 +192,61 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 #blue:hover{
-  background: rgb(146, 185, 243);
-}
-#blue:hover #bluei{
-  color: rgb(146, 185, 243);
-}
-#green:hover{
-  background: rgb(156, 238, 148);
-
-}
-#green:hover #greeni{
-  color: rgb(156, 238, 148);
-
-}
-#orange:hover{
-  background: rgb(241, 209, 150);
-
-}
-#orange:hover #orangei{
-  color: rgb(241, 209, 150);
-
-}
-#purple:hover{
-  background: rgb(243, 155, 231);
-  
-}
-#purple:hover #purplei{
-  color: rgb(243, 155, 231);
-  
-}
-#blue{
   background: rgb(201, 208, 248);
 }
-#green{
+#blue:hover #bluei{
+  color: rgb(201, 208, 248);
+}
+#green:hover{
   background: rgb(209, 245, 205);
 
 }
-#orange{
+#green:hover #greeni{
+  color: rgb(209, 245, 205);
+
+}
+#orange:hover{
   background: rgb(245, 233, 204);
 
 }
-#purple{
+#orange:hover #orangei{
+  color: rgb(245, 233, 204);
+
+}
+#purple:hover{
   background: rgb(245, 212, 234);
+  
+}
+#purple:hover #purplei{
+  color: rgb(245, 212, 234);
+  
+}
+#blue{
+  background: rgb(146, 185, 243);
+}
+#green{
+  background: rgb(156, 238, 148);
+
+}
+#orange{
+  background: rgb(241, 209, 150);
+
+}
+#purple{
+  background: rgb(243, 155, 231);
 
 }
 #purplei{
-  color: rgb(245, 212, 234);
+  color: rgb(243, 155, 231);
 }
 #bluei{
-  color: rgb(210, 216, 248);
+  color: rgb(146, 185, 243);
 }
 #greeni{
-  color: rgb(214, 243, 211);
+  color: rgb(156, 238, 148);
 }
 #orangei{
-  color: rgb(245, 235, 212);
+  color: rgb(241, 209, 150);
 }
 
 .our-missions .single-missions {
@@ -529,7 +525,7 @@ span{
   border-radius:0;
   padding:60px 10px;
   margin:30px 0px;
-  height:400px
+  height:80%;
 }
 .text{
   margin:20px 0px;
@@ -543,7 +539,7 @@ span{
   height:100px;
 }
 b{
-  color: limegreen;
+  color: #83bc00;
 }
 
 
@@ -605,7 +601,7 @@ h2.active {
 
 
 
-#loginform input[type=text] {
+#loginform input[type=text], #passwordlogin {
   background-color: #f6f6f6;
   border: none;
   color: #0d0d0d;
@@ -631,7 +627,7 @@ h2.active {
   border-bottom: 2px solid #5fbae9;
 }
 
-input[type=text]:placeholder {
+input[type=text]::placeholder {
   color: #cccccc;
 }
 
@@ -649,7 +645,7 @@ new custom
 
 
 #list-home-list.active{
-  background: rgb(77, 106, 201)!important;
+  background: rgb(0, 179, 227)!important;
   border-color: #89a8e9;
   
   }
@@ -660,7 +656,7 @@ new custom
  }
 
 #list-messages-list.active{
-  background: rgb(93, 221, 43)!important;
+  background: rgb(131, 188, 0)!important;
   border-color: #c9e088;
 }
 
@@ -764,4 +760,28 @@ new custom
   background-color: #f6f9fb;
   border-left: 2px solid #5b9bd1;
   margin-left: -2px;
+}
+.vl{
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  height: 21em;
+}
+.submitButton{
+    color: #FFFFFF;
+    background: #83bc00;
+}
+.submitButton:hover{
+    color: #FFFFFF;
+    background: #00b3e3;
+}
+#error_1_id_new_password2{
+    margin-bottom: 0; !important;
+    padding-bottom: 0; !important;
+}
+#messagespan{
+    margin-top: 0;!important;
+    padding-top: 0;!important;
+}
+#div_id_new_password2{
+    margin-bottom: 0; !important;
+    padding-bottom: 0; !important;
 }

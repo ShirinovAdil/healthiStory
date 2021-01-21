@@ -1,8 +1,9 @@
 {% extends 'global/base.html' %}
 
 {% load static %}
-{% load crispy_forms_tags %}
 {% load i18n %}
+{% load crispy_forms_tags %}
+
 
 {% block title %}
     Products
@@ -10,116 +11,373 @@
 
 
 
-{% block content%}
+{% block content %}
 
     <!-- single product start -->
     <div class="container-fluid">
-        <div class="container">	
+        <div class="container">
+            {% if messages %}
+                <ul>
+                    {% for message in messages %}
+                        <li>{{ message | safe }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
             <div class="row">
                 <div class="col-md-3 col-sm-5 product mt-3">
                     <div class="card product-card card-block">
-                        <img src="{% get_static_prefix %}{{product.img}} " class="img-left">
+                        <img src="{% get_static_prefix %}{{ product.img }} " class="img-left">
                     </div>
                 </div>
-                    
-                <div class="col-md-7 col-sm-5 product mt-3">
+
+                <div class="col-md-9 col-sm-5 product mt-3">
                     <div class="product-title">
-                        <h3>{{product.title}}</h3>
+                        <h3>{{ product.title }}</h3>
                     </div>
                     <div class="product-desc">
-                        <p> {{product.subtitle}}</p>
+                        <p> {{ product.subtitle }}</p>
                     </div>
                     <hr>
-                    
+                    {% if product_code == 'Mobile_Medi-Lab' %}
+                        <h4 class="mt-3">{% trans 'Supported Parameters' %}</h4>
+                        <div class="row justify-content-center pt-5">
+                            <div class="col-md-2">
+                                <div class="col">
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn" data-toggle="modal" data-target="#heartModal">
+                                        <img src="{% static 'img/sp_heart.png' %}">
+                                    </button>
+
+                                    <!-- Modal1 -->
+                                    <div class="modal fade" id="heartModal" tabindex="-1" role="dialog"
+                                         aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title"
+                                                        id="exampleModalLabel">{% trans 'Cardiovascular System' %}</h5>
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    &#x2714; {% trans '"Highest" Pressure (Systolic)' %} <br>
+                                                    &#x2714; {% trans '"Lowest" Pressure (Diastolic)' %} <br>
+                                                    &#x2714; {% trans 'Pulse Pressure' %} <br>
+                                                    &#x2714; {% trans 'Pulse' %} <br>
+                                                    &#x2714; {% trans 'Mean Arterial Pressure' %} <br>
+                                                    &#x2714; {% trans 'Arrhythmia' %} <br>
+                                                    &#x2714; {% trans 'Total Cholesterol (TC)' %} <br>
+                                                    &#x2714; {% trans '"Good" Cholesterol (HDL)' %} <br>
+                                                    &#x2714; {% trans '"Bad" Cholesterol (LDL)' %} <br>
+                                                    &#x2714; {% trans 'Triglyceride' %} <br>
+                                                    &#x2714; {% trans 'VLDL' %} <br>
+                                                    &#x2714; {% trans 'TC/HDL Ratio' %} <br>
+                                                    &#x2714; {% trans 'Non-HDL' %} <br>
+                                                    &#x2714; {% trans 'LDL/HDL Ratio' %} <br>
+                                                    &#x2714; {% trans '10-Years Risk of Cardiovascular Diseases' %} <br>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="text-center">{% trans 'Cardiovascular System' %}</p>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="col">
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn" data-toggle="modal" data-target="#monitorModal">
+                                        <img src="{% static 'img/sp_monitor.png' %}">
+                                    </button>
+
+                                    <!-- Modal2 -->
+                                    <div class="modal fade" id="monitorModal" tabindex="-1" role="dialog"
+                                         aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title"
+                                                        id="exampleModalLabel">{% trans 'Blood Glucose' %}</h5>
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    &#x2714; {% trans 'Fasting Blood Glucose' %} <br>
+                                                    &#x2714; {% trans 'Postprandial Blood Glucose' %} <br>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="text-center">{% trans 'Blood Glucose' %}</p>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="col">
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal">
+                                        <img src="{% static 'img/sp_cells.png' %}" alt="logo">
+                                    </button>
+
+                                    <!-- Modal3 -->
+                                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                                         aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title"
+                                                        id="exampleModalLabel">{% trans 'Complete Blood Count' %}</h5>
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    &#x2714; {% trans 'Hematocrit' %} <br>
+                                                    &#x2714; {% trans 'Hemoglobin' %} <br>
+                                                    &#x2714; {% trans 'Red Blood Cell count (RBC)' %} <br>
+                                                    &#x2714; {% trans 'Mean Cell Volume (MCV)' %} <br>
+                                                    &#x2714; {% trans 'Mean Cell Hemoglobin (MCH)' %} <br>
+                                                    &#x2714; {% trans 'Mean Cell Hemoglobin Concentration (MCHC)' %}
+                                                    <br>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="text-center">{% trans 'Complete Blood Count' %}</p>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="col">
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn" data-toggle="modal" data-target="#weightModal">
+                                        <img src="{% static 'img/sp_weight.png' %}" alt="logo">
+                                    </button>
+
+                                    <!-- Modal 4 -->
+                                    <div class="modal fade" id="weightModal" tabindex="-1" role="dialog"
+                                         aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title"
+                                                        id="exampleModalLabel">{% trans 'Body Analysis' %}</h5>
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    &#x2714; {% trans 'Weight' %} <br>
+                                                    &#x2714; {% trans 'Recommended Ideal Weight' %} <br>
+                                                    &#x2714; {% trans 'Body Mass Index' %} <br>
+                                                    &#x2714; {% trans 'Body Fat Ratio' %} <br>
+                                                    &#x2714; {% trans 'Lean Body Mass' %} <br>
+                                                    &#x2714; {% trans 'Lean Body Mass Ratio' %} <br>
+                                                    &#x2714; {% trans 'Body Surface Area' %} <br>
+                                                    &#x2714; {% trans 'Total Body Water (in liters)' %} <br>
+                                                    &#x2714; {% trans 'Total Body Water Ratio' %} <br>
+                                                    &#x2714; {% trans 'Resting Basal Metabolic Rate' %} <br>
+                                                    &#x2714; {% trans 'Recommended Fluid Intake Per Day' %} <br>
+                                                    &#x2714; {% trans 'Recommended Water Intake Per Day' %} <br>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="text-center">{% trans 'Body Analysis' %}</p>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="col">
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn" data-toggle="modal" data-target="#otherModal">
+                                        <img src="{% static 'img/sp_plus.png' %}" alt="logo">
+                                    </button>
+
+                                    <!-- Modal 5-->
+                                    <div class="modal fade" id="otherModal" tabindex="-1" role="dialog"
+                                         aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title"
+                                                        id="exampleModalLabel">{% trans 'Others' %}</h5>
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    &#x2714; {% trans 'Temperature' %} <br>
+                                                    &#x2714; {% trans 'Amount of Ketone in the Blood' %} <br>
+                                                    &#x2714; {% trans 'Amount of Creatinine in the Blood' %} <br>
+                                                    &#x2714; {% trans 'Glomerular Filtration Rate' %} <br>
+                                                    &#x2714; {% trans 'Unadjusted Glomerular Filtration Rate' %} <br>
+                                                    &#x2714; {% trans 'Creatinine Clearance' %} <br>
+                                                    &#x2714; {% trans 'Corrected Creatinine Clearance' %} <br>
+                                                    &#x2714; {% trans 'Uric Acid in Blood' %} <br>
+                                                    &#x2714; {% trans 'Glucose Ketone Index (GKI)' %} <br>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="text-center">{% trans 'Others' %}</p>
+                                </div>
+                            </div>
+                            <br/>
+                        </div>
+                        <hr>
+                    {% endif %}
                 </div>
             </div>
-       
+
             <div class="row">
                 <div class="col-md-3 col-sm-5 product mt-3">
                     <div class="list-group single-product-list" id="list-tab">
-                        <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">
+                        <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list"
+                           href="#list-home" role="tab" aria-controls="home">
                             {% trans 'Description' %}
                         </a>
-                        <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">
+                        <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list"
+                           href="#list-messages" role="tab" aria-controls="messages">
                             {% trans 'Order Now' %}
                         </a>
                     </div>
                 </div>
                 <div class="col-md-7 col-sm-5 product mt-3" id="productt">
                     <div class="tab-content" id="nav-tabContent">
-                        <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">{{product.description|safe}}</div>
-                        <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
-                            <form method="post">
-                                {% csrf_token %}
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group col-md-12 mb-0">
-                                            {{ form.email|as_crispy_field }}
+                        <div class="tab-pane fade show active" id="list-home" role="tabpanel"
+                             aria-labelledby="list-home-list">{{ product.description|safe }}</div>
+                        <div class="tab-pane fade" id="list-messages" role="tabpanel"
+                             aria-labelledby="list-messages-list">
+                            {% if product_code == 'Mobile_Medi-Lab' %}
+                                <form method="post" novalidate>
+                                    {% csrf_token %}
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="container">
+                                                <h3>{% trans 'Customer Information' %}</h3>
+                                            </div>
+                                            <div class="form-group col-md-12 mb-0">
+                                                {{ form.email|as_crispy_field }}
+                                            </div>
+
+                                            <div class="form-group col-md-12 mb-0">
+                                                {{ form.name|as_crispy_field }}
+                                            </div>
+
+                                            <div class="form-group col-md-12 mb-0">
+                                                {{ form.phone|as_crispy_field }}
+                                            </div>
+
+                                            <div class="form-group col-md-12 mb-0">
+                                                {{ form.address|as_crispy_field }}
+                                            </div>
                                         </div>
 
-                                        <div class="form-group col-md-12 mb-0">
-                                            {{ form.name|as_crispy_field }}
-                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="container">
+                                                <h3>{% trans 'Quantity of products' %}</h3>
+                                            </div>
+                                            <div class="form-group col-md-12 mb-0">
+                                                {{ form.station_amount|as_crispy_field }}
+                                            </div>
 
-                                        <div class="form-group col-md-12 mb-0">
-                                            {{ form.phone|as_crispy_field }}
-                                        </div>
+                                            <div class="form-group col-md-12 mb-0">
+                                                {{ form.capacity_number|as_crispy_field }}
+                                            </div>
 
-                                        <div class="form-group col-md-12 mb-0">
-                                            {{ form.address|as_crispy_field }}
-                                        </div>
-                                </div>
+                                            <div class="form-group col-md-12 mb-0">
+                                                {{ form.card_number|as_crispy_field }}
+                                            </div>
+                                            <div class="form-group col-md-12 mb-0">
+                                                {{ form.lancet_number|as_crispy_field }}
+                                            </div>
 
-                                    <div class="col-md-6">
-                                        <div class="form-group col-md-12 mb-0">
-                                            {{ form.station_amount|as_crispy_field }}
-                                        </div>
+                                            <div class="form-group col-md-12 mb-0">
+                                                {{ form.glucose_number|as_crispy_field }}
+                                            </div>
 
-                                        <div class="form-group col-md-12 mb-0">
-                                             {{ form.capacity_number|as_crispy_field }}
-                                        </div>
+                                            <div class="form-group col-md-12 mb-0">
+                                                {{ form.ketone_number|as_crispy_field }}
+                                            </div>
+                                            <div class="form-group col-md-12 mb-0">
+                                                {{ form.cholesterol_number|as_crispy_field }}
+                                            </div>
+                                            <div class="form-group col-md-12 mb-0">
+                                                {{ form.panel_number|as_crispy_field }}
+                                            </div>
 
-                                        <div class="form-group col-md-12 mb-0">
-                                             {{ form.card_number|as_crispy_field }}
-                                        </div>
-                                        <div class="form-group col-md-12 mb-0">
-                                            {{ form.lancet_number|as_crispy_field }}
-                                        </div>
+                                            <div class="form-group col-md-12 mb-0">
+                                                {{ form.acid_number|as_crispy_field }}
+                                            </div>
 
-                                        <div class="form-group col-md-12 mb-0">
-                                             {{ form.glucose_number|as_crispy_field }}
+                                            <div class="form-group col-md-12 mb-0">
+                                                {{ form.creatinine_number|as_crispy_field }}
+                                                <button type="submit" class="btn col-md-12 mb-0 submitButton">
+                                                    {% trans 'Send Quotation request' %}
+                                                </button>
+                                            </div>
                                         </div>
-
-                                        <div class="form-group col-md-12 mb-0">
-                                             {{ form.ketone_number|as_crispy_field }}
-                                        </div>
-                                        <div class="form-group col-md-12 mb-0">
-                                             {{ form.cholesterol_number|as_crispy_field }}
-                                        </div>
-                                        <div class="form-group col-md-12 mb-0">
-                                            {{ form.panel_number|as_crispy_field }}
-                                        </div>
-
-                                        <div class="form-group col-md-12 mb-0">
-                                             {{ form.acid_number|as_crispy_field }}
-                                        </div>
-
-                                        <div class="form-group col-md-12 mb-0">
-                                             {{ form.creatinine_number|as_crispy_field }}
-                                        </div>
-                                        <button type="submit" class="btn btn-primary col-md-12">
-                                            {% trans 'Send Quotation request' %}
-                                        </button>
                                     </div>
-                                </div>
-                              </form>
+                                </form>
+                            {% else %}
+                                <form method="post" novalidate>
+                                    {% csrf_token %}
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="container">
+                                                <h3>{% trans 'Customer Information' %}</h3>
+                                            </div>
+                                            <div class="form-group col-md-12 mb-0">
+                                                {{ form.email|as_crispy_field }}
+                                            </div>
+
+                                            <div class="form-group col-md-12 mb-0">
+                                                {{ form.name|as_crispy_field }}
+                                            </div>
+
+                                            <div class="form-group col-md-12 mb-0">
+                                                {{ form.phone|as_crispy_field }}
+                                            </div>
+
+                                            <div class="form-group col-md-12 mb-0">
+                                                {{ form.address|as_crispy_field }}
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="container">
+                                                <h3>{% trans 'Quantity of products' %}</h3>
+                                            </div>
+                                            <div class="form-group col-md-12 mb-0">
+                                                {{ form.symptom_check_set_amount|as_crispy_field }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="container">
+                                            <div class="container">
+                                                <button type="submit" class="btn col-md-12 submitButton">
+                                                    {% trans 'Send Quotation request' %}
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
-            </div><br>  
-        </div>  
+            </div>
+            <br>
+        </div>
     </div>
 
 
     <!-- end single product -->
-    {% endblock content%}
+{% endblock content %}

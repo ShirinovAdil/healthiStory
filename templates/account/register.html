@@ -2,7 +2,11 @@
 
 {% load static %}
 {% load i18n %}
-
+{% load crispy_forms_tags %}
+{% block script %}
+    <script src="{% static 'js/registration.js' %}"></script>
+    <script src="{% static 'js/survey.js' %}"></script>
+{% endblock script %}
 
 {% block title %}
     Register
@@ -11,356 +15,175 @@
 
 
 {% block content %}
-   
+
     <!-- register form start-->
+
     <div class="container">
-        <h2 class="text-center">Registration</h2>
+
+<!--        {% if messages %}-->
+<!--            <ul>-->
+<!--                {% for message in messages %}-->
+<!--                    <li>{{ message | safe }}</li>-->
+<!--                {% endfor %}-->
+<!--            </ul>-->
+<!--        {% endif %}-->
+
+
         <div class="col-md-12 offset">
-            <form class="form-horizontal" role="form">
+            {% if form.non_field_errors %}
+                <div class="non-field-errors">
+                    {% for err in form.non_field_errors %}
+                        <p class="alert alert-danger text-center">{{ err }}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
+
+            <form class="form-horizontal" method="post" id="personForm"
+                  data-cities-url="{% url 'ajax_load_cities' %}"
+                  data-districts-url="{% url 'ajax_load_districts' %}"
+                  data-towns-url="{% url 'ajax_load_towns' %}"
+                  novalidate>
+                  <h2>{% trans 'Registration' %}</h2>
+
+                {% csrf_token %}
+
                 <div class="row mt-3">
                     <div class="form-group col-sm-4">
-                        <label for="name" class="col-sm-3 control-label">Name </label>
-                        <div class="col-sm-10">
-                            <input type="text" id="name" placeholder="Name" class="form-control">
-                        </div>
+                        {{ form.name|as_crispy_field }}
                     </div>
                     <div class="form-group col-sm-4">
-                        <label for="name" class="col-sm-3 control-label">Surname </label>
-                        <div class="col-sm-10">
-                            <input type="text" id="surname" placeholder="Surname" class="form-control">
-                        </div>
+                        {{ form.surname|as_crispy_field }}
                     </div>
                     <div class="form-group col-sm-4">
-                        <label for="birthDate" class="col-sm-3 control-label">Birthdate</label>
-                        <div class="col-sm-10">
-                            <input type="date" id="birthDate" class="form-control">
-                        </div>
-                    </div>
-                </div>
-                
-                <hr>
-                <div class="alert alert-danger" role="alert">
-                    Please full fill at least one below(E-mail, ID, Phone)
-                </div>
-                <div class="row">
-                    
-                    <div class="form-group col-sm-4">
-                        <label for="email" class="col-sm-3 control-label">Email* </label>
-                        <div class="col-sm-10">
-                            <input type="email" id="email" placeholder="Email" class="form-control">
-                        </div>
-                    </div>
-                    <div class="form-group col-sm-4">
-                        
-                        <label for="phoneNumber" class="col-sm-3 control-label">Phone </label>
-                        <div class="col-sm-10">
-                            <input type="number" id="phoneNumber" placeholder="Phone number" class="form-control">
-                            <small>Your phone number won't be disclosed anywhere </small>
-                        </div>
-                    </div>
-                    <div class="form-group col-sm-4">
-                        <label for="IDNumber" class="col-sm-3 control-label">ID </label>
-                        <div class="col-sm-10">
-                            <input type="number" id="IDNumber" placeholder="ID" class="form-control">
-                        </div>
-                    </div>
-                </div>
-                   <hr>
-                
-                
-                <div class="row">
-                    <div class="form-group col-sm-4">
-                        <label for="password" class="col-sm-3 control-label">Password*</label>
-                        <div class="col-sm-10">
-                            <input type="password" id="password" placeholder="Password" class="form-control">
-                        </div>
-                    </div>
-                    <div class="form-group col-sm-4">
-                        <label for="password" class="col-sm-3 control-label">Password*</label>
-                        <div class="col-sm-10">
-                            <input type="password" id="password" placeholder="Confirm password" class="form-control">
-                        </div>
-                    </div>
-                    <div class="form-group col-sm-4">
-                        <label for="weight" class="col-sm-3 control-label">Language </label>
-                        
-                            <div class="col-sm-10">
-                                <select class="form-control">
-                                    <option selected>Turkce</option>
-                                    <option>Azərbaycanca</option>
-                                    <option>English</option>
-                                    <option>Pусский</option>
-                                </select>
-                            </div>
-                       
+                        {{ form.birthdate|as_crispy_field }}
                     </div>
                 </div>
 
                 <hr>
                 <div class="row">
-                    
                     <div class="form-group col-sm-4">
-                        <label for="inputGender" class="control-label col-sm-3">Gender</label>
-                        <div class="col-sm-10">
-                            <select id="inputGender" class="form-control">
-                                <option selected value="female">Female</option>
-                                <option value="male">Male</option>
-                            </select>
-                        </div>     
-                    </div>
-               
-                
-                
-                    <div class="form-group col-sm-4">
-                        <label for="Height" class="col-sm-3 control-label">Height* </label>
-                        <div class="col-sm-10">
-                            <input type="number" id="height" placeholder="Height in centimetres" class="form-control">
-                        </div>
+                        {{ form.passport|as_crispy_field }}
+                        <p style="font-size: medium; color: #474747">{% trans '(Citizen ID or E-mail or Mobile number)' %}</p>
                     </div>
                     <div class="form-group col-sm-4">
-                        <label for="weight" class="col-sm-6 control-label">Blood Group </label>
-                        
-                            <div class="col-sm-10">
-                                <select class="form-control">
-                                    <option value="A Rh+">A Rh+</option>
-                                    <option value="A Rh-">A Rh-</option>
-                                    <option value="AB Rh+">AB Rh+</option>
-                                    <option value="AB Rh-">AB Rh-</option>
-                                    <option value="B Rh+">B Rh+</option>
-                                    <option value="B Rh-">B Rh-</option>
-                                    <option value="0 Rh+">0 Rh+</option>
-                                    <option value="0 Rh-">0 Rh-</option>
-                                </select>
-                            </div>
-                       
+                        {{ form.email|as_crispy_field }}
+                    </div>
+                    <div class="form-group col-sm-4">
+                        {{ form.phone|as_crispy_field }}
+                    </div>
+
+                </div>
+                <hr>
+
+
+                <div class="row">
+                    <div class="form-group col-sm-4">
+                        {{ form.password|as_crispy_field }}
+                    </div>
+                    <div class="form-group col-sm-4">
+                        {{ form.confirm_password|as_crispy_field }}
+                    </div>
+                    <div class="form-group col-sm-4">
+                        {{ form.language|as_crispy_field }}
+                    </div>
+                </div>
+
+                <hr>
+                <div class="row">
+
+                    <div class="form-group col-sm-4">
+                        {{ form.gender|as_crispy_field }}
+                    </div>
+
+                    <div class="form-group col-sm-4">
+                        {{ form.height|as_crispy_field }}
+                    </div>
+                    <div class="form-group col-sm-4">
+                        {{ form.blood_group|as_crispy_field }}
                     </div>
                 </div>
 
                 <div class="row">
-                    
-                    
-               
-                
-                
                     <div class="form-group col-sm-4">
-                        <label for="weight" class="col-sm-3 control-label">Country </label>
-                        
-                            <div class="col-sm-10">
-                                <select class="form-control">
-                                    <option selected>Azerbaijan</option>
-                                    <option>Turkey</option>
-                                    <option>UK</option>
-                                    <option>Russia</option>
-                                </select>
-                            </div>
-                       
+                        {{ form.physical_activity|as_crispy_field }}
                     </div>
                     <div class="form-group col-sm-4">
-                        <label for="weight" class="col-sm-3 control-label">City </label>
-                        
-                            <div class="col-sm-10">
-                                <select class="form-control">
-                                    <option selected>Baku</option>
-                                    <option>Tovuz</option>
-                                    <option>Mingechevir</option>
-                                    <option>Sheki</option>
-                                </select>
-                            </div>
-                       
+                        {{ form.country|as_crispy_field }}
+                    </div>
+                    <div class="form-group col-sm-4">
+                        <div id="city_country">
+                            {{ form.city|as_crispy_field }}
+                        </div>
+
+                        <div id="city2_country">
+                            {{ form.city2|as_crispy_field }}
+                        </div>
+                    </div>
+                </div>
+                <div class="row" id="turkey_based">
+                    <div class="form-group col-sm-4">
+                        {{ form.district|as_crispy_field }}
+                    </div>
+                    <div class="form-group col-sm-4">
+                        {{ form.town|as_crispy_field }}
                     </div>
 
-
-                     <div class="form-group col-sm-4">
-                        <label for="weight" class="col-sm-6 control-label">Physical Activity </label>
-                        
-                            <div class="col-sm-10">
-                                <select class="form-control">
-                                    <option value="LOW" selected="">Low</option>
-                                    <option value="MEDIUM">Medium</option>
-                                    <option value="HIGH">High</option>
-                                </select>
-                            </div>
-                       
-                    </div>
                 </div>
 
 
                 <hr>
-                <div class="alert alert-success" role="alert">
-                    Questions relating to the assessment of cardiovascular disease risk
+                <div class="alert alert-info submitButton" role="alert">
+                    <h4 class="mt-3" style="color: white;"> {% trans 'Questions relating to the assessment of cardiovascular disease risk' %}</h4>
                 </div>
 
                 <div class="row">
-                    
+
                     <div class="form-group col-sm-4">
-                        <label for="weight" class="col-sm-3 control-label">Smoking </label>
-                        
-                            <div class="col-sm-10">
-                                <select class="form-control">
-                                    <option value="0">Non-smoker</option>
-                                    <option value="1">Ex-smoker</option>
-                                    <option value="2">Light smoker (less than 10)</option>
-                                    <option value="3">Moderate smoker(10 to 19)</option>
-                                    <option value="4">Heavy smoker (20 or over)</option>
-                                </select>
-                            </div>
-                       
-                    </div>
-               
-                
-                
-                    <div class="form-group col-sm-4">
-                        <label for="weight" class="col-sm-3 control-label">Diabets </label>
-                        
-                            <div class="col-sm-10">
-                                <select class="form-control">
-                                    <option value="0">None</option>
-                                    <option value="1">Type 1</option>
-                                    <option value="2">Type 2</option>
-                                </select>
-                            </div>
-                       
+                        {{ form.smoking|as_crispy_field }}
                     </div>
 
 
                     <div class="form-group col-sm-4">
-                        <label for="weight" class="col-sm-6 control-label">Ethnicity </label>
-                        
-                            <div class="col-sm-10">
-                                <select class="form-control">
-                                    <option value="1">White or not stated</option>
-                                    <option value="2">Indian</option>
-                                    <option value="3">Pakistani</option>
-                                    <option value="4">Bangladeshi</option>
-                                    <option value="5">Other Asian</option>
-                                    <option value="6">Black Caribbean</option>
-                                    <option value="7">Black African</option>
-                                    <option value="8">Chinese</option>
-                                    <option value="9">Other ethnic group</option>
-                                </select>
-                            </div>
-                       
+                        {{ form.diabets|as_crispy_field }}
+                    </div>
+
+
+                    <div class="form-group col-sm-4">
+                        {{ form.ethnicity|as_crispy_field }}
                     </div>
                 </div>
 
-                <div class="row survey">
-                    <div class="col-md-6 col-sm-12 offset-md-3 mb-3">
-                        <hr class="survey-separator">
-                        <div class="row">
-                            <label class="col-md-9">ANGINA OR HEART ATTACK IN A 1ST DEGREE RELATIVE&lt;60?*</label>
-                            <div class="col-md-3">
-                                <label class="checkbox">Yes                            
-                                    <input type="radio" name="coroner" value="YES">
-                                    <span class="checkmark"></span>
-                                </label>
-        
-                                <label class="checkbox">No                            
-                                    <input type="radio" name="coroner" value="NO" checked="checked">
-                                    <span class="checkmark"></span>
-                                </label>
-                            </div>
+                <!-- YES NO -->
+                    <div class="row">
+                        <div class="col-md col-sm-12">
+                            <div>{{ form.angina_or_heart_attack|as_crispy_field }}</div>
+                            <hr class="survey-separator">
+                            <div>{{ form.pressure_treatment|as_crispy_field }}</div>
+                            <hr class="survey-separator">
+                            <div>{{ form.rheumatoid_arthritis|as_crispy_field }}</div>
+                        </div>
+                        <div class="vl"></div>
+                        <div class="col-md col-sm-12">
+                            <div>{{ form.kidney_disease|as_crispy_field }}</div>
+                            <hr class="survey-separator">
+                            <div>{{ form.atrial_fibrillation|as_crispy_field }}</div>
+                            <hr class="survey-separator">
+                            <div id="female-only-survey">{{ form.menopause|as_crispy_field }}</div>
                         </div>
                     </div>
 
-                    <div class="col-md-6 col-sm-12 offset-md-3 mb-3" id="female-only-survey">
-                        <hr class="survey-separator">
-                        <div class="row">
-                            <label class="col-md-9">MENOPAUSE*</label>
-                            <div class="col-md-3">
-                                <label class="checkbox">Yes                            
-                                    <input type="radio" name="coroner" value="YES">
-                                    <span class="checkmark"></span>
-                                </label>
-        
-                                <label class="checkbox">No                            
-                                    <input type="radio" name="coroner" value="NO" checked="checked">
-                                    <span class="checkmark"></span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-sm-12 offset-md-3 mb-3">
-                        <hr class="survey-separator">
-                        <div class="row">
-                            <label class="col-md-9">CHRONIC KIDNEY DISEASE*</label>
-                            <div class="col-md-3">
-                                <label class="checkbox">Yes                            
-                                    <input type="radio" name="coroner" value="YES">
-                                    <span class="checkmark"></span>
-                                </label>
-        
-                                <label class="checkbox">No                            
-                                    <input type="radio" name="coroner" value="NO" checked="checked">
-                                    <span class="checkmark"></span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-sm-12 offset-md-3 mb-3">
-                        <hr class="survey-separator">
-                        <div class="row">
-                            <label class="col-md-9">ATRIAL FIBRILLATION*</label>
-                            <div class="col-md-3">
-                                <label class="checkbox">Yes                            
-                                    <input type="radio" name="coroner" value="YES">
-                                    <span class="checkmark"></span>
-                                </label>
-        
-                                <label class="checkbox">No                            
-                                    <input type="radio" name="coroner" value="NO" checked="checked">
-                                    <span class="checkmark"></span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-sm-12 offset-md-3 mb-3">
-                        <hr class="survey-separator">
-                        <div class="row">
-                            <label class="col-md-9">ARE YOU GETTING PRESSURE TREATMENT?*</label>
-                            <div class="col-md-3">
-                                <label class="checkbox">Yes                            
-                                    <input type="radio" name="coroner" value="YES">
-                                    <span class="checkmark"></span>
-                                </label>
-        
-                                <label class="checkbox">No                            
-                                    <input type="radio" name="coroner" value="NO" checked="checked">
-                                    <span class="checkmark"></span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-sm-12 offset-md-3 mb-3">
-                        <hr class="survey-separator">
-                        <div class="row">
-                            <label class="col-md-9">RHEUMATOID ARTHRITIS*</label>
-                            <div class="col-md-3">
-                                <label class="checkbox">Yes                            
-                                    <input type="radio" name="coroner" value="YES">
-                                    <span class="checkmark"></span>
-                                </label>
-        
-                                <label class="checkbox">No                            
-                                    <input type="radio" name="coroner" value="NO" checked="checked">
-                                    <span class="checkmark"></span>
-                                </label>
-                            </div>
-                        </div><hr class="survey-separator"> 
-                    </div>
-                </div>              
-                
                 <div class="form-group">
-                    <div class="col-sm-9 col-sm-offset-3">
-                        <small>*Required fields</small>
-                    </div>
+                    <small>*{% trans 'Required fields' %}</small>
                 </div>
-                <button type="submit" class="btn btn-primary btn-block">Register</button>
-            </form> <!-- /form --> <br>   
+                <button type="submit" class="btn btn-block submitButton">{% trans 'Register' %}</button>
+            </form>
+            <br>
 
         </div>
     </div>
     <!-- register end-->
+
+
+
 
 {% endblock content %}
