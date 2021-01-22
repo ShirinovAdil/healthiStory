@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect, HttpResponse
-from .forms import UserRegistrationForm, UserLoginForm, UserUpdateForm, CustomPasswordChangeForm
+from .forms import UserRegistrationForm, UserLoginForm, UserUpdateForm, CustomPasswordChangeForm, AskTheExpertForm
 from django.contrib.auth import login, logout, authenticate, update_session_auth_hash
 from django.contrib import messages
-from .models import City, District, Town
+from .models import City, District, Town, Question
 
 
 
@@ -93,7 +93,24 @@ def user_password_change(request):
 
 
 def user_ask_expert(request):
-    return HttpResponse('<h1>Soon available...</h1>')
+    """
+        Handle question asking from a user perspective
+    """
+    questions = Question.objects.filter(asked_by=request.user)
+    if request.method == "POST":
+        form = AskTheExpertForm(request.POST)
+        if form.is_valid():
+            obj = form.save(commit=False)
+            obj.asked_by = request.user
+            obj.save()
+            messages.success(request, "Message was sent sagol brat")
+            return render(request, 'account/ask_the_expert.html', {"form": form, "questions": questions})
+        else:
+            messages.success(request, "WHat doink?")
+            return render(request, 'account/ask_the_expert.html', {"form": form, "questions": questions})
+    else:
+        form = AskTheExpertForm()
+        return render(request, 'account/ask_the_expert.html', {"form": form, "questions": questions })
 
 
 def user_reports(request):

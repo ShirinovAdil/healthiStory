@@ -50,7 +50,6 @@ INSTALLED_APPS = [
     'home',
     'product',
     'account',
-    #'password_reset',
 ]
 
 MIDDLEWARE = [
@@ -133,6 +132,7 @@ EMAIL_HOST_PASSWORD = 'at7M40c~'
 EMAIL_HOST = 'myhealthistory.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 25
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 
 # Internationalization
