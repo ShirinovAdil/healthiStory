@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '8vov@7i!dt$o2*pewek0&z8$s8$b@0mth-^n9105fyzzyq+(eq'
+SECRET_KEY = 'yourdata'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -90,9 +90,9 @@ WSGI_APPLICATION = 'HealtiStory.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'healthiStory',
-        'USER': 'emil',
-        'PASSWORD': 'emil',
+        'NAME': 'yourdata',
+        'USER': 'yourdata',
+        'PASSWORD': 'yourdata',
         'HOST': 'localhost',
         'PORT': '3306',
     }
@@ -130,9 +130,9 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 # EMAIL SETTINGS
-EMAIL_HOST_USER = 'emil.ojagverdiyev@myhealthistory.com'
-EMAIL_HOST_PASSWORD = 'at7M40c~'
-EMAIL_HOST = 'myhealthistory.com'
+EMAIL_HOST_USER = 'yourdata'
+EMAIL_HOST_PASSWORD = 'yourdata'
+EMAIL_HOST = 'yourdata'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 25
 
